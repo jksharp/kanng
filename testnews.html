@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            
+            $.getJSON("http://www.baidu.com/?callback=?", function (data) {
+                $("#contact").html(data);
+            });
+        });
+    </script>
+</head>
+<body>  
+
+
+    <div align="center" style="margin:0 auto;">
+        <div style="width:240px;height:240px;overflow:hidden;border:0px">
+            <div style="width:240px;height:260px;margin:-153px -200px -500px -200px;">
+                <iframe src="http://www.its368.com/" width="240" height="240" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
