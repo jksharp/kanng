@@ -1,0 +1,4 @@
+F:\Kanng\kanng.github\Kanng.Model\bin\Debug\Kanng.Model.dll
+F:\Kanng\kanng.github\Kanng.Model\bin\Debug\Kanng.Model.pdb
+F:\Kanng\kanng.github\Kanng.Model\obj\Debug\Kanng.Model.dll
+F:\Kanng\kanng.github\Kanng.Model\obj\Debug\Kanng.Model.pdb

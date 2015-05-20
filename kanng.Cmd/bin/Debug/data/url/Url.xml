@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <url guid="6e59b82863dc4f28b3e5ae6a9b82c444">
+    <name>kanng.net</name>
+    <url>kanng.net</url>
+    <date>14:20</date>
+    <order>1</order>
+  </url>
+  <url guid="02296507530046d8806afb1d6ce65dee">
+    <name>flybi.cn</name>
+    <url>flybi.cn</url>
+    <date>14:22</date>
+    <order>1</order>
+  </url>
+  <url guid="eb881418289e422c8bb7a40ccb589d90">
+    <name>www.baidu.com</name>
+    <url>www.baidu.com</url>
+    <date>14:28</date>
+    <order>1</order>
+  </url>
+  <url guid="6d041fa994394172ab80d8ce60cefd9c">
+    <name>g.cn</name>
+    <url>g.cn</url>
+    <date>14:42</date>
+    <order>1</order>
+  </url>
+  <url guid="2e17ed59f5734821a43e623d1ebe3caa">
+    <name>www.csdn.net</name>
+    <url>www.csdn.net</url>
+    <date>15:23</date>
+    <order>1</order>
+  </url>
+</root>

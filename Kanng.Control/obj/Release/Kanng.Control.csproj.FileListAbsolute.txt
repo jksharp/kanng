@@ -1,0 +1,11 @@
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Control.dll
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Control.pdb
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Common.dll
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Model.dll
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Common.pdb
+F:\Kanng\kanng.github\Kanng.Control\bin\Release\Kanng.Model.pdb
+F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.csprojResolveAssemblyReference.cache
+F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.UrlPatte.resources
+F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.csproj.GenerateResource.Cache
+F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.dll
+F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.pdb

@@ -1,0 +1,7 @@
+F:\Kanng\kanng.github\Kanng.Common\bin\Release\Kanng.Common.dll
+F:\Kanng\kanng.github\Kanng.Common\bin\Release\Kanng.Common.pdb
+F:\Kanng\kanng.github\Kanng.Common\bin\Release\Kanng.Model.dll
+F:\Kanng\kanng.github\Kanng.Common\bin\Release\Kanng.Model.pdb
+F:\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.csprojResolveAssemblyReference.cache
+F:\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.dll
+F:\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.pdb
