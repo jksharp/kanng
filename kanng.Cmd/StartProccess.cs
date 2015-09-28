@@ -8,8 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-using Kanng.Common;
-using Kanng.Model;
+
 using System.Threading;
 
 namespace kanng.Cmd
@@ -32,13 +31,17 @@ namespace kanng.Cmd
                 {
                     if (!string.IsNullOrEmpty(str))
                     {
-                        if (File.Exists(str))
+                        //跳过注释
+                        if (!str.StartsWith("#"))
                         {
-                            Process.Start(str);
-                        }
-                        else
-                        {
-                            errorFiles += str + "\r\n";
+                            if (File.Exists(str))
+                            {
+                                Process.Start(str);
+                            }
+                            else
+                            {
+                                errorFiles += str + "\r\n";
+                            }
                         }
                     }
                     Thread.Sleep(200);
@@ -105,7 +108,7 @@ namespace kanng.Cmd
             jz aboutform = new jz();
             aboutform.Show();
         }
-        private Kanng.Control.UrlPatte urlPatte1 = null;
+        private UrlPatte urlPatte1 = null;
 
         public void LoadUrl() {
 
@@ -114,7 +117,7 @@ namespace kanng.Cmd
             {
                 foreach (UrlModel model in urlModel)
                 {
-                    this.urlPatte1 = new Kanng.Control.UrlPatte();
+                    this.urlPatte1 = new UrlPatte();
 
                     urlPatte1.SetModel(model.guid,model.url,model.name);
                     // 
@@ -145,7 +148,7 @@ namespace kanng.Cmd
 
         public void addControl(UrlModel model) {
             //this.Refresh();
-            this.urlPatte1 = new Kanng.Control.UrlPatte();
+            this.urlPatte1 = new UrlPatte();
 
             urlPatte1.SetModel(model.guid, model.url, model.name);
             // 

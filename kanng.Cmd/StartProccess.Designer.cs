@@ -43,18 +43,20 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.捐助SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -73,6 +75,8 @@
             // tabPage1
             // 
             this.tabPage1.AllowDrop = true;
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -94,7 +98,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 157);
+            this.label5.Location = new System.Drawing.Point(48, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(281, 12);
             this.label5.TabIndex = 8;
@@ -205,6 +209,26 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.webBrowser1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(716, 302);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "看门狗导航";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(716, 302);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("http://kanng.net", System.UriKind.Absolute);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -238,25 +262,22 @@
             this.捐助SToolStripMenuItem.Text = "捐助(&S)";
             this.捐助SToolStripMenuItem.Click += new System.EventHandler(this.赞助ToolStripMenuItem_Click);
             // 
-            // tabPage3
+            // label6
             // 
-            this.tabPage3.Controls.Add(this.webBrowser1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(716, 302);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "看门狗导航";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(48, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(275, 12);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "5. 通过在文件路径前面添加 #可以注释掉这个文件";
             // 
-            // webBrowser1
+            // label7
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(716, 302);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("http://kanng.net", System.UriKind.Absolute);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(48, 211);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 12);
+            this.label7.TabIndex = 10;
             // 
             // StartProccess
             // 
@@ -278,9 +299,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +330,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
         //
 
 

@@ -221,21 +221,47 @@
                     <b class="rc-tp"><b></b></b>
                     <ul id="bm_tab" class="clearfix">
                         <li id="bm-def" class="active" rel="fm">名站导航</li>
+                        <!--li rel="bb2" nocache=1>IT博客</!--li-->
 
-                        <li rel="bb2" nocache=1>IT博客</li>
+                    </ul>
+                </div>
+                <div id="bb">
+                    <div class="box">                     
+                        <div id="fm"><ul id="fmsite" class="clearfix">
+                            <li><a href="http://www.codeproject.com">codeproject</a></li>
+                            <li><a href="http://stackoverflow.com/">stackoverflow</a></li>
+                                         <li><a href="http://www.codeplex.com/">CodePlex</a></li>
+                            <li><a href="http://github.com/">GitHub</a></li>
+                                         <li><a href="http://msdn.itellyou.cn/">MSDN-iTellyou</a></li>
+                            <li><a href="http://www.cnblogs.com">博客园</a></li>
+                            <li><a href="http://www.csdn.net/">CSDN</a></li>
+                            <li><a href="http://www.51cto.com/">51CTO</a></li>
+                            <li><a href="http://www.programfan.com/">编程爱好者</a></li>
+                            <li><a href="http://www.iteye.com/">ITEYE</a></li>
+                            <li><a href="http://www.itpub.net/">ITPUB</a></li><li><a href="http://www.oschina.net/">开源中国社区</a></li><li><a href="http://www.w3school.com.cn/">在线教程</a></li><li><a href="http://down.admin5.com/">A5源码</a></li><li><a href="http://www.sxsoft.com/">软件项目交易</a></li><li><a href="http://www.cxy.me/">程序员网</a></li><li><a href="http://tech.163.com/school/">网易学院</a></li><li><a href="http://www.zzzj.com/">站长之家</a></li><li><a href="http://www.chinaitlab.com/">中国IT实验室</a></li><li><a href="http://code.google.com/intl/zh-CN/">GOOGLE代码</a></li><li><a href="http://www.itlearner.com/">IT学习者</a></li><li><a href="http://www.html5china.com/">中国HTML5</a></li><li><a href="http://www.cppfans.com/">C++爱好者</a></li><li><a href="http://developer.zdnet.com.cn/">开发者在线</a></li><li><a href="http://www.mianwww.com/">IT面试手册</a></li><li><a href="http://www.ccw.com.cn/">计算机世界</a></li><li><a href="http://www.zdnet.com.cn/">至顶网</a></li><li><a href="http://www.cxybl.com/">程序员部落</a></li><li><a href="http://www.yesky.com/">天极网</a></li><li><a href="http://it.sohu.com/">搜狐IT</a></li><li><a href="http://www.vbgood.com/">VB爱好者</a></li><li><a href="http://www.111cn.net/">喜聚教程</a></li><li><a href="http://www.chinaz.com/">站长之家</a></li><li><a href="http://www.it25.com/">互联网二三事</a></li><li><a href="http://www.36kr.com/">互联网创业</a></li><li><a href="http://www.sharejs.com/">JS分享</a></li><li><a href="http://www.phpbest.com/">PHP培训</a></li><li><a href="http://www.html5cn.com.cn/">HTML5学习</a></li><li><a href="http://www.souxue8.com/Index.html">搜吧教程</a></li><li><a href="http://tech.sina.com.cn/">新浪科技</a></li><li><a href="http://www.techweb.com.cn/">TECHWEB</a></li><li><a href="http://www.20ju.com/">草根网</a></li><li><a href="http://news.iresearch.cn/">艾瑞资讯</a></li><li><a href="http://www.vmware.com/cn" target="_blank">VMware虚拟机</a></li><li><a href="http://www.zol.com.cn/">中关村在线</a></li><li><a href="http://www.ittime.com.cn/">IT时代周刊</a></li><li><span style="color:red;"><a href="http://www.betanews.com.cn/">移动互联网</a></span></li><li><a href="http://chuang.tuicool.com/">推创</a></li></ul></div>
+                        <div id="qs-result" style="display:none;"></div>
+                    </div>
+
+                  </div>
+
+                <div id="bm">
+                    <b class="rc-tp"><b></b></b>
+                    <ul id="bm_tab" class="clearfix">
+                        <li id="bm-def" class="active" rel="fm">IT博客</li>
+                       
 
                     </ul>
                 </div>
                 <div id="bb">
                     <div class="box">
-                        <div id="bb2" style="display: none;">
+                        <div id="fm">
                             <ul id="fmsite" class="clearfix">
                                 <li><a href="http://www.williamlong.info/">月光博客</a></li>
                                 <li><a href="http://coolshell.cn/" style="color:#FF0000">酷壳</a></li>
-                                <li><a href="http://impulse.cnblogs.com/">凡的世界</a></li> 
-                                <li><a href="http://www.cnblogs.com/fish-li/" style="color:#b06a00">Fish Li</a></li>                           
+                                <li><a href="http://impulse.cnblogs.com/">凡的世界</a></li>
+                                <li><a href="http://www.cnblogs.com/fish-li/" style="color:#b06a00">Fish Li</a></li>
                                 <li><a href="http://lusongsong.com/" target="_blank">卢松松博客</a></li>
-                                <li><a href="http://wangyueblog.com/" target="_blank">望月博客</a></li>
+                                <li><a href="http://www.cnblogs.com/l_dragon/" target="_blank">生如夏花</a></li>
                                 <li><a href="http://www.muchangqing.com/" target="_blank">牟长青博客</a></li>
                                 <li><a href="http://www.amznz.com/" target="_blank">指南者</a></li>
                                 <li><a href="http://www.zreading.cn/" target="_blank">左岸读书</a></li>
@@ -266,7 +292,7 @@
                                 <li><a href="http://www.zhangchenghui.com/">黑苹果</a></li>
                                 <li><a href="http://www.0527dc.com/" style="color:#FF0000">教师日记</a></li>
                                 <li><a href="http://houshidai.com/">后时代</a></li>
-                                <li><a href="http://www.changtiandi.com/">昌天第博客</a></li>                                
+                                <li><a href="http://www.changtiandi.com/">昌天第博客</a></li>
                                 <li><a href="http://gigix.thoughtworkers.org/">透明思考</a></li>
                                 <li><a href="http://dangran.me/">当然博客</a></li>
                                 <li><a href="http://www.yangqq.com/">杨青博客</a></li>
@@ -279,24 +305,12 @@
                                 <li><a href="http://xiedexu.cn/">DeXu.Xie</a></li>
                                 <li><a href="http://www.elaomi.com/">老米博客</a></li>
                                 <li><a href="http://www.xiaoqiushui.com/" style="color:#0C00C0">萧秋水博客</a></li>
-                                <li><a href="http://www.sunyansong.com">牌巴子博客</a></li> 
+                                <li><a href="http://www.sunyansong.com">牌巴子博客</a></li>
+                                <li><a href="http://www.peng8.net" style="color:#B01600">鹏吧</a></li>
                             </ul>
                         </div>
-                        <div id="fm"><ul id="fmsite" class="clearfix">
-                            <li><a href="http://www.codeproject.com">codeproject</a></li>
-                            <li><a href="http://stackoverflow.com/">stackoverflow</a></li>
-                                         <li><a href="http://www.codeplex.com/">CodePlex</a></li>
-                            <li><a href="http://github.com/">GitHub</a></li>
-                                         <li><a href="http://msdn.itellyou.cn/">MSDN-iTellyou</a></li>
-                            <li><a href="http://www.cnblgos.com">博客园</a></li>
-                            <li><a href="http://www.csdn.net/">CSDN</a></li>
-                            <li><a href="http://www.51cto.com/">51CTO</a></li>
-                            <li><a href="http://www.programfan.com/">编程爱好者</a></li>
-                            <li><a href="http://www.iteye.com/">ITEYE</a></li>
-                            <li><a href="http://www.itpub.net/">ITPUB</a></li><li><a href="http://www.oschina.net/">开源中国社区</a></li><li><a href="http://www.w3school.com.cn/">在线教程</a></li><li><a href="http://down.admin5.com/">A5源码</a></li><li><a href="http://www.sxsoft.com/">软件项目交易</a></li><li><a href="http://www.cxy.me/">程序员网</a></li><li><a href="http://tech.163.com/school/">网易学院</a></li><li><a href="http://www.zzzj.com/">站长之家</a></li><li><a href="http://www.chinaitlab.com/">中国IT实验室</a></li><li><a href="http://code.google.com/intl/zh-CN/">GOOGLE代码</a></li><li><a href="http://www.itlearner.com/">IT学习者</a></li><li><a href="http://www.html5china.com/">中国HTML5</a></li><li><a href="http://www.cppfans.com/">C++爱好者</a></li><li><a href="http://developer.zdnet.com.cn/">开发者在线</a></li><li><a href="http://www.mianwww.com/">IT面试手册</a></li><li><a href="http://www.ccw.com.cn/">计算机世界</a></li><li><a href="http://www.zdnet.com.cn/">至顶网</a></li><li><a href="http://www.cxybl.com/">程序员部落</a></li><li><a href="http://www.yesky.com/">天极网</a></li><li><a href="http://it.sohu.com/">搜狐IT</a></li><li><a href="http://www.vbgood.com/">VB爱好者</a></li><li><a href="http://www.111cn.net/">喜聚教程</a></li><li><a href="http://www.chinaz.com/">站长之家</a></li><li><a href="http://www.it25.com/">互联网二三事</a></li><li><a href="http://www.36kr.com/">互联网创业</a></li><li><a href="http://www.sharejs.com/">JS分享</a></li><li><a href="http://www.phpbest.com/">PHP培训</a></li><li><a href="http://www.html5cn.com.cn/">HTML5学习</a></li><li><a href="http://www.souxue8.com/Index.html">搜吧教程</a></li><li><a href="http://tech.sina.com.cn/">新浪科技</a></li><li><a href="http://www.techweb.com.cn/">TECHWEB</a></li><li><a href="http://www.20ju.com/">草根网</a></li><li><a href="http://news.iresearch.cn/">艾瑞资讯</a></li><li><a href="http://www.vmware.com/cn" target="_blank">VMware虚拟机</a></li><li><a href="http://www.zol.com.cn/">中关村在线</a></li><li><a href="http://www.ittime.com.cn/">IT时代周刊</a></li><li><span style="color:red;"><a href="http://www.betanews.com.cn/">移动互联网</a></span></li><li><a href="http://chuang.tuicool.com/">推创</a></li></ul></div>
                         <div id="qs-result" style="display:none;"></div>
-                    </div>
-                    <b class="rc-bt"><b></b></b>
+                    </div>                     
                 </div>
 
                 <div id="ls">
@@ -360,6 +374,10 @@
                                         <li>
                                             <a href='http://www.w3school.com.cn/aspnet/index.asp'>ASP.NET 教程</a>
                                         </li>
+										<li>
+											<a href="https://support.microsoft.com/zh-cn">微软技术支持</a>
+										</li>
+
 
                                     </ul>
                                 </div>
@@ -635,7 +653,7 @@
                                     <ul style="margin:0px auto;width:auto;">
 
                                         <li>
-                                            <a href='http://www.androidin.com/'>Android开发者论坛</a>
+                                            <a href='http://www.9y.cm/'>9y教育</a>
                                         </li>
 
                                         <li>
@@ -1280,6 +1298,7 @@
                                     <ul style="margin:0px auto;width:auto;">
 
                                         <li><a href="http://www.5211game.com/">11平台</a></li>
+										<li><a href="http://www.youtaidu.com/">钛度-Sky创业项目</a></li>
 
                                     </ul>
                                 </div>
@@ -1320,7 +1339,7 @@
             <div class="box">
                 <ul>
                     <li class="bd">
-                        <strong>友情链接</strong><a href='http://impulse.cnblogs.com' title='凡的世界'>v2ex</a><a href='http://www.iheima.com/' title='i黑马'>i黑马</a><a href='http://36kr.com/' title='36氪'>36氪</a><a href='http://www.itchaguan.com/' title='IT茶馆'>IT茶馆</a><a href='http://www.forbeschina.com/' title='福布斯中文'>福布斯中文</a><a href='http://www.xiander.com.cn/' title='鲜蛋网'>鲜蛋网</a><a href='http://sowm.cn/' title='IT科技博客搜索'>IT科技博客搜索</a><a href='http://anyou8.com/' title='互刷平台'>互刷平台</a><a href='http://www.fondcool.com/' title='方酷App设计'>方酷App设计</a><a href='http://smeoa.com/' title='小微OA系统'>小微OA系统</a><a href='http://kanng.net/看门狗桌面助手1.0RT.rar' title='看门狗桌面助手'>看门狗桌面助手</a>
+                        <strong>友情链接</strong><a href='http://impulse.cnblogs.com' title='凡的世界'>v2ex</a><a href='http://www.iheima.com/' title='i黑马'>i黑马</a><a href='http://36kr.com/' title='36氪'>36氪</a><a href='http://www.itchaguan.com/' title='IT茶馆'>IT茶馆</a><a href='http://www.forbeschina.com/' title='福布斯中文'>福布斯中文</a><a href='http://www.xiander.com.cn/' title='鲜蛋网'>鲜蛋网</a><a href='http://sowm.cn/' title='IT科技博客搜索'>IT科技博客搜索</a><a href='http://anyou8.com/' title='互刷平台'>互刷平台</a><a href='http://www.fondcool.com/' title='方酷App设计'>方酷App设计</a><a href='http://smeoa.com/' title='小微OA系统'>小微OA系统</a><a href='http://kanng.net/看门狗桌面助手1.0RT.rar' title='看门狗桌面助手'>看门狗桌面助手</a><a href='https://github.com/jksharp/kanng' title='看门狗桌面助手'>看门狗开源网址GitHUB</a>
                     </li>
                 </ul>
             </div>

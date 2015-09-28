@@ -26,6 +26,11 @@ namespace kanng.Cmd
             System.Diagnostics.Process.Start("http://kanng.net");
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }
