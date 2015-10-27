@@ -29,7 +29,7 @@ namespace kanng.Cmd
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://kanng.net");
+            System.Diagnostics.Process.Start("Explorer.exe","http://www.kanng.net/donate/index.html");
         }
     }
 }
