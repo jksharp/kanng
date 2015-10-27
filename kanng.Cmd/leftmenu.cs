@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace kanng.Cmd
@@ -24,10 +25,21 @@ namespace kanng.Cmd
         }
 
 
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        public const int WM_SYSCOMMAND = 0x0112;
+        public const int SC_MOVE = 0xF010;
+
+
+
 
         private void leftmenu_MouseDown(object sender, MouseEventArgs e)
         {
-
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + (int)HTCAPTION, 0);
+            //timer1.Enabled = anchors != AnchorStyles.None;
         }
 
         bool beginMove = false;
@@ -38,37 +50,7 @@ namespace kanng.Cmd
         private void button1_MouseDown(object sender, MouseEventArgs e)
         {
 
-            if (e.Clicks == 2)
-            {
-                string[] strs = KanngHelper.ReadAllLines();
 
-                string errorFiles = "";
-
-                foreach (string str in strs)
-                {
-                    if (!string.IsNullOrEmpty(str))
-                    {
-                        if (File.Exists(str))
-                        {
-                            Process.Start(str);
-                        }
-                        else
-                        {
-                            errorFiles += str + "\r\n";
-                        }
-                    }
-                }
-                if (errorFiles.Length > 0)
-                {
-                    MessageBox.Show("没有启动成功的文件:\r\n" + errorFiles);
-                }
-            }
-
-
-
-            beginMove = true;
-            currentXPosition = MousePosition.X;
-            currentYPosition = MousePosition.Y;
         }
 
         private void button1_MouseMove(object sender, MouseEventArgs e)
@@ -97,17 +79,15 @@ namespace kanng.Cmd
 
         private void leftmenu_Load(object sender, EventArgs e)
         {
-
-            Left = 1200;
+            anchors = AnchorStyles.Right;
+            Left = Screen.PrimaryScreen.Bounds.Width - OFFSET;
+            //Left = 1200;
             Top = 200;
-
-
             timer1.Interval = 100;
 
-            timer1.Enabled = false;
+            timer1.Enabled = true;
 
             TopMost = true;
-            //checkDockTimer.Stop();
         }
 
         AnchorStyles anchors;
@@ -132,59 +112,56 @@ namespace kanng.Cmd
         IntPtr HTCLIENT = (IntPtr)0x1;
         IntPtr HTCAPTION = (IntPtr)0x2;
         const int WM_NCLBUTTONDBLCLK = 0x00A3;
-        //protected override void WndProc(ref Message m)
-        //{
-        //    if (m.Msg == WM_NCLBUTTONDBLCLK)
-        //    {
-        //        return;
-        //    }
-        //    if (m.Msg == WM_NCHITTEST)
-        //    {
-        //        base.WndProc(ref m);
-        //        if (m.Result == HTCLIENT)
-        //        {
-        //            m.HWnd = this.Handle;
-        //            m.Result = HTCAPTION;
-        //        }
-        //        return;
-        //    }
-        //    base.WndProc(ref m);
-        //}
+        const int WM_TASKBARRCLICK = 0x0313;
+        private const int WM_RBUTTONDOWN = 0x0204;
+
+        const int WM_MOVING = 0x0216;
 
 
         protected override void WndProc(ref Message m)
         {
-            if (m.Msg == WM_NCLBUTTONDBLCLK)
-            {
-                return;
-            }
-            if (m.Msg == WM_NCHITTEST)
-            {
-                base.WndProc(ref m);
-                if (m.Result == HTCLIENT)
-                {
-                    m.HWnd = this.Handle;
-                    m.Result = HTCAPTION;
-                }
-                return;
-            }
-
-            const int WM_MOVING = 0x216;
             switch (m.Msg)
             {
-                case WM_NCLBUTTONDBLCLK:
+                //        case WM_NCLBUTTONDBLCLK:
+                //            base.WndProc(ref m);
+                //            if (m.Result == HTCLIENT)
+                //            {
+                //                Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+                //                if (newForm1 == null)
+                //                {
+                //                    StartProccess from = new StartProccess();
+                //                    from.Show();
+                //                }
+                //                else
+                //                {
+                //                    newForm1.WindowState = FormWindowState.Normal;
+                //                    newForm1.Show();
+                //                }
+                //            }
+                //            break;
+                //        case WM_NCHITTEST:
 
-                    break;
-                case WM_NCHITTEST:
+                //            base.WndProc(ref m);
 
-                    base.WndProc(ref m);
-                    if (m.Result == HTCLIENT)
-                    {
-                        m.HWnd = this.Handle;
-                        m.Result = HTCAPTION;
-                    }
-                    break;
+
+                //            if (m.Result == HTCLIENT)
+                //            {
+                //                m.Result = HTCAPTION;
+
+                //                return;
+                //            }
+
+
+                //            // return;
+                //            break;
+                //        case WM_RBUTTONDOWN:
+                //            base.WndProc(ref m);
+                //            MessageBox.Show("右击事件");
+
+                //            break;
                 case WM_MOVING: // 窗体移动的消息，控制窗体不会移出屏幕外
+
+
                     int left = Marshal.ReadInt32(m.LParam, 0);
                     int top = Marshal.ReadInt32(m.LParam, 4);
                     int right = Marshal.ReadInt32(m.LParam, 8);
@@ -286,6 +263,79 @@ namespace kanng.Cmd
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void leftmenu_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+            if (newForm1 == null)
+            {
+                StartProccess from = new StartProccess();
+                from.Show();
+            }
+            else
+            {
+                newForm1.WindowState = FormWindowState.Normal;
+                newForm1.Show();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("确定要启动吗？", "确认", MessageBoxButtons.YesNo);
+            bool rlb = false;
+            if (dr == DialogResult.Yes)
+            {
+                string[] strs = KanngHelper.ReadAllLines();
+                string errorFiles = "";
+                if (strs != null)
+                {
+                    foreach (string str in strs)
+                    {
+                        if (!string.IsNullOrEmpty(str))
+                        {
+                            //跳过注释
+                            if (!str.StartsWith("#"))
+                            {
+                                if (File.Exists(str))
+                                {
+                                    rlb |= true;
+                                    Process.Start(str);
+                                }
+                                else if (Directory.Exists(str))
+                                {
+                                    rlb |= true;
+                                    Process.Start("Explorer.exe", str);
+                                }
+                                else
+                                {
+                                    errorFiles += str + "\r\n";
+                                }
+                            }
+                        }
+                        Thread.Sleep(200);
+                    }
+                }
+
+                if (!rlb)
+                {
+                    MessageBox.Show("没有需要启动的文件,您可以拖动文件到界面来添加文件!");
+                }
+                if (errorFiles.Length > 0)
+                {
+                    MessageBox.Show("没有启动成功的文件:\r\n" + errorFiles);
+                }
+            }
+
+
+            beginMove = true;
+            currentXPosition = MousePosition.X;
+            currentYPosition = MousePosition.Y;
+        }
+
+        private void leftmenu_MouseHover(object sender, EventArgs e)
+        {
+          //  SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + (int)HTCAPTION, 0);
         }
 
 

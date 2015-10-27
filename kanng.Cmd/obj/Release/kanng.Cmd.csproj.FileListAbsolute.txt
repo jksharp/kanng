@@ -14,3 +14,4 @@ F:\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.csproj.GenerateResource.Ca
 F:\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.exe
 F:\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.pdb
 F:\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.UrlPatte.resources
+F:\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.csprojResolveAssemblyReference.cache

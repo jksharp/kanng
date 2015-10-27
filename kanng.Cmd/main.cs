@@ -63,6 +63,21 @@ namespace kanng.Cmd
             }
             return form;
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+            if (newForm1 == null)
+            {
+                StartProccess from = new StartProccess();
+                from.Show();
+            }
+            else
+            {
+                newForm1.WindowState = FormWindowState.Normal;
+                newForm1.Show();
+            }
+        }
     }
 }
     
