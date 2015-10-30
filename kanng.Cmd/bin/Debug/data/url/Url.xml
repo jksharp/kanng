@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <url guid="230jljlkj2lk3jl2jl3">    
+    <name>看门狗</name>
+    <url>http://www.kanng.net</url>
+    <date>2015-05-12</date>
+    <order>0</order>
+  </url>
+  <url guid="230jlssjlkj2lk3jl2jl3">
+    <name>flybi</name>
+    <url>http://www.fly.cn</url>
+    <date>2015-05-12</date>
+    <order>0</order>
+  </url>
+</root>

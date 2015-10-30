@@ -268,14 +268,14 @@
             // 关于AToolStripMenuItem
             // 
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于AToolStripMenuItem.Text = "关于(&A)";
             this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于看门狗ToolStripMenuItem_Click);
             // 
             // 捐助SToolStripMenuItem
             // 
             this.捐助SToolStripMenuItem.Name = "捐助SToolStripMenuItem";
-            this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.捐助SToolStripMenuItem.Text = "捐助(&S)";
             this.捐助SToolStripMenuItem.Click += new System.EventHandler(this.赞助ToolStripMenuItem_Click);
             // 
@@ -292,7 +292,7 @@
             this.MaximizeBox = false;
             this.Name = "StartProccess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "看门狗桌面助手";
+            this.Text = "看门狗桌启动面助手";
             this.Load += new System.EventHandler(this.StartProccess_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
