@@ -23,13 +23,49 @@ namespace kanng.Cmd
             get;
             set;
         }
+
+        /// <summary>
+        /// 文件扩展名 类型 文件 可以分为  可以执行文件 和 非 执行文件  
+        /// </summary>
+        int pathAttr = 0;
+
         public StartProccess()
         {
             InitializeComponent();
+            richTextBox1.AllowDrop = true;
+            richTextBox1.DragEnter += new DragEventHandler(richTextBox1_DragEnter);
+
+            richTextBox1.DragDrop += new DragEventHandler(richTextBox1_DragDrop);
+        }
+
+        private void richTextBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Link;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void richTextBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            Array arrarFileName = (Array)e.Data.GetData(DataFormats.FileDrop);
+            string strFileName = arrarFileName.GetValue(0).ToString();
+
+
+            richTextBox1.Text += strFileName + "\r\n";
+
+            KanngHelper.WriteFile(richTextBox1.Text);
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             string[] strs = KanngHelper.ReadAllLines();
             bool rlb = false;
             string errorFiles = "";
@@ -37,31 +73,39 @@ namespace kanng.Cmd
             {
                 foreach (string str in strs)
                 {
-                    if (!string.IsNullOrEmpty(str))
+                    try
                     {
-                        //跳过注释
-                        if (!str.StartsWith("#"))
+                        if (!string.IsNullOrEmpty(str))
                         {
-                            if (File.Exists(str))
+                            //跳过注释
+                            if (!str.StartsWith("#"))
                             {
+
                                 rlb |= true;
                                 Process.Start(str);
                                 Thread.Sleep(Limetime);
-                            }
-                            else if (Directory.Exists(str))
-                            {
-                                rlb |= true;
-                                Process.Start("Explorer.exe", str);
-                                Thread.Sleep(Limetime);
-                            }
-                            else
-                            {
-                                errorFiles += str + "\r\n";
+
+                                //if (File.Exists(str) || Directory.Exists(str))
+                                //{
+
+                                //}
+                                ////else if (Directory.Exists(str))
+                                ////{
+                                ////    rlb |= true;
+                                ////    Process.Start("Explorer.exe", str);
+                                ////    Thread.Sleep(Limetime);
+                                ////}
+                                //else
+                                //{
+                                //    errorFiles += str + "\r\n";
+                                //}
                             }
                         }
                     }
-                   
-
+                    catch (Exception ex)//容错处理
+                    {
+                        errorFiles += str + "\r\n";
+                    }
                 }
             }
 
@@ -75,50 +119,16 @@ namespace kanng.Cmd
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            KanngHelper.WriteFile(richTextBox1.Text);
-        }
-
         private void StartProccess_Load(object sender, EventArgs e)
         {
-
-            ComputerInfo ci = new ComputerInfo();
-
-            decimal apmdata = ci.AvailablePhysicalMemory / 1024 / 1024;
-
-            if (apmdata < 1000)
-            {
-                Limetime = 800;
-            }
-            else if (apmdata < 2000)
-            {
-                Limetime = 600;
-            }
-            else if (apmdata < 4000)
-            {
-                Limetime = 400;
-            }
-            else if (apmdata < 8000)
-            {
-                Limetime = 200;
-            }
-            else if (apmdata < 10000)
-            {
-                Limetime = 100;
-            }
-                     
-
-         
-
-            LoadUrl();
-            richTextBox1.Text = KanngHelper.ReadAllText();
-
+            Limetime = 1000;
+            // LoadUrl();  
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text = KanngHelper.ReadAllText();
+            //richTextBox1.Text = KanngHelper.ReadAllText();
+
         }
 
         private void tabPage1_DragEnter(object sender, DragEventArgs e)
@@ -162,6 +172,13 @@ namespace kanng.Cmd
         public void LoadUrl()
         {
 
+            Uri rulpaht = new Uri("http://www.kanng.net");
+
+            webBrowser1.Url = rulpaht;
+
+            richTextBox1.Text = KanngHelper.ReadAllText();
+
+
             List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
             if (urlModel != null)
             {
@@ -183,6 +200,7 @@ namespace kanng.Cmd
 
                 }
             }
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -224,7 +242,67 @@ namespace kanng.Cmd
             {
                 this.WindowState = FormWindowState.Normal;
             }
+
+
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
+            if (urlModel != null)
+            {
+                foreach (UrlModel model in urlModel)
+                {
+                    System.Diagnostics.Process.Start(model.url);
+
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("rundll32.exe", "shell32.dll,Control_RunDLL");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad.exe");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("mspaint.exe");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("regedit.exe");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
+        }
+
+        private void richTextBox1_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control &e.KeyCode == Keys.S)
+            {
+                KanngHelper.WriteFile(richTextBox1.Text);
+            }
+        }
+
+        private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KanngHelper.WriteFile(richTextBox1.Text);
+            
+        }
+
     }
 
 

@@ -14,25 +14,8 @@
             height: 200px;
         }
 
-#search .button, #search .button:hover {
-    background-color: #ee601d;
-}
 
 
-		#search .button {
-    width: 72px;
-    height: 40px;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    background-position: 0 0;
-    z-index: 100;
-    position: relative;
-    top: 5px;
-    right: 0px;
-    font-size: 16px;
-    font-family: "Microsoft YaHei";
-}
 
     </style>
   
@@ -83,23 +66,40 @@
             <div id="sb" class="clearfix">
                 <div id="js_type_2">
                     <div class="sw">
-                        <p id="sw_2">
+                        <p style="display:none" id="sw_2">
                             <a href='https://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp#newwindow=1&safe=strict&hl=zh-CN&q=%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%8E%92%E8%A1%8C'>编程语言排行</a><a href='https://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp#newwindow=1&safe=strict&hl=zh-CN&q=.net%E8%B7%A8%E5%B9%B3%E5%8F%B0'>.NET跨平台</a>
                         </p>
                     </div>
                     <div class="sf">
-                        <form style="height:60px;padding-top:5px;" action="http://cn.bing.com" method="get" target="_blank">
-                            <a href="http://cn.bing.com" id="sf_label" rel="">
-                                <img src="http://www.kanng.net/img/bing.jpg" width="105" height="35" title="微 软 搜 索" />
-                            </a>
-                           
-							<input name="q" title="输入搜索词"id="lst-ib" class="int"  type="text" size="69" maxlength="250"  value="" autocomplete="off">
+                    <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+	<div>
+    <a href="https://www.baidu.com/" target="_blank">
+        <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="Baidu" align="bottom" border="0">
+    </a>
+    <input type="text"  onfocus="checkHttps" name="word"  size="60"  align="bottom" />
+    <input type="submit" value="百度搜索" />
+	</div>
+</form>
+<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+<script>
+    function checkHttps () {
+        BaiduHttps.useHttps();    
+    };
+    function baiduWithHttps (formname) {
+        var data = BaiduHttps.useHttps();
+        if (data.s === 0) {
+            return true;
+        }
+        else {
+            formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+            return true;
+        }
+    };
+</script>
 
-                            <input class="button"  type="submit"  value="搜 索"/>
-<input name="qs" id="sa_qs" type="hidden" value="bs">
-<input type="hidden" value="NAVSHP" name="FORM" id="bingSearchFormeCode" /><input type="hidden" value="zh-cn" name="mkt" /><input type="hidden" value="PN" name="defaultPN" id="defaultPN" /><input type="hidden" name="sk" /
 
-                        </form>
+
                     </div>
                 </div>
 
@@ -289,7 +289,7 @@
                                 <li><a href="http://lusongsong.com/" target="_blank">卢松松博客</a></li>
                                 <li><a href="http://www.cnblogs.com/l_dragon/" target="_blank" style="color:#b06aff">生如夏花</a></li>
                                 <li><a href="http://www.cnblogs.com/free722/" target="_blank">辛勤的代码工</a></li>
-                                <li><a href="http://www.amznz.com/" target="_blank">指南者</a></li>
+                                <li><a href="http://www.cnblogs.com/lori/" target="_blank">仓储大叔</a></li>
                                 <li><a href="http://www.zreading.cn/" target="_blank">左岸读书</a></li>
                                 <li><a href="https://chenghouwen.com/" target="_blank">勺子博客</a></li>
                                 <li><a href="http://www.liguoqing.net/" target="_blank">李国庆博客</a></li>
@@ -1137,7 +1137,7 @@
                                         </li>
 
                                         <li>
-                                            <a href='http://job.csdn.net/'>CSDN job </a>
+                                            <a href='http://www.linkedin.com/'>Linkin领英</a>
                                         </li>
 
                                         <li>
@@ -1160,42 +1160,24 @@
                             </dd>
                             <dd class='m'><a href='zhaopin/zhaopin.html'>更多>></a></dd>
                         </dl>
-						 <dl id='ls895'>
+						  <dl id='ls895'>
                             <dt>
-                                <a href='qitafenlei/shuma/shuma.html'>网址导航</a>
+                                <a href='pojie/pojie.html'>吾爱破解</a>
                             </dt>
                             <dd class='l'>
                                 <div style="width:633px;height:30px;text-align:center;">
                                     <ul style="margin:0px auto;width:auto;">
 
                                         <li>
-                                            <a href='https://it2048.cn'>极客导航</a>
+                                            <a href='http://www.52pojie.cn/'>吾爱破解</a>
                                         </li>
 
-                                        <li>
-                                            <a href='http://hao123.cn'>Hao123.cn</a>
-                                        </li>
-
-                                        <li>
-                                            <a href='http://www.its368.com'>Its368</a>
-                                        </li>
-
-                                        <li>
-                                            <a href='http://www.hao123.com'>Hao123</a>
-                                        </li>
-
-                                        <li>
-                                            <a href='https://hao.360.cn/index.html'>360导航</a>
-                                        </li>
-
-                                        <li>
-                                            <a href='http://navisec.it/'>纳威安全导航</a>
-                                        </li>
+                                        
 
                                     </ul>
                                 </div>
                             </dd>
-                            <dd class='m'><a href='navigation/navigation.html'>更多>></a></dd>
+                            <dd class='m'><a href='pojie/pojie.html'>更多>></a></dd>
                         </dl>
                         <dl id='ls795'>
                             <dt>
@@ -1380,6 +1362,20 @@
         <div id="meta">
             <b class="rc-tp"><b></b></b>
             <div class="box">
+                
+
+                <ul>
+                    <li>
+                        <strong>实用查询</strong>
+                    <a href="http://www.12306.cn">12306</a>
+                    <a href="http://tongji.baidu.com">百度统计</a>
+ <a href="http://zhanzhang.baidu.com">百度站长</a>
+                  
+                </ul>
+
+            </div>
+
+			 <div class="box">
                 
 
                 <ul>

@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Threading;
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.Devices;
+
+
 namespace kanng.Cmd
 {
     public partial class main : Form
@@ -22,6 +27,9 @@ namespace kanng.Cmd
         private void main_Activated(object sender, EventArgs e)
         {
             newForm = new StartProccess();
+            newForm.LoadUrl();
+            
+
             newForm.Show();
 
             leftform = new leftmenu();
