@@ -1160,16 +1160,16 @@
                             </dd>
                             <dd class='m'><a href='zhaopin/zhaopin.html'>更多>></a></dd>
                         </dl>
-						 <dl id='ls895'>
+						  <dl id='ls2341'>
                             <dt>
-                                <a href='qitafenlei/shuma/shuma.html'>网址导航</a>
+                                <a href='navigation/navigation.html'>IT导航</a>
                             </dt>
                             <dd class='l'>
                                 <div style="width:633px;height:30px;text-align:center;">
                                     <ul style="margin:0px auto;width:auto;">
 
-                                        <li>
-                                            <a href='https://it2048.cn'>极客导航</a>
+                                      <li>
+                                            <a href='https://it2048.cn/'>极客导航</a>
                                         </li>
 
                                         <li>
@@ -1177,7 +1177,7 @@
                                         </li>
 
                                         <li>
-                                            <a href='http://www.its368.com'>Its368</a>
+                                            <a href='http://www.its368.com/'>Its368</a>
                                         </li>
 
                                         <li>
@@ -1190,12 +1190,31 @@
 
                                         <li>
                                             <a href='http://navisec.it/'>纳威安全导航</a>
-                                        </li>
+                                        </li>										
 
                                     </ul>
                                 </div>
                             </dd>
                             <dd class='m'><a href='navigation/navigation.html'>更多>></a></dd>
+                        </dl>
+						  <dl id='ls895'>
+                            <dt>
+                                <a href='pojie/pojie.html'>吾爱破解</a>
+                            </dt>
+                            <dd class='l'>
+                                <div style="width:633px;height:30px;text-align:center;">
+                                    <ul style="margin:0px auto;width:auto;">
+
+                                        <li>
+                                            <a href='http://www.52pojie.cn/'>吾爱破解</a>
+                                        </li>
+
+                                        
+
+                                    </ul>
+                                </div>
+                            </dd>
+                            <dd class='m'><a href='pojie/pojie.html'>更多>></a></dd>
                         </dl>
                         <dl id='ls795'>
                             <dt>
