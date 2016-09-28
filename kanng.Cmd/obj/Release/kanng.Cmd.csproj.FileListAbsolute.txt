@@ -21,7 +21,6 @@ F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\url\Url.xml
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\kanng.data
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\kanng.Cmd.exe
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\kanng.Cmd.pdb
-F:\code\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.csprojResolveAssemblyReference.cache
 F:\code\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.about.resources
 F:\code\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.CreatUrl.resources
 F:\code\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.jz.resources

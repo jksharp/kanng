@@ -238,6 +238,12 @@ namespace kanng.Cmd
             {
                 this.WindowState = FormWindowState.Maximized;
             }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+                richTextBox2.Text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
+            }
             else
             {
                 this.WindowState = FormWindowState.Normal;
@@ -299,8 +305,24 @@ namespace kanng.Cmd
 
         private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KanngHelper.WriteFile(richTextBox1.Text);
+
+            if (tabControl1.SelectedIndex == 3)
+            {
+                KanngHelper.WriteHostsFile(richTextBox2.Text);
+            }
+            else
+            {
+                KanngHelper.WriteFile(richTextBox1.Text);
+            }
             
+
+
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
