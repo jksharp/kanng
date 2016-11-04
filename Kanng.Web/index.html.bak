@@ -234,9 +234,25 @@
                         <li><a href='qitafenlei/youxiang/youxiang.html' target='_blank'>邮箱</a></li>
                         <li><a href='qitafenlei/zhuomian/zhuomian.html' target='_blank'>桌面</a></li>
                         <li><a href='qitafenlei/zhaoshang/zhaoshang.html' target='_blank'>招商</a></li>
-                    </ul>
+                    </ul>		
+					
                 </div>
-              
+             	<div class="box">
+						<h2>站长微信(微信号：jwsharp)</h2>
+					<img src="img/jiangkangwx.jpg" alt="微信号:jwsharp" width="230px" height="247px" />
+				</div>
+					<div class="box">
+					<h2>赞助广告</h2>
+					<a href="http://www.51buyin.com/shopping/index.htm?mallid=1641028442766&code=021OvLDN1yRQg41q9TFN1iWJDN1OvLD7&state=" title=" 全球时刻">
+					<video muted id="media" src="http://imgs6.mxthcdn.com/51buyin/mp4/1.mp4" autoplay="" loop="" width="230px" height="247px"></video>
+					</a>
+					</div>
+			
+					
+					
+							
+							
+
                 <b class="rc-bt"><b></b></b>
 
              
@@ -289,7 +305,7 @@
                                 <li><a href="http://lusongsong.com/" target="_blank">卢松松博客</a></li>
                                 <li><a href="http://www.cnblogs.com/l_dragon/" target="_blank" style="color:#b06aff">生如夏花</a></li>
                                 <li><a href="http://www.cnblogs.com/free722/" target="_blank">辛勤的代码工</a></li>
-                                <li><a href="http://www.cnblogs.com/lori/" target="_blank">仓储大叔</a></li>
+                                <li><a href="http://www.webdiyer.com/" target="_blank">杨涛主页</a></li>
                                 <li><a href="http://www.zreading.cn/" target="_blank">左岸读书</a></li>
                                 <li><a href="https://chenghouwen.com/" target="_blank">勺子博客</a></li>
                                 <li><a href="http://www.liguoqing.net/" target="_blank">李国庆博客</a></li>
@@ -316,7 +332,7 @@
                                 <li><a href="http://letsfilm.org/">胶片的味道</a></li>
                                 <li><a href="http://www.ashinblog.com/">超人电话亭</a></li>
                                 <li><a href="http://www.zhangchenghui.com/">黑苹果</a></li>
-                                <li><a href="http://www.0527dc.com/" style="color:#FF0000">教师日记</a></li>
+                                <li><a href="http://www.cnblogs.com/aspnetx/" title="专注微软平台的商业智能解决方案" style="color:#FF0000">哥本哈士奇</a></li>
                                 <li><a href="http://houshidai.com/">后时代</a></li>
                                 <li><a href="http://www.changtiandi.com/">昌天第博客</a></li>
                                 <li><a href="http://gigix.thoughtworkers.org/">透明思考</a></li>
@@ -1208,9 +1224,13 @@
                                         <li>
                                             <a href='http://www.52pojie.cn/'>吾爱破解</a>
                                         </li>
-
-                                        
-
+										 <li>
+                                            <a href='https://www.namaho.com/'>namaho</a>
+                                        </li>
+                                        <li>
+                                            <a href='https://github.com/shadowsocks/shadowsocks-windows/'>shadowsocks-windows</a>
+                                        </li>		
+				
                                     </ul>
                                 </div>
                             </dd>
@@ -1385,7 +1405,7 @@
                                         <li><a href="http://www.5211game.com/">11平台</a></li>
 										<li><a href="http://www.youtaidu.com/">钛度-Sky创业项目</a></li>
                                         <li><a href="http://gamerboom.com/">游戏邦</a></li>
-
+										<li><a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-6759004064.11.N6R2YL&id=44046335772"></a></li>
                                     </ul>
                                 </div>
                             </dd>
@@ -1417,7 +1437,7 @@
 
                 <ul>
                     <li>
-                        <strong>实用查询</strong>
+                    <strong>实用查询</strong>
                     <a href="http://alexa.chinaz.com/">Alexa</a>
                     <a href="http://ping.chinaz.com/">Ping</a>
                     <a href="http://whois.chinaz.com/">Whios</a>
@@ -1466,3 +1486,4 @@
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256765401'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256765401%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>
+
