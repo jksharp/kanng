@@ -232,17 +232,17 @@ namespace kanng.Cmd
         StartProccess newForm = null;
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form newForm1 = CheckMdiFormIsOpen("StartProccess");
-            if (newForm1 == null)
-            {
-                StartProccess from = new StartProccess();
-                from.Show();
-            }
-            else
-            {
-                newForm1.WindowState = FormWindowState.Normal;
-                newForm1.Show();
-            }
+            //Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+            //if (newForm1 == null)
+            //{
+            //    StartProccess from = new StartProccess();
+            //    from.Show();
+            //}
+            //else
+            //{
+            //    newForm1.WindowState = FormWindowState.Normal;
+            //    newForm1.Show();
+            //}
         }
 
 
@@ -270,7 +270,7 @@ namespace kanng.Cmd
             Form newForm1 = CheckMdiFormIsOpen("StartProccess");
             if (newForm1 == null)
             {
-                StartProccess from = new StartProccess();
+                StartProccess from = new StartProccess("");
                 from.Show();
             }
             else
@@ -286,7 +286,8 @@ namespace kanng.Cmd
             bool rlb = false;
             if (dr == DialogResult.Yes)
             {
-                string[] strs = KanngHelper.ReadAllLines();
+              //  string[] strs = KanngHelper.ReadAllLines();
+                string[] strs = null;
                 string errorFiles = "";
                 if (strs != null)
                 {

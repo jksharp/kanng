@@ -17,6 +17,20 @@ namespace kanng.Cmd
 {
     public partial class StartProccess : Form
     {
+        public string Title
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 加载的文件路径
+        /// </summary>
+        public string LoadPath
+        {
+            get;
+            set;
+        }
 
         public int Limetime
         {
@@ -29,10 +43,16 @@ namespace kanng.Cmd
         /// </summary>
         int pathAttr = 0;
 
-        public StartProccess()
+        public StartProccess(string path)
         {
+            LoadPath = path;
+
+            Title = "看门狗桌面助手1.4-" + path;
+
             InitializeComponent();
+
             richTextBox1.AllowDrop = true;
+
             richTextBox1.DragEnter += new DragEventHandler(richTextBox1_DragEnter);
 
             richTextBox1.DragDrop += new DragEventHandler(richTextBox1_DragDrop);
@@ -58,7 +78,7 @@ namespace kanng.Cmd
 
             richTextBox1.Text += strFileName + "\r\n";
 
-            KanngHelper.WriteFile(richTextBox1.Text);
+            KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
 
 
         }
@@ -66,7 +86,7 @@ namespace kanng.Cmd
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string[] strs = KanngHelper.ReadAllLines();
+            string[] strs = KanngHelper.SingleKanng(LoadPath).ReadAllLines();
             bool rlb = false;
             string errorFiles = "";
             if (strs != null)
@@ -121,6 +141,7 @@ namespace kanng.Cmd
 
         private void StartProccess_Load(object sender, EventArgs e)
         {
+            this.Text = Title;
             Limetime = 1000;
             // LoadUrl();  
         }
@@ -152,7 +173,7 @@ namespace kanng.Cmd
                     richTextBox1.Text += s[i] + "\r\n";
                 }
             }
-            KanngHelper.WriteFile(richTextBox1.Text);
+            KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
         }
 
 
@@ -172,11 +193,11 @@ namespace kanng.Cmd
         public void LoadUrl()
         {
 
-            Uri rulpaht = new Uri("http://www.kanng.net");
+            // Uri rulpaht = new Uri("http://www.kanng.net");
 
-            webBrowser1.Url = rulpaht;
+            //webBrowser1.Url = rulpaht;
 
-            richTextBox1.Text = KanngHelper.ReadAllText();
+            richTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
 
 
             List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
@@ -234,11 +255,8 @@ namespace kanng.Cmd
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (tabControl1.SelectedIndex == 2)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            if (tabControl1.SelectedIndex == 3)
             {
                 this.WindowState = FormWindowState.Maximized;
 
@@ -297,32 +315,44 @@ namespace kanng.Cmd
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control &e.KeyCode == Keys.S)
+            if (e.Control & e.KeyCode == Keys.S)
             {
-                KanngHelper.WriteFile(richTextBox1.Text);
+                KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
             }
         }
 
-        private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (tabControl1.SelectedIndex == 3)
-            {
-                KanngHelper.WriteHostsFile(richTextBox2.Text);
-            }
-            else
-            {
-                KanngHelper.WriteFile(richTextBox1.Text);
-            }
-            
-
-
-            
-        }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iT导航ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.kanng.net");
+        }
+
+        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 3)
+            {
+                KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+            }
+            else
+            {
+                KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+            }
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewProject newp = new NewProject();
+            newp.Show();
         }
 
     }

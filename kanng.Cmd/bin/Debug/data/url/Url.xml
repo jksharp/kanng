@@ -1,15 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <url guid="230jljlkj2lk3jl2jl3">    
-    <name>看门狗</name>
-    <url>http://www.kanng.net</url>
-    <date>2015-05-12</date>
-    <order>0</order>
+  <url guid="dfd6b68eedbd4cf3b4031c51c7656c7c">
+    <name>www.baidu.com</name>
+    <url>www.baidu.com</url>
+    <date>9:34</date>
+    <order>1</order>
   </url>
-  <url guid="230jlssjlkj2lk3jl2jl3">
-    <name>flybi</name>
-    <url>http://www.fly.cn</url>
-    <date>2015-05-12</date>
-    <order>0</order>
+  <url guid="bf13c5e8ceb449208d705c0981c140d0">
+    <name>www.csdn.net</name>
+    <url>www.csdn.net</url>
+    <date>9:34</date>
+    <order>1</order>
+  </url>
+  <url guid="a3cf6608c2414fa1acf9a55e81fd1fee">
+    <name>www.jingzhengu.com</name>
+    <url>www.jingzhengu.com</url>
+    <date>15:47</date>
+    <order>1</order>
+  </url>
+  <url guid="dfc46ec07d47438780adec8edc759990">
+    <name>http://192.168.0.13:8080/zentao/company-browse.html</name>
+    <url>http://192.168.0.13:8080/zentao/company-browse.html</url>
+    <date>13:48</date>
+    <order>1</order>
   </url>
 </root>

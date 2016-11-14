@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
 using Microsoft.VisualBasic.Devices;
+using System.IO;
 
 
 namespace kanng.Cmd
@@ -26,24 +27,47 @@ namespace kanng.Cmd
         leftmenu leftform = null;
         private void main_Activated(object sender, EventArgs e)
         {
-            newForm = new StartProccess();
-            newForm.LoadUrl();
-            
 
-            newForm.Show();
+            string localhost = Directory.GetCurrentDirectory() + "\\data\\";
+
+            string[] dirs = Directory.GetDirectories(localhost);
+
+
+            foreach (string str in dirs)
+            {
+               
+                DirectoryInfo info = new DirectoryInfo(str);
+                ToolStripMenuItem item = new ToolStripMenuItem();
+                item.Name = info.Name;
+                item.Text = info.Name;
+                if (info.Name == "url") continue;
+                item.Click += new EventHandler(ToolStripMenuItem_Click);
+                contextMenuStrip1.Items.Insert(0, item);
+            }
+
+
+            //newForm = new StartProccess(info.Name);
+            //  newForm.LoadUrl();
+
+
+            // newForm.Show();
 
             leftform = new leftmenu();
-            leftform.Show();
+            // leftform.Show();
 
             this.Hide();
         }
 
-        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string path = sender.ToString();
+
             Form newForm1 = CheckMdiFormIsOpen("StartProccess");
             if (newForm1 == null)
             {
-                StartProccess from = new StartProccess();
+                StartProccess from = new StartProccess(sender.ToString());
+                from.LoadUrl();
                 from.Show();
             }
             else
@@ -51,6 +75,24 @@ namespace kanng.Cmd
                 newForm1.WindowState = FormWindowState.Normal;
                 newForm1.Show();
             }
+
+
+        }
+
+
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+            //if (newForm1 == null)
+            //{
+            //    StartProccess from = new StartProccess();
+            //    from.Show();
+            //}
+            //else
+            //{
+            //    newForm1.WindowState = FormWindowState.Normal;
+            //    newForm1.Show();
+            //}
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,18 +116,17 @@ namespace kanng.Cmd
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Form newForm1 = CheckMdiFormIsOpen("StartProccess");
-            if (newForm1 == null)
-            {
-                StartProccess from = new StartProccess();
-                from.Show();
-            }
-            else
-            {
-                newForm1.WindowState = FormWindowState.Normal;
-                newForm1.Show();
-            }
+            //Form newForm1 = CheckMdiFormIsOpen("StartProccess");
+            //if (newForm1 == null)
+            //{
+            //    StartProccess from = new StartProccess();
+            //    from.Show();
+            //}
+            //else
+            //{
+            //    newForm1.WindowState = FormWindowState.Normal;
+            //    newForm1.Show();
+            //}
         }
     }
 }
-    

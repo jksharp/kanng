@@ -18,7 +18,7 @@ namespace kanng.Cmd
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
-            StartProccess newForm = new StartProccess();
+            StartProccess newForm = new StartProccess("");
             newForm.Show();
         }
 

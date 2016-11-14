@@ -77,6 +77,12 @@
     <Compile Include="CreatUrl.Designer.cs">
       <DependentUpon>CreatUrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper.Designer.cs">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </Compile>
     <Compile Include="jz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
       <DependentUpon>jz.cs</DependentUpon>
     </Compile>
     <Compile Include="KanngHelper.cs" />
+    <Compile Include="NewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProject.Designer.cs">
+      <DependentUpon>NewProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartProccess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,9 @@
     <EmbeddedResource Include="CreatUrl.resx">
       <DependentUpon>CreatUrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Helper.resx">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="jz.resx">
       <DependentUpon>jz.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProject.resx">
+      <DependentUpon>NewProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,7 +163,25 @@
       <DependentUpon>UrlPatte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="data\kanng.data">
+    <None Include="data\ODC系统开发\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\sys\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\东风雪铁龙\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\易鑫资本\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\获取域账号信息\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\车型库改版\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\车型库更新\data\kanng.data">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
@@ -159,15 +195,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\ODC系统开发\data\url\Url.xml" />
+    <Content Include="data\sys\data\url\Url.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\url\Url.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\东风雪铁龙\data\url\Url.xml" />
+    <Content Include="data\易鑫资本\data\url\Url.xml" />
+    <Content Include="data\获取域账号信息\data\url\Url.xml" />
+    <Content Include="data\车型库改版\data\url\Url.xml" />
+    <Content Include="data\车型库更新\data\url\Url.xml" />
     <Content Include="favicon not.ico" />
     <Content Include="favicon.ico" />
     <None Include="Resources\puppy-151306_640.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="data\ico\" />
     <Folder Include="image\" />
   </ItemGroup>
   <ItemGroup>
