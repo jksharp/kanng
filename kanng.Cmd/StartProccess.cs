@@ -334,7 +334,7 @@ namespace kanng.Cmd
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 3)
+            if (tabControl1.SelectedIndex == 2)
             {
                 KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
             }
@@ -353,6 +353,42 @@ namespace kanng.Cmd
         {
             NewProject newp = new NewProject();
             newp.Show();
+        }
+
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helper newp = new Helper();
+            newp.Show();
+        }
+
+        private void StartProccess_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                if (tabControl1.SelectedIndex == 2)
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+                }
+                else
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+                }
+            }
+        }
+
+        private void richTextBox1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                if (tabControl1.SelectedIndex == 2)
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+                }
+                else
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+                }
+            }
         }
 
     }

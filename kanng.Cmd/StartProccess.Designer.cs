@@ -257,6 +257,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(710, 296);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
+            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown_1);
             // 
             // label7
             // 
@@ -409,6 +410,7 @@
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.帮助ToolStripMenuItem.Text = "帮助";
+            this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
             // 
             // iT导航ToolStripMenuItem
             // 
@@ -432,6 +434,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "看门狗桌面启动助手";
             this.Load += new System.EventHandler(this.StartProccess_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StartProccess_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

@@ -64,17 +64,25 @@ namespace kanng.Cmd
             string path = sender.ToString();
 
             Form newForm1 = CheckMdiFormIsOpen("StartProccess");
-            if (newForm1 == null)
+            if (newForm1 != null)
+            {
+                //newForm1.WindowState = FormWindowState.Normal;
+                //newForm1.Show();
+                newForm1.Close();
+                StartProccess from = new StartProccess(sender.ToString());
+                from.LoadUrl();
+                from.Show();
+                
+
+            }
+            else
             {
                 StartProccess from = new StartProccess(sender.ToString());
                 from.LoadUrl();
                 from.Show();
+                
             }
-            else
-            {
-                newForm1.WindowState = FormWindowState.Normal;
-                newForm1.Show();
-            }
+
 
 
         }
