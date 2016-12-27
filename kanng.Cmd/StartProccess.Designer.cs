@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.syntaxTextBox1 = new Kanng.SyntaxTextBox.SyntaxTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -63,6 +64,7 @@
             this.捐助SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iT导航ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -84,7 +86,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(724, 328);
+            this.tabControl1.Size = new System.Drawing.Size(858, 379);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -102,7 +104,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(716, 302);
+            this.tabPage1.Size = new System.Drawing.Size(850, 353);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "启动程序";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +113,8 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(439, 271);
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button10.Location = new System.Drawing.Point(541, 316);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 23);
             this.button10.TabIndex = 15;
@@ -121,7 +124,8 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(340, 271);
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button9.Location = new System.Drawing.Point(442, 316);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 23);
             this.button9.TabIndex = 14;
@@ -131,7 +135,8 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(120, 271);
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.Location = new System.Drawing.Point(222, 316);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(96, 23);
             this.button8.TabIndex = 13;
@@ -141,7 +146,8 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(222, 271);
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Location = new System.Drawing.Point(324, 316);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(112, 23);
             this.button7.TabIndex = 12;
@@ -151,7 +157,8 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 271);
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Location = new System.Drawing.Point(105, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 23);
             this.button5.TabIndex = 11;
@@ -161,8 +168,9 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(633, 264);
+            this.button2.Location = new System.Drawing.Point(735, 309);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 35);
             this.button2.TabIndex = 3;
@@ -188,8 +196,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.syntaxTextBox1);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(710, 296);
+            this.splitContainer1.Size = new System.Drawing.Size(844, 347);
             this.splitContainer1.SplitterDistance = 290;
             this.splitContainer1.TabIndex = 16;
             // 
@@ -248,16 +257,34 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "5.#可以注释掉这个文件";
             // 
+            // syntaxTextBox1
+            // 
+            this.syntaxTextBox1.AcceptsTab = true;
+            this.syntaxTextBox1.CaseSensitive = false;
+            this.syntaxTextBox1.ConfigFile = "csharp.xml";
+            this.syntaxTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.syntaxTextBox1.FilterAutoComplete = true;
+            this.syntaxTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.syntaxTextBox1.MaxUndoRedoSteps = 50;
+            this.syntaxTextBox1.Name = "syntaxTextBox1";
+            this.syntaxTextBox1.Size = new System.Drawing.Size(844, 347);
+            this.syntaxTextBox1.TabIndex = 6;
+            this.syntaxTextBox1.Text = "";
+            this.syntaxTextBox1.WordWrap = false;
+            this.syntaxTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked_1);
+            this.syntaxTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
+            // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Location = new System.Drawing.Point(145, 38);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(710, 296);
+            this.richTextBox1.Size = new System.Drawing.Size(104, 76);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
-            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown_1);
+            this.richTextBox1.Visible = false;
+            this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked_1);
+            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
             // 
             // label7
             // 
@@ -273,7 +300,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(716, 302);
+            this.tabPage2.Size = new System.Drawing.Size(850, 353);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "启动网址";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -286,7 +313,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(710, 296);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 347);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button3
@@ -324,7 +351,7 @@
             this.tabPage4.Controls.Add(this.richTextBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(716, 302);
+            this.tabPage4.Size = new System.Drawing.Size(850, 353);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Hosts";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -334,9 +361,10 @@
             this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox2.Location = new System.Drawing.Point(0, 0);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(716, 302);
+            this.richTextBox2.Size = new System.Drawing.Size(850, 353);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
+            this.richTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
             // 
             // menuStrip1
             // 
@@ -345,7 +373,7 @@
             this.帮助HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(724, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(858, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -362,21 +390,21 @@
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.打开ToolStripMenuItem.Text = "新建";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -394,42 +422,45 @@
             // 关于AToolStripMenuItem
             // 
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.关于AToolStripMenuItem.Text = "关于(&A)";
             this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于看门狗ToolStripMenuItem_Click);
             // 
             // 捐助SToolStripMenuItem
             // 
             this.捐助SToolStripMenuItem.Name = "捐助SToolStripMenuItem";
-            this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.捐助SToolStripMenuItem.Text = "捐助(&J)";
             this.捐助SToolStripMenuItem.Click += new System.EventHandler(this.赞助ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.帮助ToolStripMenuItem.Text = "帮助";
             this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
             // 
             // iT导航ToolStripMenuItem
             // 
             this.iT导航ToolStripMenuItem.Name = "iT导航ToolStripMenuItem";
-            this.iT导航ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iT导航ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.iT导航ToolStripMenuItem.Text = "IT导航";
             this.iT导航ToolStripMenuItem.Click += new System.EventHandler(this.iT导航ToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // StartProccess
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 353);
+            this.ClientSize = new System.Drawing.Size(858, 404);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "StartProccess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "看门狗桌面启动助手";
@@ -490,6 +521,8 @@
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iT导航ToolStripMenuItem;
+        private Kanng.SyntaxTextBox.SyntaxTextBox syntaxTextBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         //
 
 

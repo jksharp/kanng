@@ -51,11 +51,11 @@ namespace kanng.Cmd
 
             InitializeComponent();
 
-            richTextBox1.AllowDrop = true;
+            syntaxTextBox1.AllowDrop = true;
 
-            richTextBox1.DragEnter += new DragEventHandler(richTextBox1_DragEnter);
+            syntaxTextBox1.DragEnter += new DragEventHandler(richTextBox1_DragEnter);
 
-            richTextBox1.DragDrop += new DragEventHandler(richTextBox1_DragDrop);
+            syntaxTextBox1.DragDrop += new DragEventHandler(richTextBox1_DragDrop);
         }
 
         private void richTextBox1_DragEnter(object sender, DragEventArgs e)
@@ -76,9 +76,9 @@ namespace kanng.Cmd
             string strFileName = arrarFileName.GetValue(0).ToString();
 
 
-            richTextBox1.Text += strFileName + "\r\n";
+            syntaxTextBox1.Text += strFileName + "\r\n";
 
-            KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+            KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
 
 
         }
@@ -87,6 +87,8 @@ namespace kanng.Cmd
         {
 
             string[] strs = KanngHelper.SingleKanng(LoadPath).ReadAllLines();
+
+            bool ifcontine = true;
             bool rlb = false;
             string errorFiles = "";
             if (strs != null)
@@ -95,8 +97,23 @@ namespace kanng.Cmd
                 {
                     try
                     {
+                        
                         if (!string.IsNullOrEmpty(str))
                         {
+                            if (str.Contains("/*"))
+                            {
+                                ifcontine = false;
+                                continue;
+                            }
+
+                            if (str.Contains("*/"))
+                            {
+                                ifcontine = true;
+                                continue;
+                            }
+
+                            if (!ifcontine) continue;
+
                             //跳过注释
                             if (!str.StartsWith("#"))
                             {
@@ -170,10 +187,10 @@ namespace kanng.Cmd
             {
                 for (i = 0; i < s.Length; i++)
                 {
-                    richTextBox1.Text += s[i] + "\r\n";
+                    syntaxTextBox1.Text += s[i] + "\r\n";
                 }
             }
-            KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+            KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
         }
 
 
@@ -197,7 +214,7 @@ namespace kanng.Cmd
 
             //webBrowser1.Url = rulpaht;
 
-            richTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
+            syntaxTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
 
 
             List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
@@ -308,16 +325,18 @@ namespace kanng.Cmd
             System.Diagnostics.Process.Start("calc.exe");
         }
 
-        private void richTextBox1_LinkClicked(object sender, LinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(e.LinkText);
-        }
-
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control & e.KeyCode == Keys.S)
+            if (e.Control && e.KeyCode == Keys.S)
             {
-                KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+                if (tabControl1.SelectedIndex == 2)
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+                }
+                else
+                {
+                    KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
+                }
             }
         }
 
@@ -340,7 +359,7 @@ namespace kanng.Cmd
             }
             else
             {
-                KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+                KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
             }
         }
 
@@ -371,24 +390,15 @@ namespace kanng.Cmd
                 }
                 else
                 {
-                    KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
+                    KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
                 }
             }
         }
+      
 
-        private void richTextBox1_KeyDown_1(object sender, KeyEventArgs e)
+        private void richTextBox1_LinkClicked_1(object sender, LinkClickedEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.S)
-            {
-                if (tabControl1.SelectedIndex == 2)
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
-                }
-                else
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteFile(richTextBox1.Text);
-                }
-            }
+            System.Diagnostics.Process.Start(e.LinkText);
         }
 
     }

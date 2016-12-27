@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.Model", "Kanng.Model\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.Common", "Kanng.Common\Kanng.Common.csproj", "{817AA02C-2706-4120-8A67-C9BEA6CF4B9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.SyntaxTextBox", "Kanng.SyntaxTextBox\Kanng.SyntaxTextBox.csproj", "{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{817AA02C-2706-4120-8A67-C9BEA6CF4B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817AA02C-2706-4120-8A67-C9BEA6CF4B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817AA02C-2706-4120-8A67-C9BEA6CF4B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

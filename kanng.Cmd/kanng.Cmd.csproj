@@ -45,6 +45,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -172,7 +173,13 @@
     <None Include="data\东风雪铁龙\data\kanng.data">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="data\抓取网站数据\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="data\易鑫资本\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\看门狗\data\kanng.data">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\获取域账号信息\data\kanng.data">
@@ -203,7 +210,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="data\东风雪铁龙\data\url\Url.xml" />
+    <Content Include="data\抓取网站数据\data\url\Url.xml" />
     <Content Include="data\易鑫资本\data\url\Url.xml" />
+    <Content Include="data\看门狗\data\url\Url.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\获取域账号信息\data\url\Url.xml" />
     <Content Include="data\车型库改版\data\url\Url.xml" />
     <Content Include="data\车型库更新\data\url\Url.xml" />
@@ -235,6 +246,12 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kanng.SyntaxTextBox\Kanng.SyntaxTextBox.csproj">
+      <Project>{4f6938e1-b0a7-4edd-97e8-0a5c10b4d155}</Project>
+      <Name>Kanng.SyntaxTextBox</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

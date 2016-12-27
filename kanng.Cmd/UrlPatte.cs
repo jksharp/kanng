@@ -38,7 +38,7 @@ namespace kanng.Cmd
         {
             if (e.Clicks == 2)
             {
-                System.Diagnostics.Process.Start("http://" + urlModel.url);
+                System.Diagnostics.Process.Start(urlModel.url);
             }
 
 
@@ -54,7 +54,7 @@ namespace kanng.Cmd
         {
             if (e.Clicks == 2)
             {
-                System.Diagnostics.Process.Start("http://" + urlModel.url);
+                System.Diagnostics.Process.Start( urlModel.url);
 
             }
 
