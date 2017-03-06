@@ -45,3 +45,7 @@ F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\易鑫资本\data\kanng.da
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\获取域账号信息\data\kanng.data
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\车型库改版\data\kanng.data
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\data\车型库更新\data\kanng.data
+F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Common.dll
+F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Model.dll
+F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Common.pdb
+F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Model.pdb
