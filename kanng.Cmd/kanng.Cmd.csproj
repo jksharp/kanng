@@ -248,6 +248,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Kanng.Common\Kanng.Common.csproj">
+      <Project>{817aa02c-2706-4120-8a67-c9bea6cf4b9f}</Project>
+      <Name>Kanng.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kanng.SyntaxTextBox\Kanng.SyntaxTextBox.csproj">
       <Project>{4f6938e1-b0a7-4edd-97e8-0a5c10b4d155}</Project>
       <Name>Kanng.SyntaxTextBox</Name>
