@@ -6,3 +6,4 @@ F:\code\Kanng\kanng.github\Kanng.Model\bin\Release\Kanng.Model.dll
 F:\code\Kanng\kanng.github\Kanng.Model\bin\Release\Kanng.Model.pdb
 F:\code\Kanng\kanng.github\Kanng.Model\obj\Release\Kanng.Model.dll
 F:\code\Kanng\kanng.github\Kanng.Model\obj\Release\Kanng.Model.pdb
+F:\code\Kanng\kanng.github\Kanng.Model\obj\Release\Kanng.Model.csprojResolveAssemblyReference.cache
