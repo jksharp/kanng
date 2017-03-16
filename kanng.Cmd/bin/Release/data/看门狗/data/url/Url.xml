@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <url guid="dfd6b68eedbd4cf3b4031c51c7656c7c">
+    <name>www.baidu.com</name>
+    <url>www.baidu.com</url>
+    <date>9:34</date>
+    <order>1</order>
+  </url>
+  <url guid="bf13c5e8ceb449208d705c0981c140d0">
+    <name>www.csdn.net</name>
+    <url>www.csdn.net</url>
+    <date>9:34</date>
+    <order>1</order>
+  </url>
+  <url guid="a3cf6608c2414fa1acf9a55e81fd1fee">
+    <name>www.jingzhengu.com</name>
+    <url>www.jingzhengu.com</url>
+    <date>15:47</date>
+    <order>1</order>
+  </url> 
+</root>

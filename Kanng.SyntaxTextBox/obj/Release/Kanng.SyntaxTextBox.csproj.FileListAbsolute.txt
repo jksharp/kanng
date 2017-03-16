@@ -1,0 +1,8 @@
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.AutoCompleteForm.resources
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.SyntaxTextBox.resources
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.csproj.GenerateResource.Cache
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\bin\Release\Kanng.SyntaxTextBox.dll
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\bin\Release\Kanng.SyntaxTextBox.pdb
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.dll
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.pdb
+F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.csprojResolveAssemblyReference.cache
