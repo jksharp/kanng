@@ -49,3 +49,4 @@ F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Common.dll
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Model.dll
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Common.pdb
 F:\code\Kanng\kanng.github\kanng.Cmd\bin\Release\Kanng.Model.pdb
+F:\code\Kanng\kanng.github\kanng.Cmd\obj\Release\kanng.Cmd.Form1.resources

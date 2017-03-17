@@ -78,6 +78,12 @@
     <Compile Include="CreatUrl.Designer.cs">
       <DependentUpon>CreatUrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreatUrl.resx">
       <DependentUpon>CreatUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helper.resx">
       <DependentUpon>Helper.cs</DependentUpon>
@@ -220,11 +229,12 @@
     <Content Include="data\车型库更新\data\url\Url.xml" />
     <Content Include="favicon not.ico" />
     <Content Include="favicon.ico" />
+    <Content Include="image\Closed.bmp" />
+    <Content Include="image\Start.bmp" />
+    <Content Include="image\Stop.bmp" />
     <None Include="Resources\puppy-151306_640.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="image\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>

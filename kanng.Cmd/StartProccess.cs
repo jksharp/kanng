@@ -80,81 +80,8 @@ namespace kanng.Cmd
 
             KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
 
-
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            string[] strs = KanngHelper.SingleKanng(LoadPath).ReadAllLines();
-
-            bool ifcontine = true;
-            bool rlb = false;
-            string errorFiles = "";
-            if (strs != null)
-            {
-                foreach (string str in strs)
-                {
-                    try
-                    {
-                        
-                        if (!string.IsNullOrEmpty(str))
-                        {
-                            if (str.Contains("/*"))
-                            {
-                                ifcontine = false;
-                                continue;
-                            }
-
-                            if (str.Contains("*/"))
-                            {
-                                ifcontine = true;
-                                continue;
-                            }
-
-                            if (!ifcontine) continue;
-
-                            //跳过注释
-                            if (!str.StartsWith("#"))
-                            {
-
-                                rlb |= true;
-                                Process.Start(str);
-                                Thread.Sleep(Limetime);
-
-                                //if (File.Exists(str) || Directory.Exists(str))
-                                //{
-
-                                //}
-                                ////else if (Directory.Exists(str))
-                                ////{
-                                ////    rlb |= true;
-                                ////    Process.Start("Explorer.exe", str);
-                                ////    Thread.Sleep(Limetime);
-                                ////}
-                                //else
-                                //{
-                                //    errorFiles += str + "\r\n";
-                                //}
-                            }
-                        }
-                    }
-                    catch (Exception ex)//容错处理
-                    {
-                        errorFiles += str + "\r\n";
-                    }
-                }
-            }
-
-            if (!rlb)
-            {
-                MessageBox.Show("没有需要启动的文件,您可以拖动文件到界面来添加文件!");
-            }
-            if (errorFiles.Length > 0)
-            {
-                MessageBox.Show("没有启动成功的文件:\r\n" + errorFiles);
-            }
-        }
 
         private void StartProccess_Load(object sender, EventArgs e)
         {
@@ -329,14 +256,7 @@ namespace kanng.Cmd
         {
             if (e.Control && e.KeyCode == Keys.S)
             {
-                if (tabControl1.SelectedIndex == 2)
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
-                }
-                else
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
-                }
+                Save();
             }
         }
 
@@ -353,14 +273,47 @@ namespace kanng.Cmd
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Save();
+
+
+        }
+
+
+        public void Save() {
+            new Thread(() =>
+            {
+
+                Action<string> action = (s) =>
+                {
+                    toolStripProgressBar1.Visible = true;
+                    toolStripStatusLabel1.Text = s;
+                    toolStripProgressBar1.Value = 0;
+                    while (toolStripProgressBar1.Value < 100)
+                    {
+
+                        toolStripProgressBar1.PerformStep();
+                    }
+
+                };
+                this.Invoke(action, LoadPath + "项目正在保存");
+                Thread.Sleep(1000);
+                this.Invoke(action, LoadPath + "项目保存完成");
+
+            }).Start();
+
+
             if (tabControl1.SelectedIndex == 2)
             {
+
                 KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+
+
             }
             else
             {
                 KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
             }
+
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -394,11 +347,101 @@ namespace kanng.Cmd
                 }
             }
         }
-      
+
 
         private void richTextBox1_LinkClicked_1(object sender, LinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(e.LinkText);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            StartFiles();
+        }
+
+
+        public void StartFiles()
+        {
+
+
+            string[] strs = KanngHelper.SingleKanng(LoadPath).ReadAllLines();
+
+            bool ifcontine = true;
+            bool rlb = false;
+            string errorFiles = "";
+            if (strs != null)
+            {
+                foreach (string str in strs)
+                {
+
+
+                    try
+                    {
+
+                        if (!string.IsNullOrEmpty(str))
+                        {
+                            if (str.Contains("/*"))
+                            {
+                                ifcontine = false;
+                                continue;
+                            }
+
+                            if (str.Contains("*/"))
+                            {
+                                ifcontine = true;
+                                continue;
+                            }
+
+                            if (!ifcontine) continue;
+
+                            //跳过注释
+                            if (!str.StartsWith("#"))
+                            {
+
+                                rlb |= true;
+                                Process pro =   Process.Start(str);
+                               
+                                Thread.Sleep(Limetime);
+
+                                //if (File.Exists(str) || Directory.Exists(str))
+                                //{
+
+                                //}
+                                ////else if (Directory.Exists(str))
+                                ////{
+                                ////    rlb |= true;
+                                ////    Process.Start("Explorer.exe", str);
+                                ////    Thread.Sleep(Limetime);
+                                ////}
+                                //else
+                                //{
+                                //    errorFiles += str + "\r\n";
+                                //}
+                            }
+                        }
+                    }
+                    catch (Exception ex)//容错处理
+                    {
+                        errorFiles += str + "\r\n";
+                    }
+                }
+            }
+
+            if (!rlb)
+            {
+                MessageBox.Show("没有需要启动的文件,您可以拖动文件到界面来添加文件!");
+            }
+            if (errorFiles.Length > 0)
+            {
+                MessageBox.Show("没有启动成功的文件:\r\n" + errorFiles);
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            //关闭现有进程
+
+
         }
 
     }
