@@ -5,3 +5,11 @@ F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\bin\Debug\Kanng.SyntaxTextBox.dll
 F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\bin\Debug\Kanng.SyntaxTextBox.pdb
 F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.dll
 F:\code\Kanng\kanng.github\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\bin\Debug\Kanng.SyntaxTextBox.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\bin\Debug\Kanng.SyntaxTextBox.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.AutoCompleteForm.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.SyntaxTextBox.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.csproj.GenerateResource.Cache
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Debug\Kanng.SyntaxTextBox.csprojResolveAssemblyReference.cache

@@ -19,14 +19,17 @@ namespace kanng.Cmd
         private void button1_Click(object sender, EventArgs e)
         {
             string guid = Guid.NewGuid().ToString().Replace("-", "");
-
+            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "")
+            {
+                return;
+            }
             bool rlb = UrlXmlIO.Create(textBox1.Text, guid);
             if (rlb) MessageBox.Show("添加成功!");
 
             StartProccess startFrom = (StartProccess)CheckMdiFormIsOpen("StartProccess");
             UrlModel model = new UrlModel();
             model.guid = guid;
-            model.name = textBox1.Text;
+            model.name = textBox2.Text;
             model.url = textBox1.Text;
             startFrom.addControl(model);
             this.Close();
@@ -46,6 +49,16 @@ namespace kanng.Cmd
                 }
             }
             return form;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Url = new Uri( textBox1.Text);
+        }
+
+        private void CreatUrl_Load(object sender, EventArgs e)
+        {
+            webBrowser1.ScriptErrorsSuppressed = false;
         }
     }
 }

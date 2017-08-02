@@ -5,3 +5,10 @@ F:\Kanng\kanng.github\Kanng.Common\obj\Debug\Kanng.Common.pdb
 F:\Kanng\kanng.github\Kanng.Common\bin\Debug\Kanng.Model.dll
 F:\Kanng\kanng.github\Kanng.Common\bin\Debug\Kanng.Model.pdb
 F:\Kanng\kanng.github\Kanng.Common\obj\Debug\Kanng.Common.csprojResolveAssemblyReference.cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Debug\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Debug\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Debug\Kanng.Model.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Debug\Kanng.Model.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Debug\Kanng.Common.csprojResolveAssemblyReference.cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Debug\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Debug\Kanng.Common.pdb

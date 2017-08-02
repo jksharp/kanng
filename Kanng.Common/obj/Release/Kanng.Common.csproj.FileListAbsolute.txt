@@ -12,3 +12,10 @@ F:\code\Kanng\kanng.github\Kanng.Common\bin\Release\Kanng.Model.pdb
 F:\code\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.csprojResolveAssemblyReference.cache
 F:\code\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.dll
 F:\code\Kanng\kanng.github\Kanng.Common\obj\Release\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Release\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Release\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Release\Kanng.Model.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\bin\Release\Kanng.Model.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Release\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Release\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Common\obj\Release\Kanng.Common.csprojResolveAssemblyReference.cache

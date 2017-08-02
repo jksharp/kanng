@@ -221,8 +221,10 @@ namespace kanng.Cmd
             {
                 foreach (UrlModel model in urlModel)
                 {
-                    System.Diagnostics.Process.Start(model.url);
-
+                    if (model.url.ToLower().StartsWith("https") || model.url.ToLower().StartsWith("http"))
+                        System.Diagnostics.Process.Start(model.url);
+                    else
+                        System.Diagnostics.Process.Start("http://" + model.url);
                 }
             }
         }
@@ -279,7 +281,8 @@ namespace kanng.Cmd
         }
 
 
-        public void Save() {
+        public void Save()
+        {
             new Thread(() =>
             {
 
@@ -305,7 +308,13 @@ namespace kanng.Cmd
             if (tabControl1.SelectedIndex == 2)
             {
 
-                KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+                if (tabControl2.SelectedIndex == 1)
+
+                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
+
+                else if (tabControl2.SelectedIndex == 2)
+
+                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox1.Text);
 
 
             }
@@ -337,14 +346,7 @@ namespace kanng.Cmd
         {
             if (e.Control && e.KeyCode == Keys.S)
             {
-                if (tabControl1.SelectedIndex == 2)
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox2.Text);
-                }
-                else
-                {
-                    KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
-                }
+                Save();
             }
         }
 
@@ -399,8 +401,8 @@ namespace kanng.Cmd
                             {
 
                                 rlb |= true;
-                                Process pro =   Process.Start(str);
-                               
+                                Process pro = Process.Start(str);
+
                                 Thread.Sleep(Limetime);
 
                                 //if (File.Exists(str) || Directory.Exists(str))
@@ -444,6 +446,61 @@ namespace kanng.Cmd
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("mstsc.exe");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("inetmgr");
+        }
+
+        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl2.SelectedIndex == 2)
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+                richTextBox2.Text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+                richTextBox1.Text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            Save();
+
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                Save();
+            }
+        }
     }
 
 

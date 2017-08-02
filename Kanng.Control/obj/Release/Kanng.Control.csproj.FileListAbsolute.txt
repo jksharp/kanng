@@ -9,3 +9,14 @@ F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.UrlPatte.resources
 F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.csproj.GenerateResource.Cache
 F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.dll
 F:\Kanng\kanng.github\Kanng.Control\obj\Release\Kanng.Control.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Control.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Control.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Model.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Release\Kanng.Model.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Release\Kanng.Control.csprojResolveAssemblyReference.cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Release\Kanng.Control.UrlPatte.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Release\Kanng.Control.csproj.GenerateResource.Cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Release\Kanng.Control.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Release\Kanng.Control.pdb

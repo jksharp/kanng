@@ -9,3 +9,14 @@ F:\Kanng\kanng.github\Kanng.Control\obj\Debug\Kanng.Control.dll
 F:\Kanng\kanng.github\Kanng.Control\obj\Debug\Kanng.Control.pdb
 F:\Kanng\kanng.github\Kanng.Control\bin\Debug\Kanng.Common.dll
 F:\Kanng\kanng.github\Kanng.Control\bin\Debug\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Control.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Control.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Common.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Model.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Common.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\bin\Debug\Kanng.Model.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Debug\Kanng.Control.csprojResolveAssemblyReference.cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Debug\Kanng.Control.UrlPatte.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Debug\Kanng.Control.csproj.GenerateResource.Cache
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Debug\Kanng.Control.dll
+E:\code\Kanng\kanng.github\kanng\Kanng.Control\obj\Debug\Kanng.Control.pdb
