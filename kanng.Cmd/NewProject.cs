@@ -13,6 +13,17 @@ namespace kanng.Cmd
 {
     public partial class NewProject : Form
     {
+
+        public int ProjectId = 1;
+
+        /// <summary>
+        /// 1表示新建2表示重命名
+        /// </summary>
+        public int FormMode = 1;
+
+
+
+
         public NewProject()
         {
             InitializeComponent();
@@ -20,11 +31,24 @@ namespace kanng.Cmd
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string path = Environment.CurrentDirectory;
-            
-            DirectoryIO.CopyFolder(path + "\\data\\sys\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
+            if (FormMode == 1)
+            {
+                string path = Environment.CurrentDirectory;
 
-            MessageBox.Show(textBox1.Text.Trim()+"创建成功，请重新打开看门狗桌面启动助手！");
+                DirectoryIO.CopyFolder(path + "\\data\\sys\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
+
+                MessageBox.Show(textBox1.Text.Trim() + "创建成功，请重新打开看门狗桌面启动助手！");
+            }
+            else if (FormMode == 2)
+            {
+                textBox1.Text = "当前项目";
+
+                string path = Environment.CurrentDirectory;
+
+                DirectoryIO.CopyFolder(path + "\\data\\sys\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
+
+                MessageBox.Show(textBox1.Text.Trim() + "修改成功，请重新打开看门狗桌面启动助手！");
+            }
         }
     }
 }

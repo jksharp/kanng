@@ -16,20 +16,19 @@ namespace kanng.Cmd
         {
             xmlFileName = System.AppDomain.CurrentDomain.BaseDirectory + "\\" + xmlFileName;
         }
-
-
-
-
-        public static bool Create(string url,string guid)
+        
+        public static bool Create(string name,string url,string guid, string username, string pwd)
         {
 
             string xpath = "/root";  //这是新节点的父节点路径
             string Name = "url";
             string idname = "guid";
             StringBuilder sb = new StringBuilder();
-            sb.Append("<name>"+url+"</name>");
+            sb.Append("<name>"+ name+ "</name>");
             sb.Append("<url>"+url+"</url>");
-            sb.Append("<date>"+DateTime.Now.ToShortTimeString()+"</date>");
+            sb.Append("<username>" + username + "</username>");
+            sb.Append("<pwd>" + pwd + "</pwd>");
+            sb.Append("<date>"+DateTime.Now.ToString()+"</date>");
             sb.Append("<order>1</order>");
 
             bool isSuccess = XMLHelper.CreateXmlNodeByXPath(xmlFileName, xpath, Name, sb.ToString(), idname,guid);
@@ -47,6 +46,24 @@ namespace kanng.Cmd
             return isSuccess;
         }
 
+        public static bool UpdateNode(string name, string url, string guid,string username,string pwd)
+        {     
+            string xpath = "/root/url[@guid='" + guid + "']"; //要删除的id为1的book子节点
+            string Name = "url";
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<name>" + name + "</name>");
+            sb.Append("<url>" + url + "</url>");
+            sb.Append("<username>" + username + "</username>");
+            sb.Append("<pwd>" + pwd + "</pwd>");
+            sb.Append("<date>" + DateTime.Now.ToString() + "</date>");
+            sb.Append("<order>1</order>");
+
+
+            bool isSuccess = XMLHelper.CreateOrUpdateXmlNodeByXPath2(xmlFileName, xpath, Name, sb.ToString());
+            return isSuccess;
+        }
+
+
         public static List<UrlModel> ReadAllUrl()
         {
           
@@ -60,9 +77,31 @@ namespace kanng.Cmd
             foreach (XmlNode node in nodeList)
             {
                 UrlModel model = new UrlModel();
+                XmlElement element = (XmlElement)node;
                 model.guid = node.Attributes[0].Value;
-                model.name = node.ChildNodes[0].InnerText;
-                model.url = node.ChildNodes[1].InnerText;
+                
+                foreach (XmlNode node2 in node.ChildNodes)
+                {
+                    if (node2.Name == "name")
+                    {
+                        model.name = element.GetElementsByTagName("name").Item(0).InnerText;
+                    }
+                    else if (node2.Name == "url")
+                    {
+                        model.url = element.GetElementsByTagName("url").Item(0).InnerText;
+                    }
+                    else if (node2.Name == "username")
+                    {
+                        model.name = element.GetElementsByTagName("username").Item(0).InnerText;
+                    }
+                    else if (node2.Name == "password")
+                    {
+                        model.name = element.GetElementsByTagName("password").Item(0).InnerText;
+                    }
+
+                }
+             
+                
                 list.Add(model);
             }
 

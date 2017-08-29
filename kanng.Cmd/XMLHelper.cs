@@ -222,6 +222,42 @@ namespace kanng.Cmd
             return isSuccess;
         }
 
+
+        /// <summary>
+        /// 依据匹配XPath表达式的第一个节点来创建或更新它的子节点(如果节点存在则更新,不存在则创建)
+        /// </summary>
+        /// <param name="xmlFileName">XML文档完全文件名(包含物理路径)</param>
+        /// <param name="xpath">要匹配的XPath表达式(例如:"//节点名//子节点名</param>
+        /// <param name="xmlNodeName">要匹配xmlNodeName的节点名称</param>
+        /// <param name="innerText">节点文本值</param>
+        /// <returns>成功返回true,失败返回false</returns>
+        public static bool CreateOrUpdateXmlNodeByXPath2(string xmlFileName, string xpath, string xmlNodeName, string innerText)
+        {
+            bool isSuccess = false;
+           
+            XmlDocument xmlDoc = new XmlDocument();
+            try
+            {
+                xmlDoc.Load(xmlFileName); //加载XML文档
+                XmlNode xmlNode = xmlDoc.SelectSingleNode(xpath);
+                if (xmlNode != null)
+                {
+                    //存在此节点则更新
+                    xmlNode.InnerXml = innerText;
+                 
+                }
+                xmlDoc.Save(xmlFileName); //保存到XML文档
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex; //这里可以定义你自己的异常处理
+            }
+            return isSuccess;
+        }
+
+
+
         /// <summary>
         /// 依据匹配XPath表达式的第一个节点来创建或更新它的属性(如果属性存在则更新,不存在则创建)
         /// </summary>

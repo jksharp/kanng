@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <url guid="dfd6b68eedbd4cf3b4031c51c7656c7c">
-    <name>www.baidu.com</name>
-    <url>www.baidu.com</url>
-    <date>9:34</date>
+    <name>百度收索</name>
+    <url>https://www.baidu.com</url>
+    <date>16:11</date>
     <order>1</order>
   </url>
   <url guid="bf13c5e8ceb449208d705c0981c140d0">
-    <name>www.csdn.net</name>
-    <url>www.csdn.net</url>
-    <date>9:34</date>
+    <name>CSDN</name>
+    <url>http://www.csdn.net</url>
+    <username>jksharp</username>
+    <pwd>123456</pwd>
+    <date>2017/8/29 17:59:28</date>
     <order>1</order>
   </url>
   <url guid="a3cf6608c2414fa1acf9a55e81fd1fee">

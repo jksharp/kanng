@@ -11,4 +11,3 @@ E:\code\Kanng\kanng.github\kanng\Kanng.Model\bin\Release\Kanng.Model.dll
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\bin\Release\Kanng.Model.pdb
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Release\Kanng.Model.dll
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Release\Kanng.Model.pdb
-E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Release\Kanng.Model.csprojResolveAssemblyReference.cache

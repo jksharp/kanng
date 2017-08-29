@@ -74,8 +74,7 @@ namespace kanng.Cmd
         {
             Array arrarFileName = (Array)e.Data.GetData(DataFormats.FileDrop);
             string strFileName = arrarFileName.GetValue(0).ToString();
-
-
+            
             syntaxTextBox1.Text += strFileName + "\r\n";
 
             KanngHelper.SingleKanng(LoadPath).WriteFile(syntaxTextBox1.Text);
@@ -100,7 +99,7 @@ namespace kanng.Cmd
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                e.Effect = DragDropEffects.All;
+                e.Effect = DragDropEffects.Link;
             }
             else
                 e.Effect = DragDropEffects.None;
@@ -136,28 +135,27 @@ namespace kanng.Cmd
 
         public void LoadUrl()
         {
-
             // Uri rulpaht = new Uri("http://www.kanng.net");
 
             //webBrowser1.Url = rulpaht;
 
             syntaxTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
 
-
             List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
+
             if (urlModel != null)
             {
                 foreach (UrlModel model in urlModel)
                 {
                     this.urlPatte1 = new UrlPatte();
 
-                    urlPatte1.SetModel(model.guid, model.url, model.name);
+                    urlPatte1.SetModel(model.guid, model.url, model.name,model.username,model.password);
                     // 
                     // urlPatte1
                     // 
                     this.urlPatte1.Cursor = System.Windows.Forms.Cursors.Hand;
                     this.urlPatte1.Location = new System.Drawing.Point(3, 3);
-                    this.urlPatte1.Name = "urlPatte1";
+                    this.urlPatte1.Name = model.guid;
                     this.urlPatte1.Size = new System.Drawing.Size(87, 51);
                     this.urlPatte1.TabIndex = 3;
 
@@ -184,18 +182,42 @@ namespace kanng.Cmd
             //this.Refresh();
             this.urlPatte1 = new UrlPatte();
 
-            urlPatte1.SetModel(model.guid, model.url, model.name);
+            urlPatte1.SetModel(model.guid, model.url, model.name, model.username, model.password);
             // 
             // urlPatte1
             // 
             this.urlPatte1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.urlPatte1.Location = new System.Drawing.Point(3, 3);
-            this.urlPatte1.Name = "urlPatte1";
+            this.urlPatte1.Name = model.guid;
             this.urlPatte1.Size = new System.Drawing.Size(87, 51);
             this.urlPatte1.TabIndex = 3;
             this.flowLayoutPanel1.Controls.Add(this.urlPatte1);
 
         }
+
+        public void updateControl(UrlModel model)
+        {
+            //this.Refresh();
+            this.urlPatte1 = (UrlPatte)this.flowLayoutPanel1.Controls.Find(model.guid, false)[0];
+
+            urlPatte1.SetModel(model.guid, model.url, model.name, model.username, model.password);
+            // 
+            // urlPatte1
+            // 
+            this.urlPatte1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.urlPatte1.Location = new System.Drawing.Point(3, 3);
+            this.urlPatte1.Name = model.guid;
+            this.urlPatte1.Size = new System.Drawing.Size(87, 51);
+            this.urlPatte1.TabIndex = 3;
+            urlPatte1.label1.Text = model.name;
+            this.urlPatte1.Refresh();
+
+
+
+
+        }
+
+
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -500,6 +522,13 @@ namespace kanng.Cmd
             {
                 Save();
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NewProject newp = new NewProject();
+            newp.FormMode = 2;//新建
+            newp.Show();
         }
     }
 

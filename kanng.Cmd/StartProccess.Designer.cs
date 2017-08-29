@@ -63,6 +63,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,6 +104,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.AllowDrop = true;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -113,6 +115,8 @@
             this.tabControl1.Size = new System.Drawing.Size(858, 332);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
+            this.tabControl1.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
             // 
             // tabPage1
             // 
@@ -131,6 +135,7 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.AllowDrop = true;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(3, 3);
             this.splitContainer1.Name = "splitContainer1";
@@ -148,7 +153,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.AllowDrop = true;
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
+            this.splitContainer1.Panel2.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(844, 300);
             this.splitContainer1.SplitterDistance = 136;
@@ -211,6 +219,7 @@
             // 
             // splitContainer2
             // 
+            this.splitContainer2.AllowDrop = true;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
@@ -219,10 +228,14 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.AllowDrop = true;
             this.splitContainer2.Panel1.Controls.Add(this.syntaxTextBox1);
+            this.splitContainer2.Panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
+            this.splitContainer2.Panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.AllowDrop = true;
             this.splitContainer2.Panel2.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.splitContainer2.Panel2.Controls.Add(this.button1);
             this.splitContainer2.Panel2.Controls.Add(this.button10);
@@ -233,6 +246,8 @@
             this.splitContainer2.Size = new System.Drawing.Size(844, 300);
             this.splitContainer2.SplitterDistance = 250;
             this.splitContainer2.TabIndex = 17;
+            this.splitContainer2.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
+            this.splitContainer2.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
             // 
             // syntaxTextBox1
             // 
@@ -240,6 +255,7 @@
             this.syntaxTextBox1.CaseSensitive = false;
             this.syntaxTextBox1.ConfigFile = "csharp.xml";
             this.syntaxTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.syntaxTextBox1.EnableAutoDragDrop = true;
             this.syntaxTextBox1.FilterAutoComplete = true;
             this.syntaxTextBox1.Location = new System.Drawing.Point(0, 0);
             this.syntaxTextBox1.MaxUndoRedoSteps = 50;
@@ -472,6 +488,7 @@
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.打开ToolStripMenuItem,
             this.保存ToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.退出ToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(58, 21);
@@ -480,21 +497,28 @@
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.打开ToolStripMenuItem.Text = "新建";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.toolStripMenuItem1.Text = "重命名(&R)";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -640,6 +664,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "看门狗桌面启动助手";
             this.Load += new System.EventHandler(this.StartProccess_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StartProccess_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -724,6 +750,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         //
 
 

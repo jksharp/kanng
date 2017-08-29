@@ -36,6 +36,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_UserName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_Pwd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -43,15 +47,15 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(91, 11);
+            this.textBox1.Location = new System.Drawing.Point(197, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 21);
+            this.textBox1.Size = new System.Drawing.Size(447, 21);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(569, 284);
+            this.button1.Location = new System.Drawing.Point(655, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -65,11 +69,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(179, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "地址：";
+            this.label1.Text = "地址(需要加上http或者https)：";
             // 
             // webBrowser1
             // 
@@ -79,13 +83,13 @@
             this.webBrowser1.Location = new System.Drawing.Point(14, 50);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(669, 211);
+            this.webBrowser1.Size = new System.Drawing.Size(716, 211);
             this.webBrowser1.TabIndex = 3;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(527, 12);
+            this.button2.Location = new System.Drawing.Point(655, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -96,27 +100,67 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(365, 284);
-            this.textBox2.MaxLength = 4;
+            this.textBox2.Location = new System.Drawing.Point(68, 281);
+            this.textBox2.MaxLength = 7;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 21);
+            this.textBox2.Size = new System.Drawing.Size(155, 21);
             this.textBox2.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 293);
+            this.label2.Location = new System.Drawing.Point(21, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 6;
             this.label2.Text = "名称：";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(246, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "用户名：";
+            // 
+            // txt_UserName
+            // 
+            this.txt_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_UserName.Location = new System.Drawing.Point(305, 281);
+            this.txt_UserName.Name = "txt_UserName";
+            this.txt_UserName.Size = new System.Drawing.Size(122, 21);
+            this.txt_UserName.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(449, 284);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "密码：";
+            // 
+            // txt_Pwd
+            // 
+            this.txt_Pwd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Pwd.Location = new System.Drawing.Point(513, 281);
+            this.txt_Pwd.Name = "txt_Pwd";
+            this.txt_Pwd.Size = new System.Drawing.Size(100, 21);
+            this.txt_Pwd.TabIndex = 10;
             // 
             // CreatUrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 319);
+            this.Controls.Add(this.txt_Pwd);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_UserName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
@@ -143,5 +187,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_UserName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_Pwd;
     }
 }

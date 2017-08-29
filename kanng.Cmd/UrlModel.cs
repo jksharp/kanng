@@ -12,5 +12,13 @@ namespace kanng.Cmd
         public string url { get; set; }
 
         public string name { get; set; }
+
+        public string username { get; set; }
+
+        public string password { get; set; }
+
+        public DateTime date { get; set; }
+
+        public int order { get; set; }
     }
 }
