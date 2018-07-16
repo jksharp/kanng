@@ -104,7 +104,11 @@ namespace kanng.Cmd
                 catch { };
             }
 
-            webBrowser1.ScriptErrorsSuppressed = false;
+            webBrowser1.ScriptErrorsSuppressed = true; //禁用错误脚本提示
+            webBrowser1.IsWebBrowserContextMenuEnabled = false; //禁用右键菜单
+            webBrowser1.WebBrowserShortcutsEnabled = false; //禁用快捷键
+            webBrowser1.AllowWebBrowserDrop = false;//禁止拖拽
+            webBrowser1.ScrollBarsEnabled = false;//禁止滚动条
         }
     }
 }

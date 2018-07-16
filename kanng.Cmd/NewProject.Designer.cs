@@ -69,6 +69,7 @@
             this.Controls.Add(this.button1);
             this.Name = "NewProject";
             this.Text = "NewProject";
+            this.Load += new System.EventHandler(this.NewProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

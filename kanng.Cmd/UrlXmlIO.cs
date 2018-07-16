@@ -92,11 +92,11 @@ namespace kanng.Cmd
                     }
                     else if (node2.Name == "username")
                     {
-                        model.name = element.GetElementsByTagName("username").Item(0).InnerText;
+                        model.username = element.GetElementsByTagName("username").Item(0).InnerText;
                     }
                     else if (node2.Name == "password")
                     {
-                        model.name = element.GetElementsByTagName("password").Item(0).InnerText;
+                        model.password = element.GetElementsByTagName("password").Item(0).InnerText;
                     }
 
                 }

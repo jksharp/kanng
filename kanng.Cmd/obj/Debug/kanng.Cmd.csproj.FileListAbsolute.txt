@@ -61,10 +61,8 @@ E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\kanng.Cmd.exe
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\kanng.Cmd.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.Common.dll
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.SyntaxTextBox.dll
-E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.Model.dll
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.Common.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.SyntaxTextBox.pdb
-E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\Kanng.Model.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.csprojResolveAssemblyReference.cache
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.about.resources
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.CreatUrl.resources
@@ -78,3 +76,4 @@ E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.Properties.Resour
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.StartProccess.resources
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.UrlPatte.resources
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.csproj.GenerateResource.Cache
+E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.SecondSrceen.resources

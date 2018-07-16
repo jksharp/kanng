@@ -22,7 +22,12 @@ namespace kanng.Cmd
         public int FormMode = 1;
 
 
-
+        public string ProjectName
+        {
+            get;
+            set;
+        }
+        
 
         public NewProject()
         {
@@ -40,15 +45,24 @@ namespace kanng.Cmd
                 MessageBox.Show(textBox1.Text.Trim() + "创建成功，请重新打开看门狗桌面启动助手！");
             }
             else if (FormMode == 2)
-            {
-                textBox1.Text = "当前项目";
+            {               
 
                 string path = Environment.CurrentDirectory;
 
-                DirectoryIO.CopyFolder(path + "\\data\\sys\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
+                Directory.Move(path + "\\data\\" + ProjectName + "\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
 
                 MessageBox.Show(textBox1.Text.Trim() + "修改成功，请重新打开看门狗桌面启动助手！");
             }
+        }
+
+        private void NewProject_Load(object sender, EventArgs e)
+        {
+            if (FormMode == 2)
+            {
+                textBox1.Text = ProjectName;
+                button1.Text = "修改";
+            }
+            else button1.Text = "添加";
         }
     }
 }

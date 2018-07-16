@@ -112,6 +112,12 @@
     <Compile Include="NewProject.Designer.cs">
       <DependentUpon>NewProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="SecondSrceen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondSrceen.Designer.cs">
+      <DependentUpon>SecondSrceen.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartProccess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SecondSrceen.resx">
+      <DependentUpon>SecondSrceen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartProccess.resx">
       <DependentUpon>StartProccess.cs</DependentUpon>
     </EmbeddedResource>

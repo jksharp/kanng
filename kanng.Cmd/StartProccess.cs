@@ -86,8 +86,10 @@ namespace kanng.Cmd
         {
             this.Text = Title;
             Limetime = 1000;
-            // LoadUrl();  
-        }
+
+
+			// LoadUrl();  
+		}
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -526,11 +528,83 @@ namespace kanng.Cmd
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+           string projectname=  LoadPath;
             NewProject newp = new NewProject();
             newp.FormMode = 2;//新建
+            newp.ProjectName = projectname;
             newp.Show();
         }
-    }
+
+        private void 运行ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+		private void toolStripSplitButton1_ButtonClick_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			toolStripStatusLabel3.Text = DateTime.Now.ToString();
+		}
+
+		private void timer2_Tick(object sender, EventArgs e)
+		{
+	
+			new Thread(() =>
+			{
+
+				Action<string> action = (s) =>
+				{
+					do
+					{
+						if (DateTime.Now.Hour > 9)
+						{
+							TimeSpan endtime = DateTime.Now - new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 9, 0, 0);
+							double value = 9;
+							double usertime = endtime.TotalSeconds * 1.0 / 60 / 60;
+							int int_p = Convert.ToInt32(usertime * 100 / 9);
+
+							toolStripProgressBar2.Value = int_p>0 && int_p < 100 ? int_p : 100;
+
+							if (toolStripProgressBar2.Value > 20 && toolStripProgressBar2.Value < 50)
+							{
+								toolStripProgressBar2.BackColor = Color.Blue;
+							}
+							else if (toolStripProgressBar2.Value > 50)
+							{
+								toolStripProgressBar2.BackColor = Color.Orange;
+							}
+						}
+
+					}
+					while (1!=1);
+
+				};
+				this.Invoke(action,  "项目正在保存");
+				Thread.Sleep(1000);
+				
+
+			}).Start();
+
+		//	timer2.Stop();
+		
+			//Thread.Sleep(1000);
+			//toolStripProgressBar2.Value = 0;
+		}
+
+		private void timer3_Tick(object sender, EventArgs e)
+		{
+			//toolStripProgressBar2.Value = 0;
+		}
+
+		private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+
+		}
+	}
 
 
 

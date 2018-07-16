@@ -13,4 +13,3 @@ E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTex
 E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.csproj.GenerateResource.Cache
 E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.dll
 E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.pdb
-E:\code\Kanng\kanng.github\kanng\Kanng.SyntaxTextBox\obj\Release\Kanng.SyntaxTextBox.csprojResolveAssemblyReference.cache

@@ -23,5 +23,14 @@ namespace Kanng.Common
             File.Copy(file, to + Path.GetFileName(file), true);
            
         }
+
+
+        public static void UpdateFolderName(string from, string to)
+        {
+            if (!Directory.Exists(from))
+            {
+                Directory.Move(from, to);
+            }         
+        }
     }
 }

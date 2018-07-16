@@ -69,10 +69,8 @@ E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\kanng.Cmd.exe
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\kanng.Cmd.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.Common.dll
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.SyntaxTextBox.dll
-E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.Model.dll
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.Common.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.SyntaxTextBox.pdb
-E:\code\Kanng\kanng.github\kanng\kanng.Cmd\bin\Release\Kanng.Model.pdb
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Release\kanng.Cmd.csprojResolveAssemblyReference.cache
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Release\kanng.Cmd.about.resources
 E:\code\Kanng\kanng.github\kanng\kanng.Cmd\obj\Release\kanng.Cmd.CreatUrl.resources

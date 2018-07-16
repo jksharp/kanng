@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kanng.Web", "http://localhost:8647", "{0914B69D-F428-4E97-B771-A051092EC152}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.Common", "Kanng.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.SyntaxTextBox", "Kanng.SyntaxTextBox\Kanng.SyntaxTextBox.csproj", "{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.DeadMoney", "Kanng.DeadMoney\Kanng.DeadMoney.csproj", "{DE1791DA-66C7-49EA-8562-39F10F4185EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1791DA-66C7-49EA-8562-39F10F4185EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1791DA-66C7-49EA-8562-39F10F4185EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1791DA-66C7-49EA-8562-39F10F4185EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1791DA-66C7-49EA-8562-39F10F4185EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

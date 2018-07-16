@@ -1,27 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <url guid="dfd6b68eedbd4cf3b4031c51c7656c7c">
-    <name>www.baidu.com</name>
+    <name>百度</name>
     <url>www.baidu.com</url>
     <date>9:34</date>
     <order>1</order>
   </url>
   <url guid="bf13c5e8ceb449208d705c0981c140d0">
-    <name>www.csdn.net</name>
+    <name>CSDN</name>
     <url>www.csdn.net</url>
     <date>9:34</date>
     <order>1</order>
   </url>
-  <url guid="a3cf6608c2414fa1acf9a55e81fd1fee">
-    <name>www.jingzhengu.com</name>
-    <url>www.jingzhengu.com</url>
-    <date>15:47</date>
+  <url guid="4a6fbb1eed1745e698e77dcbaa5502a8">
+    <name>北京教育考试院</name>
+    <url>http://www.bjeea.cn/</url>
+    <username>
+    </username>
+    <pwd>
+    </pwd>
+    <date>2017/8/29 18:12:37</date>
     <order>1</order>
   </url>
-  <url guid="dfc46ec07d47438780adec8edc759990">
-    <name>http://192.168.0.13:8080/zentao/company-browse.html</name>
-    <url>http://192.168.0.13:8080/zentao/company-browse.html</url>
-    <date>13:48</date>
+  <url guid="abd8e93bacbe49c08468b8c1f775f9db">
+    <name>易鑫车贷</name>
+    <url>www.daikuan.com</url>
+    <date>14:20</date>
+    <order>1</order>
+  </url>
+  <url guid="88f85119b187420cbf431fa33f672c8f">
+    <name>易鑫OA</name>
+    <url>oa.daikuan.com</url>
+    <date>14:20</date>
+    <order>1</order>
+  </url>
+  <url guid="06c460c6fa6e442ab66367a52a412702">
+    <name>易鑫OP</name>
+    <url>op.daikuan.com</url>
+    <date>14:20</date>
+    <order>1</order>
+  </url>
+  <url guid="ed45473e58924207ac970e490b7993ca">
+    <name>堡垒机</name>
+    <url>https://10.0.6.4/</url>
+    <date>15:43</date>
+    <order>1</order>
+  </url>
+  <url guid="c9b40d1f44884f93ad53c37afaa128f2">
+    <name>http://172.31.11.1:8080/default.html</name>
+    <url>http://172.31.11.1:8080/default.html</url>
+    <date>10:43</date>
+    <order>1</order>
+  </url>
+  <url guid="b7c0522dbc7f444bba68c287c475f00a">
+    <name>自动发布</name>
+    <url>http://fb.yixin.dk:2001/</url>
+    <date>19:36</date>
+    <order>1</order>
+  </url>
+  <url guid="ead7a6d7f20b4a48bfa774c8a6e88f80">
+    <name>数据库维护</name>
+    <url>http://intra.taoche.com:85/</url>
+    <date>17:27</date>
+    <order>1</order>
+  </url>
+  <url guid="dd61bbdbfc9e46d3a28b58722e6c2567">
+    <name>易鑫工单</name>
+    <url>http://itoms.yxqiche.com</url>
+    <date>17:02</date>
+    <order>1</order>
+  </url>
+  <url guid="a94e9490e7dd4823a005107a79f4a14c">
+    <name>http://autotracking.autodmp.com/app/#/report/projectlist/?aid=0</name>
+    <url>http://autotracking.autodmp.com/app/#/report/projectlist/?aid=0</url>
+    <date>10:30</date>
     <order>1</order>
   </url>
 </root>
