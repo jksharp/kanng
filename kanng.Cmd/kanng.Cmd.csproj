@@ -112,12 +112,6 @@
     <Compile Include="NewProject.Designer.cs">
       <DependentUpon>NewProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecondSrceen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SecondSrceen.Designer.cs">
-      <DependentUpon>SecondSrceen.cs</DependentUpon>
-    </Compile>
     <Compile Include="StartProccess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +132,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskHelper.cs" />
     <Compile Include="UrlModel.cs" />
     <Compile Include="UrlPatte.cs">
       <SubType>UserControl</SubType>
@@ -181,9 +176,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SecondSrceen.resx">
-      <DependentUpon>SecondSrceen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StartProccess.resx">
       <DependentUpon>StartProccess.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,10 +183,15 @@
       <DependentUpon>UrlPatte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="data\DayReport\个人工作日报模板.doc" />
+    <None Include="data\DayReport\个人工作日报-姜康-2017-06-20.doc" />
     <None Include="data\ODC系统开发\data\kanng.data">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\sys\data\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\task\kanng.data">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="data\东风雪铁龙\data\kanng.data">

@@ -32,7 +32,16 @@ namespace kanng.Cmd
             set;
         }
 
-        public int Limetime
+		/// <summary>
+		/// 加载的任务文件路径
+		/// </summary>
+		public string LoadTaskPath
+		{
+			get;
+			set;
+		}
+
+		public int Limetime
         {
             get;
             set;
@@ -142,8 +151,9 @@ namespace kanng.Cmd
             //webBrowser1.Url = rulpaht;
 
             syntaxTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
+			syntaxTextBox2.Text = TaskHelper.Single().ReadAllText();
 
-            List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
+			List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
 
             if (urlModel != null)
             {
@@ -601,6 +611,11 @@ namespace kanng.Cmd
 		}
 
 		private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+
+		}
+
+		private void button11_Click(object sender, EventArgs e)
 		{
 
 		}

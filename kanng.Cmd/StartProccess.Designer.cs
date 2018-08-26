@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点6");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点7");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点1");
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("节点8");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("节点9");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("节点2", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("节点3");
+			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("节点4");
+			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("节点5");
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartProccess));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -88,6 +102,20 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.timer3 = new System.Windows.Forms.Timer(this.components);
+			this.tabPage6 = new System.Windows.Forms.TabPage();
+			this.syntaxTextBox2 = new Kanng.SyntaxTextBox.SyntaxTextBox();
+			this.tabPage7 = new System.Windows.Forms.TabPage();
+			this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.button11 = new System.Windows.Forms.Button();
+			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -107,6 +135,12 @@
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
+			this.tabPage6.SuspendLayout();
+			this.tabPage7.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+			this.splitContainer3.Panel1.SuspendLayout();
+			this.splitContainer3.Panel2.SuspendLayout();
+			this.splitContainer3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -115,11 +149,13 @@
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
 			this.tabControl1.Controls.Add(this.tabPage4);
+			this.tabControl1.Controls.Add(this.tabPage6);
+			this.tabControl1.Controls.Add(this.tabPage7);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(0, 50);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(858, 332);
+			this.tabControl1.Size = new System.Drawing.Size(1049, 440);
 			this.tabControl1.TabIndex = 0;
 			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
 			this.tabControl1.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
@@ -133,7 +169,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(850, 306);
+			this.tabPage1.Size = new System.Drawing.Size(810, 324);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "启动程序";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -165,7 +201,7 @@
 			this.splitContainer1.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
 			this.splitContainer1.Panel2.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
 			this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-			this.splitContainer1.Size = new System.Drawing.Size(844, 300);
+			this.splitContainer1.Size = new System.Drawing.Size(804, 318);
 			this.splitContainer1.SplitterDistance = 136;
 			this.splitContainer1.TabIndex = 16;
 			// 
@@ -250,8 +286,8 @@
 			this.splitContainer2.Panel2.Controls.Add(this.button9);
 			this.splitContainer2.Panel2.Controls.Add(this.button7);
 			this.splitContainer2.Panel2.Controls.Add(this.button8);
-			this.splitContainer2.Size = new System.Drawing.Size(844, 300);
-			this.splitContainer2.SplitterDistance = 250;
+			this.splitContainer2.Size = new System.Drawing.Size(804, 318);
+			this.splitContainer2.SplitterDistance = 268;
 			this.splitContainer2.TabIndex = 17;
 			this.splitContainer2.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
 			this.splitContainer2.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);
@@ -267,7 +303,7 @@
 			this.syntaxTextBox1.Location = new System.Drawing.Point(0, 0);
 			this.syntaxTextBox1.MaxUndoRedoSteps = 50;
 			this.syntaxTextBox1.Name = "syntaxTextBox1";
-			this.syntaxTextBox1.Size = new System.Drawing.Size(844, 250);
+			this.syntaxTextBox1.Size = new System.Drawing.Size(804, 268);
 			this.syntaxTextBox1.TabIndex = 6;
 			this.syntaxTextBox1.Text = "";
 			this.syntaxTextBox1.WordWrap = false;
@@ -277,7 +313,7 @@
 			// button1
 			// 
 			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button1.Location = new System.Drawing.Point(695, 10);
+			this.button1.Location = new System.Drawing.Point(655, 10);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(124, 23);
 			this.button1.TabIndex = 16;
@@ -288,7 +324,7 @@
 			// button10
 			// 
 			this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button10.Location = new System.Drawing.Point(298, 10);
+			this.button10.Location = new System.Drawing.Point(258, 10);
 			this.button10.Name = "button10";
 			this.button10.Size = new System.Drawing.Size(107, 23);
 			this.button10.TabIndex = 15;
@@ -299,7 +335,7 @@
 			// button5
 			// 
 			this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button5.Location = new System.Drawing.Point(47, 10);
+			this.button5.Location = new System.Drawing.Point(7, 10);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(111, 23);
 			this.button5.TabIndex = 11;
@@ -310,7 +346,7 @@
 			// button9
 			// 
 			this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button9.Location = new System.Drawing.Point(574, 10);
+			this.button9.Location = new System.Drawing.Point(534, 10);
 			this.button9.Name = "button9";
 			this.button9.Size = new System.Drawing.Size(93, 23);
 			this.button9.TabIndex = 14;
@@ -321,7 +357,7 @@
 			// button7
 			// 
 			this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button7.Location = new System.Drawing.Point(435, 10);
+			this.button7.Location = new System.Drawing.Point(395, 10);
 			this.button7.Name = "button7";
 			this.button7.Size = new System.Drawing.Size(112, 23);
 			this.button7.TabIndex = 12;
@@ -332,7 +368,7 @@
 			// button8
 			// 
 			this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button8.Location = new System.Drawing.Point(178, 10);
+			this.button8.Location = new System.Drawing.Point(138, 10);
 			this.button8.Name = "button8";
 			this.button8.Size = new System.Drawing.Size(96, 23);
 			this.button8.TabIndex = 13;
@@ -354,7 +390,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(850, 306);
+			this.tabPage2.Size = new System.Drawing.Size(810, 324);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "启动网址";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -367,7 +403,7 @@
 			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 300);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(804, 318);
 			this.flowLayoutPanel1.TabIndex = 0;
 			// 
 			// button3
@@ -406,7 +442,7 @@
 			this.tabPage4.Controls.Add(this.tabControl2);
 			this.tabPage4.Location = new System.Drawing.Point(4, 22);
 			this.tabPage4.Name = "tabPage4";
-			this.tabPage4.Size = new System.Drawing.Size(850, 306);
+			this.tabPage4.Size = new System.Drawing.Size(810, 324);
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Hosts";
 			this.tabPage4.UseVisualStyleBackColor = true;
@@ -432,7 +468,7 @@
 			this.tabControl2.Multiline = true;
 			this.tabControl2.Name = "tabControl2";
 			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(850, 306);
+			this.tabControl2.Size = new System.Drawing.Size(810, 324);
 			this.tabControl2.TabIndex = 1;
 			this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
 			// 
@@ -442,7 +478,7 @@
 			this.tabPage3.Location = new System.Drawing.Point(4, 4);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(842, 280);
+			this.tabPage3.Size = new System.Drawing.Size(802, 298);
 			this.tabPage3.TabIndex = 0;
 			this.tabPage3.Text = "localhost";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -452,7 +488,7 @@
 			this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.richTextBox2.Location = new System.Drawing.Point(3, 3);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(836, 274);
+			this.richTextBox2.Size = new System.Drawing.Size(796, 292);
 			this.richTextBox2.TabIndex = 0;
 			this.richTextBox2.Text = "";
 			this.richTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
@@ -486,7 +522,7 @@
             this.帮助HToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(858, 25);
+			this.menuStrip1.Size = new System.Drawing.Size(1049, 25);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -505,35 +541,35 @@
 			// 打开ToolStripMenuItem
 			// 
 			this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-			this.打开ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.打开ToolStripMenuItem.Text = "新建";
 			this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
 			// 
 			// 保存ToolStripMenuItem
 			// 
 			this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-			this.保存ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.保存ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.保存ToolStripMenuItem.Text = "保存";
 			this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
 			this.toolStripMenuItem1.Text = "重命名(&R)";
 			this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
 			// 
 			// 运行ToolStripMenuItem
 			// 
 			this.运行ToolStripMenuItem.Name = "运行ToolStripMenuItem";
-			this.运行ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.运行ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.运行ToolStripMenuItem.Text = "运行";
 			this.运行ToolStripMenuItem.Click += new System.EventHandler(this.运行ToolStripMenuItem_Click);
 			// 
 			// 退出ToolStripMenuItem
 			// 
 			this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-			this.退出ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.退出ToolStripMenuItem.Text = "退出";
 			this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
 			// 
@@ -551,28 +587,28 @@
 			// 关于AToolStripMenuItem
 			// 
 			this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-			this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.关于AToolStripMenuItem.Text = "关于(&A)";
 			this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于看门狗ToolStripMenuItem_Click);
 			// 
 			// 捐助SToolStripMenuItem
 			// 
 			this.捐助SToolStripMenuItem.Name = "捐助SToolStripMenuItem";
-			this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.捐助SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.捐助SToolStripMenuItem.Text = "捐助(&J)";
 			this.捐助SToolStripMenuItem.Click += new System.EventHandler(this.赞助ToolStripMenuItem_Click);
 			// 
 			// 帮助ToolStripMenuItem
 			// 
 			this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-			this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.帮助ToolStripMenuItem.Text = "帮助";
 			this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
 			// 
 			// iT导航ToolStripMenuItem
 			// 
 			this.iT导航ToolStripMenuItem.Name = "iT导航ToolStripMenuItem";
-			this.iT导航ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.iT导航ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.iT导航ToolStripMenuItem.Text = "IT导航";
 			this.iT导航ToolStripMenuItem.Click += new System.EventHandler(this.iT导航ToolStripMenuItem_Click);
 			// 
@@ -590,7 +626,7 @@
             this.toolStripButton3});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 25);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(858, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(1049, 25);
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -644,9 +680,9 @@
             this.toolStripProgressBar1,
             this.toolStripStatusLabel3,
             this.toolStripProgressBar2});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 382);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 490);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(858, 22);
+			this.statusStrip1.Size = new System.Drawing.Size(1049, 22);
 			this.statusStrip1.TabIndex = 3;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -696,12 +732,186 @@
 			this.timer3.Interval = 1000;
 			this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
 			// 
+			// tabPage6
+			// 
+			this.tabPage6.Controls.Add(this.syntaxTextBox2);
+			this.tabPage6.Location = new System.Drawing.Point(4, 22);
+			this.tabPage6.Name = "tabPage6";
+			this.tabPage6.Size = new System.Drawing.Size(1041, 414);
+			this.tabPage6.TabIndex = 4;
+			this.tabPage6.Text = "任务";
+			this.tabPage6.UseVisualStyleBackColor = true;
+			// 
+			// syntaxTextBox2
+			// 
+			this.syntaxTextBox2.AcceptsTab = true;
+			this.syntaxTextBox2.CaseSensitive = false;
+			this.syntaxTextBox2.ConfigFile = "csharp.xml";
+			this.syntaxTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.syntaxTextBox2.EnableAutoDragDrop = true;
+			this.syntaxTextBox2.FilterAutoComplete = true;
+			this.syntaxTextBox2.Location = new System.Drawing.Point(0, 0);
+			this.syntaxTextBox2.MaxUndoRedoSteps = 50;
+			this.syntaxTextBox2.Name = "syntaxTextBox2";
+			this.syntaxTextBox2.Size = new System.Drawing.Size(1041, 414);
+			this.syntaxTextBox2.TabIndex = 7;
+			this.syntaxTextBox2.Text = "";
+			this.syntaxTextBox2.WordWrap = false;
+			// 
+			// tabPage7
+			// 
+			this.tabPage7.Controls.Add(this.splitContainer3);
+			this.tabPage7.Location = new System.Drawing.Point(4, 22);
+			this.tabPage7.Name = "tabPage7";
+			this.tabPage7.Size = new System.Drawing.Size(1041, 414);
+			this.tabPage7.TabIndex = 5;
+			this.tabPage7.Text = "日报";
+			this.tabPage7.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer3
+			// 
+			this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer3.Name = "splitContainer3";
+			// 
+			// splitContainer3.Panel1
+			// 
+			this.splitContainer3.Panel1.Controls.Add(this.treeView1);
+			// 
+			// splitContainer3.Panel2
+			// 
+			this.splitContainer3.Panel2.Controls.Add(this.textBox3);
+			this.splitContainer3.Panel2.Controls.Add(this.textBox2);
+			this.splitContainer3.Panel2.Controls.Add(this.textBox1);
+			this.splitContainer3.Panel2.Controls.Add(this.label11);
+			this.splitContainer3.Panel2.Controls.Add(this.label10);
+			this.splitContainer3.Panel2.Controls.Add(this.label9);
+			this.splitContainer3.Panel2.Controls.Add(this.label8);
+			this.splitContainer3.Panel2.Controls.Add(this.textBox4);
+			this.splitContainer3.Panel2.Controls.Add(this.button11);
+			this.splitContainer3.Size = new System.Drawing.Size(1041, 414);
+			this.splitContainer3.SplitterDistance = 194;
+			this.splitContainer3.TabIndex = 0;
+			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(136, 243);
+			this.textBox3.Multiline = true;
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(525, 75);
+			this.textBox3.TabIndex = 12;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(136, 129);
+			this.textBox2.Multiline = true;
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(613, 89);
+			this.textBox2.TabIndex = 11;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(136, 23);
+			this.textBox1.Multiline = true;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(542, 84);
+			this.textBox1.TabIndex = 10;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(12, 367);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(77, 12);
+			this.label11.TabIndex = 17;
+			this.label11.Text = "需要其他协助";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(12, 269);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(53, 12);
+			this.label10.TabIndex = 16;
+			this.label10.Text = "明天计划";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(26, 181);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(29, 12);
+			this.label9.TabIndex = 15;
+			this.label9.Text = "问题";
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(12, 63);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(77, 12);
+			this.label8.TabIndex = 14;
+			this.label8.Text = "今天工作内容";
+			// 
+			// textBox4
+			// 
+			this.textBox4.Location = new System.Drawing.Point(136, 324);
+			this.textBox4.Multiline = true;
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(591, 77);
+			this.textBox4.TabIndex = 13;
+			// 
+			// button11
+			// 
+			this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.button11.Location = new System.Drawing.Point(755, 378);
+			this.button11.Name = "button11";
+			this.button11.Size = new System.Drawing.Size(75, 23);
+			this.button11.TabIndex = 9;
+			this.button11.Text = "保存";
+			this.button11.UseVisualStyleBackColor = true;
+			// 
+			// treeView1
+			// 
+			this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.treeView1.Location = new System.Drawing.Point(0, 0);
+			this.treeView1.Name = "treeView1";
+			treeNode1.Name = "节点6";
+			treeNode1.Text = "节点6";
+			treeNode2.Name = "节点7";
+			treeNode2.Text = "节点7";
+			treeNode3.Name = "节点0";
+			treeNode3.Text = "节点0";
+			treeNode4.Name = "节点1";
+			treeNode4.Text = "节点1";
+			treeNode5.Name = "节点8";
+			treeNode5.Text = "节点8";
+			treeNode6.Name = "节点9";
+			treeNode6.Text = "节点9";
+			treeNode7.Name = "节点2";
+			treeNode7.Text = "节点2";
+			treeNode8.Name = "节点3";
+			treeNode8.Text = "节点3";
+			treeNode9.Name = "节点4";
+			treeNode9.Text = "节点4";
+			treeNode10.Name = "节点5";
+			treeNode10.Text = "节点5";
+			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10});
+			this.treeView1.Size = new System.Drawing.Size(194, 414);
+			this.treeView1.TabIndex = 0;
+			// 
 			// StartProccess
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(858, 404);
+			this.ClientSize = new System.Drawing.Size(1049, 512);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.statusStrip1);
@@ -739,6 +949,13 @@
 			this.toolStrip1.PerformLayout();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
+			this.tabPage6.ResumeLayout(false);
+			this.tabPage7.ResumeLayout(false);
+			this.splitContainer3.Panel1.ResumeLayout(false);
+			this.splitContainer3.Panel2.ResumeLayout(false);
+			this.splitContainer3.Panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+			this.splitContainer3.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -805,6 +1022,20 @@
 		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar2;
 		private System.Windows.Forms.Timer timer2;
 		private System.Windows.Forms.Timer timer3;
+		private System.Windows.Forms.TabPage tabPage6;
+		private Kanng.SyntaxTextBox.SyntaxTextBox syntaxTextBox2;
+		private System.Windows.Forms.TabPage tabPage7;
+		private System.Windows.Forms.SplitContainer splitContainer3;
+		private System.Windows.Forms.TreeView treeView1;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.Button button11;
 		//
 
 
