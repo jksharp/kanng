@@ -7,3 +7,8 @@ E:\code\Kanng\kanng.github\kanng\Kanng.Model\bin\Debug\Kanng.Model.pdb
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.dll
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.pdb
 E:\code\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.csprojResolveAssemblyReference.cache
+F:\Kanng\kanng.github\kanng\Kanng.Model\bin\Debug\Kanng.Model.dll
+F:\Kanng\kanng.github\kanng\Kanng.Model\bin\Debug\Kanng.Model.pdb
+F:\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.csprojResolveAssemblyReference.cache
+F:\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.dll
+F:\Kanng\kanng.github\kanng\Kanng.Model\obj\Debug\Kanng.Model.pdb

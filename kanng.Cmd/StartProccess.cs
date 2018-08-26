@@ -12,6 +12,7 @@ using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
 using Microsoft.VisualBasic.Devices;
+using Kanng.Common;
 
 namespace kanng.Cmd
 {
@@ -618,6 +619,31 @@ namespace kanng.Cmd
 		private void button11_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void button11_Click_1(object sender, EventArgs e)
+		{
+
+			//rb.gznr = "建数据库";
+			//rb.hbdx = "领导A";
+			//rb.mtjh = "和业务部门A沟通业务";
+			//rb.rq = DateTime.Now.ToShortDateString();
+			//rb.xz = "需要业务部门协助";
+			//rb.ydwt = "业务不明确";
+			//rb.name = "";
+			//rb.bm = "";
+
+			RB rb = new RB();
+			rb.gznr = gznr.Text;
+			rb.hbdx = hbdx.Text ;
+			rb.mtjh = mtjh.Text;
+			rb.rq = DateTime.Now.ToShortDateString();
+			rb.xz = xz.Text;
+			rb.ydwt = wt.Text;
+			rb.name = name.Text;
+			rb.bm = bm.Text;
+			NPOIWordHelper.Export(rb);
+			MessageBox.Show("保存成功！");
 		}
 	}
 

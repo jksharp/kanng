@@ -33,3 +33,10 @@ F:\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.UrlPatte.resources
 F:\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.csproj.GenerateResource.Cache
 F:\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.exe
 F:\Kanng\kanng.github\kanng\kanng.Cmd\obj\Debug\kanng.Cmd.pdb
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\NPOI.dll
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\NPOI.OOXML.dll
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\NPOI.OpenXml4Net.dll
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\NPOI.xml
+F:\Kanng\kanng.github\kanng\kanng.Cmd\bin\Debug\data\DayReport\tt.docx
