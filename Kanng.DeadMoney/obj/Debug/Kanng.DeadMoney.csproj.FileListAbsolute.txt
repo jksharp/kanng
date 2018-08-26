@@ -1,0 +1,9 @@
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\bin\Debug\Kanng.DeadMoney.exe.config
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\bin\Debug\Kanng.DeadMoney.exe
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\bin\Debug\Kanng.DeadMoney.pdb
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.csprojResolveAssemblyReference.cache
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.Form1.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.Properties.Resources.resources
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.csproj.GenerateResource.Cache
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.exe
+E:\code\Kanng\kanng.github\kanng\Kanng.DeadMoney\obj\Debug\Kanng.DeadMoney.pdb
