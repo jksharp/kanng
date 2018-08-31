@@ -241,6 +241,10 @@ namespace kanng.Cmd
 
                 richTextBox2.Text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
             }
+            else if (tabControl1.SelectedIndex == 4)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
             else
             {
                 this.WindowState = FormWindowState.Normal;
@@ -340,7 +344,11 @@ namespace kanng.Cmd
             }).Start();
 
 
-            if (tabControl1.SelectedIndex == 2)
+            if (tabControl1.SelectedIndex == 3)
+            {
+                TaskHelper.Single().WriteFile(syntaxTextBox2.Text);
+            }
+            else if (tabControl1.SelectedIndex == 2)
             {
 
                 if (tabControl2.SelectedIndex == 1)
@@ -350,8 +358,6 @@ namespace kanng.Cmd
                 else if (tabControl2.SelectedIndex == 2)
 
                     KanngHelper.SingleKanng(LoadPath).WriteHostsFile(richTextBox1.Text);
-
-
             }
             else
             {

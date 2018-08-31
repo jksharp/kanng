@@ -41,6 +41,8 @@ namespace kanng.Cmd
                 item.Name = info.Name;
                 item.Text = info.Name;
                 if (info.Name == "url") continue;
+                if (info.Name == "task") continue;
+                if (info.Name == "DayReport") continue;
                 item.Click += new EventHandler(ToolStripMenuItem_Click);
                 contextMenuStrip1.Items.Insert(0, item);
             }
