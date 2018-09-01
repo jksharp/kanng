@@ -152,6 +152,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DrHelper.cs" />
     <Compile Include="TaskHelper.cs" />
     <Compile Include="UrlModel.cs" />
     <Compile Include="UrlPatte.cs">
@@ -203,6 +204,9 @@
       <DependentUpon>UrlPatte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="data\DayReport\kanng.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="data\DayReport\tt.doc" />
     <None Include="data\DayReport\tt.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

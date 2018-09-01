@@ -153,6 +153,7 @@ namespace kanng.Cmd
 
             syntaxTextBox1.Text = KanngHelper.SingleKanng(LoadPath).ReadAllText();
 			syntaxTextBox2.Text = TaskHelper.Single().ReadAllText();
+			ReadWorkReport();//绑定
 
 			List<UrlModel> urlModel = UrlXmlIO.ReadAllUrl();
 
@@ -178,6 +179,144 @@ namespace kanng.Cmd
             }
 
         }
+
+		public void ReadWorkReport() {
+
+			string[] contents=DrHelper.Single().ReadAllLines();
+			StringBuilder hqlc = new StringBuilder();
+			if (contents != null)
+			{
+				int start = 1;
+				foreach (var content in contents)
+				{
+					if (content == "##name s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##name e##")
+					{
+						name.Text = hqlc.ToString();
+						start = -1;
+						continue;
+					}
+				
+
+					if (content == "##bm s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##bm e##")
+					{
+						bm.Text = hqlc.ToString();
+						start = -1;
+						continue;
+
+					}
+					
+
+					if (content == "##hbdx s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##hbdx e##")
+					{
+						hbdx.Text = hqlc.ToString();
+						start = -1;
+						continue;
+
+					}
+				
+
+					if (content == "##gznr s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##gznr e##")
+					{
+						gznr.Text = hqlc.ToString();
+						start = -1;
+						continue;
+					}
+					
+					if (content == "##wt s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##wt e##")
+					{
+						wt.Text = hqlc.ToString();
+						start = -1;
+						continue;
+					}
+				
+				
+				
+					if (content == "##mtjh s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##mtjh e##")
+					{
+						mtjh.Text = hqlc.ToString();
+						start = -1;
+						continue;
+
+					}
+
+					if (content == "##xz s##")
+					{
+						start = 1;
+						//name.Text = content;
+						hqlc.Clear();
+						continue;
+					}
+					if (content == "##xz e##")
+					{
+						xz.Text = hqlc.ToString();
+						start = -1;
+						continue;
+					}
+					if (start == 1)
+						hqlc.AppendLine(content);
+
+					
+
+				}
+			}
+			//StringBuilder hql = new StringBuilder();
+			//hql.AppendLine(name.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(bm.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(bm.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(gznr.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(wt.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(hbdx.Text);
+			//hql.AppendLine("");
+			//hql.AppendLine(DateTime.Now.ToShortDateString());
+			
+		}
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -640,15 +779,44 @@ namespace kanng.Cmd
 			//rb.bm = "";
 
 			RB rb = new RB();
-			rb.gznr = gznr.Text;
-			rb.hbdx = hbdx.Text ;
-			rb.mtjh = mtjh.Text;
+			rb.gznr = gznr.Text.Trim();//工作内容
+			rb.hbdx = hbdx.Text.Trim() ;//汇报对象
+			rb.mtjh = mtjh.Text.Trim();//明天计划
 			rb.rq = DateTime.Now.ToShortDateString();
-			rb.xz = xz.Text;
-			rb.ydwt = wt.Text;
-			rb.name = name.Text;
-			rb.bm = bm.Text;
+			rb.xz = xz.Text.Trim();//是否需要协助协助
+			rb.ydwt = wt.Text.Trim();//问题
+			rb.name = name.Text.Trim();//名称
+			rb.bm = bm.Text.Trim();//部门
 			NPOIWordHelper.Export(rb);
+
+			StringBuilder hql = new StringBuilder();
+			hql.AppendLine("##name s##");
+			hql.AppendLine(name.Text.Trim());
+			hql.AppendLine("##name e##");
+
+			hql.AppendLine("##bm s##");
+			hql.AppendLine(bm.Text.Trim());
+			hql.AppendLine("##bm e##");
+			hql.AppendLine("##hbdx s##");
+			hql.AppendLine(hbdx.Text.Trim());
+			hql.AppendLine("##hbdx e##");
+			hql.AppendLine("##gznr s##");
+			hql.AppendLine(gznr.Text.Trim());
+			hql.AppendLine("##gznr e##");
+			hql.AppendLine("##wt s##");
+			hql.AppendLine(wt.Text.Trim());
+			hql.AppendLine("##wt e##");
+			hql.AppendLine("##mtjh s##");
+			hql.AppendLine(mtjh.Text.Trim());
+			hql.AppendLine("##mtjh e##");
+			hql.AppendLine("##xz s##");
+			hql.AppendLine(xz.Text.Trim());
+			hql.AppendLine("##xz e##");
+			hql.AppendLine("##datetime s##");
+			hql.AppendLine(DateTime.Now.ToShortDateString());
+			hql.AppendLine("##datetime e##");
+			DrHelper.Single().WriteFile(hql.ToString());
+			
 			MessageBox.Show("保存成功！");
 		}
 	}
