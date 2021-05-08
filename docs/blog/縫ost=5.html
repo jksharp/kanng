@@ -1,0 +1,444 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>php MySQL使用批量插入多条记录</title>
+	<meta name="keywords" content="IT博客 php博客 网站博客,php,MySQL使用批量插入多条记录" />
+	<meta name="description" content="MySQL使用INSERT插入多条记录..." />
+	<meta name="generator" content="emlog" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php�rsd.php" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wlwmanifest.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS"  href="rss.php" />
+	<link type="text/css" href="content/templates/Metro/main.css" rel="stylesheet" />
+	<script src="include/lib/js/jquery/jquery-1.7.1.js" type="text/javascript"></script>
+	<script src="include/lib/js/common_tpl.js" type="text/javascript"></script>
+	<script src="../../tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<body>
+
+
+<!-- Copyright � 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Verdana; font-size: 9pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+��ҳ�������� <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.0.0.1025</b></a>  ��  04/23/15 10:34:29.<br>
+<b>��ַ:</b> <a class="info" href="http://kanng.net/blog/?post=5">http://kanng.net/blog/?post=5</a><br>
+<b>����:</b> php MySQL使用批量插入多条记录 &nbsp;&bull;&nbsp; <b>��С:</b> 23618<br></div>
+<!-- /Copyright � 2005. Spidersoft Ltd -->
+
+
+	<div id="page">
+		<script type="text/javascript">
+			if(screen.width>1030){document.getElementsByTagName('body')[0].className = "widescreen";}
+		</script>
+		<div id="container">
+			<div id="wrap">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a title="返回 hao123IT博客 首页" href="blog.html">hao123IT博客</a>
+						</h1>
+					</div>
+					<div class="search">	
+						<div class="search_site addapted" style="overflow: hidden;">	
+							<form id="searchform" method="get" action="http://kanng.net/blog/index.php">
+								<input type="submit" value="" id="searchsubmit" class="button">
+								<input type="text" id="s" name="keyword" value="">
+							</form>
+						</div>
+					</div>
+					<div id="contact">
+						<a href="rss.php" rel="bookmark" target="_blank" title="订阅到RSS"><img src="content/templates/Metro/images/rss24.png" alt="订阅到RSS" title="订阅到RSS" /></a>
+						<a href="#" rel="bookmark" target="_blank" title="关注新浪微博"><img src="content/templates/Metro/images/sina24.png" alt="关注新浪微博" title="关注新浪微博" /></a>
+						<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=s2555@qq.com" rel="bookmark" target="_blank" title="发邮件给我们"><img src="content/templates/Metro/images/mail24.png" alt="发邮件给我们" title="发邮件给我们" /></a>
+						<a href="#" rel="bookmark" target="_blank" title="关注腾讯微博"><img src="content/templates/Metro/images/tengxun24.png" alt="关注腾讯微博" title="关注腾讯微博" /></a>
+					</div>
+				</div>
+				<div id="nav">
+					<div class="topnav">
+							<ul id="menu" class="menu">
+			<li><a href="blog.html" >首页</a></li>
+			<li><a href="�sort=2.html" >前端设计</a></li>
+			<li><a href="�sort=1.html" >PHP</a></li>
+		</ul>
+					</div>
+				</div>
+				
+			<div id="content">
+	<div class="main">
+		<div class="left">
+			<div class="post_date">
+				<span class="date_ym">2013.9</span>
+				<span class="date_d">10</span>
+			</div>
+			<div class="articles">
+				<div class="post-title-single">
+					<h2>php MySQL使用批量插入多条记录</h2>
+				</div>
+				<div class="infosingle">
+					<div id="singleinfo">
+						<span class="info-user-icon">
+							<a href="�author=1.html" >admin</a> 发表于 2013-9-10 14:47 Tuesday						</span>
+						<span class="info-category-icon"><a href="�sort=1.html">PHP</a>
+</span>
+						<span class="info-view-icon">超过1618围观</span>
+						<span class="info-comment-icon"><a href="#comments">1条评论</a></span>					</div>
+				</div>
+				<div class="context">
+				<br/>
+					<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	MySQL使用INSERT插入多条记录，应该如何操作呢？下面就为您详细介绍<a href="http://database.51cto.com/art/201009/225564.htm">MySQL</a>使用INSERT插入多条记录的实现方法，供您参考。
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	看到这个标题也许大家会问，这有什么好说的，调用多次INSERT语句不就可以插入多条记录了吗！但使用这种方法要增加服务器的负荷，因为，执行每一次SQL服务器都要同样对SQL进行分析、优化等操作。幸好MySQL提供了另一种解决方案，就是使用一条INSERT语句来插入多条记录。这并不是标准的SQL语法，因此只能在MySQL中使用。
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	INSERT INTO users(name, age)
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	VALUES('姚明', 25), ('比尔.盖茨', 50), ('火星人', 600);
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	上面的INSERT 语句向users表中连续插入了3条记录。值得注意的是，上面的INSERT语句中的VALUES后必须每一条记录的值放到一对(…)中，中间使用","分割。假设有一个表table1
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	CREATE TABLE table1(n INT)；
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	如果要向table1中插入5条记录，下面写法是错误的：
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	INSERT INTO table1 (i) VALUES(1,2,3,4,5);
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	MySQL将会抛出下面的错误
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	ERROR 1136: Column count doesn't match value count at row 1
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	而正确的写法应该是这样：
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	INSERT INTO t able1(i) VALUES(1),(2),(3),(4),(5);
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	当然，这种写法也可以省略列名，这样每一对括号里的值的数目必须一致，而且这个数目必须和列数一致。如：
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	INSERT INTO t able1 VALUES(1),(2),(3),(4),(5);
+</p>
+<p style="color:#333333;background-color:#F8F8F8;text-indent:28px;font-family:宋体;font-size:14px;">
+	当需要批量插入数据的时候使用这种方式，比循环插入要好多了，一次搞定，不用频繁操作数据库。
+</p><br/>
+					<br/>
+					<div id="log_tags">
+						本文标签：	<a href="�tag=php.html">php</a>	<a href="�tag=MySQL使用批量插入多条记录.html">MySQL使用批量插入多条记录</a>					</div><br/>
+					<div id="share">
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_tsina"></a>
+						<a class="bds_qzone"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_kaixin001"></a>
+						<a class="bds_tieba"></a>
+						<a class="bds_diandian"></a>
+						<a class="bds_mail"></a>
+						<a class="bds_bdhome"></a>
+						<a class="bds_sqq"></a>
+						<a class="bds_fx"></a>
+						<a class="bds_ty"></a>
+						<span class="bds_more"></span>
+						<a class="shareCount"></a>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3134744" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">
+						document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+						</script>
+						<!-- Baidu Button END -->
+					</div><br/><br/>
+
+					<div class="feed-tip">
+						»版权所有：《<a href="blog.html" title="hao123IT博客">hao123IT博客</a>》 → 《<a title="php MySQL使用批量插入多条记录" href="�post=5.html">php MySQL使用批量插入多条记录</a>》；<br>
+						»本文网址：<a title="http://kanng.net/blog/?post=5" href="�post=5.html">http://kanng.net/blog/?post=5</a> ；<br>
+						»除特别标注,本博客所有文章均为原创. 互联分享,尊重版权,转载请以链接形式标明本文地址；    
+					</div>
+					<!--分享和版权结束-->
+										<div class="feed-tip">
+						<div class="neighbor_log">
+<span class="left">上一篇：：<a href="�post=6.html" title="上一篇《添加你的博客连接》">添加你的博客连接</a></span><br/>
+ <span class="right">下一篇：<a href="�post=4.html" title="下一篇《php使用Snoopy做采集，模拟登录程序》">php使用Snoopy做采集，模拟登录程序</a></span>
+</div>
+					</div>
+					<div class="remen">
+						<div style="float:right; width:49%; word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+						<h3>热门文章</h3>
+												<ul>
+												<li><a href="�post=19.html" title="查看文章:非API方式调用谷歌翻译">非API方式调用谷歌翻译</a></li>
+												<li><a href="�post=18.html" title="查看文章:js判断是否手机平板浏览器">js判断是否手机平板浏览器</a></li>
+												<li><a href="�post=20.html" title="查看文章:支付宝收款主页另一种实现，可用于接受捐赠">支付宝收款主页另一种实现，可用于接受捐赠</a></li>
+												<li><a href="�post=21.html" title="查看文章:查询数据库中某个值在哪个表">查询数据库中某个值在哪个表</a></li>
+												</ul>
+						</div>
+						<div style="float:left; width:49%; word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+						<h3>相关文章</h3>
+												<ul>
+												<li><a href="�post=5.html" title="查看文章:php MySQL使用批量插入多条记录">php MySQL使用批量插入多条记录</a></li>
+												<li><a href="�post=4.html" title="查看文章:php使用Snoopy做采集，模拟登录程序">php使用Snoopy做采集，模拟登录程序</a></li>
+												<li><a href="�post=19.html" title="查看文章:非API方式调用谷歌翻译">非API方式调用谷歌翻译</a></li>
+												<li><a href="�post=8.html" title="查看文章:天翼189开放平台短信验证码代码实例">天翼189开放平台短信验证码代码实例</a></li>
+												</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="articles">
+			<div id="wumiiLikeRecBtnDiv" class="wumii"></div>
+		</div>
+
+		<div class="articles">
+			<div class="post-comment">
+				<ul class="maintab_menu">
+					<li class="current"><h3>各种观点</h3></li>
+				</ul>
+				<div class="maintab_content">
+					<div class="">
+							<div id="comments" class="div"> 
+		<a name="comments"></a>
+					<div class="comment-header"> 评论列表 <span style="font-size:14px;" id="go-comment-place"><a href="javascript:void()">↓</a></span> </div>
+				<div id="comment_list">
+				<div class="comment-box">
+			<div class="comment" id="comment-24">
+				<a name="24"></a>
+									<img src="http://www.gravatar.com/avatar/5a4887a4dc0839852e741efa921bdddb?s=40&d=mm&r=g" width="36" height="36" class="avatar" />
+							<div class="comment-info" style="border-left: 3px solid #bf0c00;"> 
+			<span class="louceng" style="color:#cc0000;font-weight: bold;font-size:15px">呦，果断人中龙凤!</span> 
+		<!--<span class="louceng">#1</span> -->
+		<span class="name"><a href="http://blog.libnav.com/" rel="external nofollow" target="_blank">宋小北</a></span><span style="padding-left:5px"></span>&nbsp;&nbsp; &nbsp;&nbsp;<span class="comment-time"> 2014-06-13 21:58 </span> <a class='comment-reply-link' href='#comment-24' onclick="commentReply(24,this)">@回复</a><br />
+          <span class="commnet-content">如果用
+<br />INSERT INTO table1 (i) VALUES(1,2,3,4,5);&nbsp;&nbsp;插入5条记录
+<br />那肯定是mysql基础不牢靠，循环里插入是执行了5条，
+<br />INSERT INTO t able1 VALUES(1),(2),(3),(4),(5);只是一条，当然快很多了</span> </div>
+              </div>
+    </div>
+    <div style="clear:both;"></div>
+      </div>
+</div>
+<div id="pagenavi">  </div>
+						<div id="comment-place" class="div">
+  <div class="comment-post" id="comment-post">
+
+	<div class="cancel-reply" id="cancel-reply" style="display:none"><a href="javascript:void(0);" onclick="cancelReply()">取消回复</a></div>
+    <div class="comment-header"><a name="respond"></a>亲，你怎么看？</div>
+    <form method="post" name="commentform" action="http://kanng.net/blog/index.php?action=addcom" id="commentform">
+      <input type="hidden" name="gid" value="5" />
+                  <div id="userinfo">
+        <div id="comment-author-info">          
+          <p>
+			<div id="guest_avatar">
+				<img src="http://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=80&d=mm&r=g" id="realtime_avatar" />
+				<p style="font-size:12px;color:#999;">亲，头像对么？</p>
+			</div>
+			<label for="author"><small>姓名:</small> </label>
+            <input type="text" name="comname" class="input" value="" tabindex="1"/>
+          </p>
+          <p>
+			<label for="email"><small>邮箱:</small> </label>
+            <input type="text" name="commail" id="email" class="input" value="" tabindex="2"/>
+          </p>
+          <p>
+			<label for="url"><small>主页:</small></label>
+            <input type="text" name="comurl" class="input" value="" tabindex="3" />
+          </p>
+        </div>
+      </div>
+            <p>
+        <textarea name="comment" class="textarea" cols="100" rows="7" tabindex="4" onkeydown="if(event.altKey && window.event.keyCode == 83) {document.getElementById('submit').click();return false;}; if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false;};" >
+</textarea>
+      </p>
+      <p>      <div id="loading" style="display:none">提交中，请稍候……</div>
+      </p>
+      <input name="submit" type="submit" class="submit blue button" tabindex="5" value="填写好了！(Ctrl+Enter)" />
+      <input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
+    </form>
+    <div id="error" style="color:red"></div>
+	<div class="clear"></div>
+    <p style="font-size:12px;color:#999;padding: 0 10px 10px 10px;text-shadow:-1px 1px 0 white;"><br />
+      木有头像就木JJ啦！还木有头像吗？<a href="http://www.gravatar.com/" target="_blank" rel="nofollow">点这里申请</a>属于你的个性Gravatar头像吧！</p>
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	﻿<div id="sidebar">
+		<ul id="sidebar">
+<li>
+  <h3><span>请支持我</span></h3>
+  <ul id="zidingyi">
+    <script type="text/javascript">
+     document.write('<a style="display:none!important" id="tanx-a-mm_22633153_2355965_13448834"></a>');
+     tanx_s = document.createElement("script");
+     tanx_s.type = "text/javascript";
+     tanx_s.charset = "gbk";
+     tanx_s.id = "tanx-s-mm_22633153_2355965_13448834";
+     tanx_s.async = true;
+     tanx_s.src = "http://p.tanx.com/ex?i=mm_22633153_2355965_13448834";
+     tanx_h = document.getElementsByTagName("head")[0];
+     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>  </ul>
+</li>
+<li>
+  <h3><span>日历</span></h3>
+  <div id="calendar"> </div>
+  <script>sendinfo('http://kanng.net/blog/?action=cal','calendar');</script> 
+</li>
+<li>
+  <h3><span>存档</span></h3>
+  <ul id="record">
+        <li><a href="�record=201502.html">2015年2月(1)</a></li>
+        <li><a href="�record=201411.html">2014年11月(1)</a></li>
+        <li><a href="�record=201410.html">2014年10月(2)</a></li>
+        <li><a href="�record=201403.html">2014年3月(2)</a></li>
+        <li><a href="�record=201402.html">2014年2月(1)</a></li>
+        <li><a href="�record=201312.html">2013年12月(1)</a></li>
+        <li><a href="�record=201311.html">2013年11月(3)</a></li>
+        <li><a href="�record=201310.html">2013年10月(2)</a></li>
+        <li><a href="�record=201309.html">2013年9月(4)</a></li>
+        <li><a href="�record=201308.html">2013年8月(2)</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>最新评论</span></h3>
+  <ul id="newcomment">
+        <li id="comment"><span class="name">admin </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=8#31">@佛山淋浴房：就几步流程</a></li>
+        <li id="comment"><span class="name">佛山淋浴房 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=8#30">感觉还是有点复杂</a></li>
+        <li id="comment"><span class="name">顾长春 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=6#29">这个网站不错，赞一个。</a></li>
+        <li id="comment"><span class="name">麦特佐罗 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#28">@财经博客：哪都有你啊</a></li>
+        <li id="comment"><span class="name">所在 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#27">看了之后启发很大啊值得推荐</a></li>
+        <li id="comment"><span class="name">newbalanceshoesjp </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=4#25">良いあなたはここにあるが、私はでしたサイ...</a></li>
+        <li id="comment"><span class="name">宋小北 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=5#24">如果用
+INSERT INTO tab...</a></li>
+        <li id="comment"><span class="name">财经名人 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#23">看写的文章，受益匪浅</a></li>
+        <li id="comment"><span class="name">财经博客 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#22">看了写的内容 很不错。欢迎回访</a></li>
+        <li id="comment"><span class="name">梦里的畅泳 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=3#21">嗯,是这个道理</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>链接</span></h3>
+  <ul id="link">
+        <li><a href="http://www.kanng.net/" title="it导航，编程导航，程序员导航" target="_blank">IT导航</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>搜索</span></h3>
+  <ul id="logserch">
+    <form name="keyform" method="get" id="sidebar_s" action="http://kanng.net/blog/index.php">
+      <input name="keyword" id="s" type="text" value="" style="width:120px;"/>
+      <input type="submit" id="logserch_logserch" class="button" value="搜索" />
+    </form>
+  </ul>
+</li>
+</ul><!--end #siderbar-->	</div>
+	<div class="clear"></div>
+</div>
+	<div id="footer">
+	<div id="footer-body">
+		<div id="footer-subbody">
+			<div class="footerLink">
+				<li id="linkcat-2" class="linkcat">
+					<h2>友情链接</h2>
+					<ul class='xoxo blogroll'>
+						<li><a href="http://anyou8.com/" title="淘宝店铺SEO" target="_blank">淘宝店铺收录</a></li>
+						<li><a href="../index.html" title="程序员导航、IT导航" target="_blank">hao123it导航</a></li>
+						<li><a href="http://36kr.com/" title="互联网创业" target="_blank">关注互联网创业</a></li>
+						<li><a href="http://chinaz.com/" title="站长之家" target="_blank">站长之家</a></li>
+					</ul>
+				</li>
+				<div class="clear"></div>
+			</div>
+			<div class="footerLink" id="footerNavgate">
+				<h2>站内导航</h2>
+				<ul>
+					<li>联系站长</li>
+					<li><a href="guestbook" target="_blank">投稿</a></li>
+					<li>关于本站</li>
+					<li><a href="sitemap.xml" target="_blank">站点地图</a></li>
+				</ul>
+				<div style="margin:4px auto;color:#3399FF">关注本站站长微博：</div>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+			<div class="footerLink" id="footer-about">
+				<h2>本站简介</h2>
+					<ul>
+						<li>本站记录分享工作学习中的经验，如果你有好的技术文章，可以投稿给到本博客，加上您的原文连接，更好的推广您的文章。
+						</li>
+					</ul>
+				<div id="footer-logo"><a id="footer-title"></a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="footer-content">
+			Copyright &copy;  2013<a href="blog.html">hao123IT博客</a> |  
+			<a href="sitemap.xml" target="_blank">站点地图</a>  <a href="http://www.miibeian.gov.cn/" target="_blank"  rel="nofollow"></a> <!--这里是统计代码 开始--><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6426c588d8591d5b3a9e1d33146258df' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!--这里是统计代码 结束--><br/>
+			<!-- 返回顶部 -->
+			<div style="display: none;" id="gotop"></div>
+				<script type='text/javascript'>
+					backTop=function (btnId){
+						var btn=document.getElementById(btnId);
+						var d=document.documentElement;
+						var b=document.body;
+						window.onscroll=set;
+						btn.onclick=function (){
+							btn.style.display="none";
+							window.onscroll=null;
+							this.timer=setInterval(function(){
+								d.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+								b.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+								if((d.scrollTop+b.scrollTop)==0) clearInterval(btn.timer,window.onscroll=set);
+							},10);
+						};
+						function set(){btn.style.display=(d.scrollTop+b.scrollTop>100)?'block':"none"}
+					};
+					backTop('gotop');
+				</script>
+				<!-- 返回顶部END -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+</div>
+
+</body>
+</html>

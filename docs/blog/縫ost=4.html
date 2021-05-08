@@ -1,0 +1,548 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>php使用Snoopy做采集，模拟登录程序</title>
+	<meta name="keywords" content="IT博客 php博客 网站博客,php,采集" />
+	<meta name="description" content="Snoo..." />
+	<meta name="generator" content="emlog" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php�rsd.php" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wlwmanifest.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS"  href="rss.php" />
+	<link type="text/css" href="content/templates/Metro/main.css" rel="stylesheet" />
+	<script src="include/lib/js/jquery/jquery-1.7.1.js" type="text/javascript"></script>
+	<script src="include/lib/js/common_tpl.js" type="text/javascript"></script>
+	<script src="../../tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<body>
+
+
+<!-- Copyright � 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Verdana; font-size: 9pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+��ҳ�������� <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.0.0.1025</b></a>  ��  04/23/15 10:34:29.<br>
+<b>��ַ:</b> <a class="info" href="http://kanng.net/blog/?post=4">http://kanng.net/blog/?post=4</a><br>
+<b>����:</b> php使用Snoopy做采集，模拟登录程序 &nbsp;&bull;&nbsp; <b>��С:</b> 32428<br></div>
+<!-- /Copyright � 2005. Spidersoft Ltd -->
+
+
+	<div id="page">
+		<script type="text/javascript">
+			if(screen.width>1030){document.getElementsByTagName('body')[0].className = "widescreen";}
+		</script>
+		<div id="container">
+			<div id="wrap">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a title="返回 hao123IT博客 首页" href="blog.html">hao123IT博客</a>
+						</h1>
+					</div>
+					<div class="search">	
+						<div class="search_site addapted" style="overflow: hidden;">	
+							<form id="searchform" method="get" action="http://kanng.net/blog/index.php">
+								<input type="submit" value="" id="searchsubmit" class="button">
+								<input type="text" id="s" name="keyword" value="">
+							</form>
+						</div>
+					</div>
+					<div id="contact">
+						<a href="rss.php" rel="bookmark" target="_blank" title="订阅到RSS"><img src="content/templates/Metro/images/rss24.png" alt="订阅到RSS" title="订阅到RSS" /></a>
+						<a href="#" rel="bookmark" target="_blank" title="关注新浪微博"><img src="content/templates/Metro/images/sina24.png" alt="关注新浪微博" title="关注新浪微博" /></a>
+						<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=s2555@qq.com" rel="bookmark" target="_blank" title="发邮件给我们"><img src="content/templates/Metro/images/mail24.png" alt="发邮件给我们" title="发邮件给我们" /></a>
+						<a href="#" rel="bookmark" target="_blank" title="关注腾讯微博"><img src="content/templates/Metro/images/tengxun24.png" alt="关注腾讯微博" title="关注腾讯微博" /></a>
+					</div>
+				</div>
+				<div id="nav">
+					<div class="topnav">
+							<ul id="menu" class="menu">
+			<li><a href="blog.html" >首页</a></li>
+			<li><a href="�sort=2.html" >前端设计</a></li>
+			<li><a href="�sort=1.html" >PHP</a></li>
+		</ul>
+					</div>
+				</div>
+				
+			<div id="content">
+	<div class="main">
+		<div class="left">
+			<div class="post_date">
+				<span class="date_ym">2013.9</span>
+				<span class="date_d">3</span>
+			</div>
+			<div class="articles">
+				<div class="post-title-single">
+					<h2>php使用Snoopy做采集，模拟登录程序</h2>
+				</div>
+				<div class="infosingle">
+					<div id="singleinfo">
+						<span class="info-user-icon">
+							<a href="�author=1.html" >admin</a> 发表于 2013-9-3 20:58 Tuesday						</span>
+						<span class="info-category-icon"><a href="�sort=1.html">PHP</a>
+</span>
+						<span class="info-view-icon">超过2655围观</span>
+						<span class="info-comment-icon"><a href="#comments">1条评论</a></span>					</div>
+				</div>
+				<div class="context">
+				<br/>
+					<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">Snoopy是一个php类，用来模拟浏览器的功能，可以获取网页内容，模拟表单提交等</span><span style="font-size:14px;">。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">下载地址:</span><a href="http://sourceforge.net/projects/snoopy/"><span style="font-size:14px;">http://sourceforge.net/projects/snoopy/</span></a>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">一、Snoopy的一些特点:</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　1.抓取网页的内容 fetch</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　2.抓取网页的文本内容 (去除HTML标签) fetchtext</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　3.抓取网页的链接，表单 fetchlinks fetchform</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　4.支持代理主机</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　5.支持基本的用户名/密码验证</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　6.支持设置user_agent, referer(来路), cookies和header content(头文件)</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　7.支持浏览器重定向，并能控制重定向深度</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　8.能把网页中的链接扩展成高质量的url(默认)</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　9.提交数据并且获取返回值</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　10.支持跟踪HTML框架</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　11.支持重定向的时候传递cookies，要求php4以上就可以了，由于本身是php一个类，无需扩支持，服务器不支持curl时候的最好选择。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">二、类方法:</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">fetch($URI)&nbsp;</span><br />
+<span style="font-size:14px;">———–</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　这是为了抓取网页的内容而使用的方法。$URI参数是被抓取网页的URL地址。抓取的结果被存储在 $this-&gt;results 中。如果你正在抓取的是一个框架，Snoopy将会将每个框架追踪后存入数组中，然后存入 $this-&gt;results。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">fetchtext($URI)&nbsp;</span><br />
+<span style="font-size:14px;">—————</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法类似于fetch()，唯一不同的就是本方法会去除HTML标签和其他的无关数据，只返回网页中的文字内容。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">fetchform($URI)&nbsp;</span><br />
+<span style="font-size:14px;">—————</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法类似于fetch()，唯一不同的就是本方法会去除HTML标签和其他的无关数据，只返回网页中表单内容(form)。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">fetchlinks($URI)&nbsp;</span><br />
+<span style="font-size:14px;">—————-</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法类似于fetch()，唯一不同的就是本方法会去除HTML标签和其他的无关数据，只返回网页中链接(link)。</span><br />
+<span style="font-size:14px;">默认情况下，相对链接将自动补全，转换成完整的URL。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">submit($URI,$formvars)&nbsp;</span><br />
+<span style="font-size:14px;">———————-</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法向$URL指定的链接地址发送确认表单。$formvars是一个存储表单参数的数组。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">submittext($URI,$formvars)&nbsp;</span><br />
+<span style="font-size:14px;">————————–</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法类似于submit()，唯一不同的就是本方法会去除HTML标签和其他的无关数据，只返回登陆后网页中的文字内容。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">submitlinks($URI)&nbsp;</span><br />
+<span style="font-size:14px;">—————-</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">　　本方法类似于submit()，唯一不同的就是本方法会去除HTML标签和其他的无关数据，只返回网页中链接(link)。&nbsp;</span><br />
+<span style="font-size:14px;">默认情况下，相对链接将自动补全，转换成完整的URL。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">三、类属性: (缺省值在括号里)</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">$host 连接的主机&nbsp;</span><br />
+<span style="font-size:14px;">$port 连接的端口&nbsp;</span><br />
+<span style="font-size:14px;">$proxy_host 使用的代理主机，如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$proxy_port 使用的代理主机端口，如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$agent 用户代理伪装 (Snoopy v0.1)&nbsp;</span><br />
+<span style="font-size:14px;">$referer 来路信息，如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$cookies cookies， 如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$rawheaders 其他的头信息, 如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$maxredirs 最大重定向次数， 0=不允许 (5)&nbsp;</span><br />
+<span style="font-size:14px;">$offsiteok whether or not to allow redirects off-site. (true)&nbsp;</span><br />
+<span style="font-size:14px;">$expandlinks 是否将链接都补全为完整地址 (true)&nbsp;</span><br />
+<span style="font-size:14px;">$user 认证用户名, 如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$pass 认证用户名, 如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$accept http 接受类型 (image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*)&nbsp;</span><br />
+<span style="font-size:14px;">$error 哪里报错, 如果有的话&nbsp;</span><br />
+<span style="font-size:14px;">$response_code 从服务器返回的响应代码&nbsp;</span><br />
+<span style="font-size:14px;">$headers 从服务器返回的头信息&nbsp;</span><br />
+<span style="font-size:14px;">$maxlength 最长返回数据长度&nbsp;</span><br />
+<span style="font-size:14px;">$read_timeout 读取操作超时 (requires PHP 4 Beta 4+)&nbsp;</span><br />
+<span style="font-size:14px;">设置为0为没有超时&nbsp;</span><br />
+<span style="font-size:14px;">$timed_out 如果一次读取操作超时了，本属性返回 true (requires PHP 4 Beta 4+)&nbsp;</span><br />
+<span style="font-size:14px;">$maxframes 允许追踪的框架最大数量&nbsp;</span><br />
+<span style="font-size:14px;">$status 抓取的http的状态&nbsp;</span><br />
+<span style="font-size:14px;">$temp_dir 网页服务器能够写入的临时文件目录 (/tmp)&nbsp;</span><br />
+<span style="font-size:14px;">$curl_path cURL binary 的目录, 如果没有cURL binary就设置为 false</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">&nbsp;简单例子：</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="color:#009900;font-size:14px;">Snoopy=new $Snoopy;</span><br />
+<span style="color:#009900;font-size:14px;">&nbsp;$Snoopy-&gt;agent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31";</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;referer = "</span><a href="http://www.kanng.net/"><span style="color:#009900;font-size:14px;">http://www.kanng.net/</span></a><span style="color:#009900;font-size:14px;">";</span><br />
+<span style="color:#009900;font-size:14px;">// set some cookies:</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;cookies["PHPSESSID"] = "fc106b1918bd522cc863f638490e6fff7"; //伪装sessionid </span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;cookies["SessionID"] = rand(12987,98765).'834723489';</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;cookies["favoriteColor"] = "blue";</span><br />
+<span style="color:#009900;font-size:14px;">// set an raw-header:</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;rawheaders["Pragma"] = "no-cache";</span><br />
+<span style="color:#009900;font-size:14px;">// set some internal variables:</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;maxredirs = 2;</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;offsiteok = false;</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;expandlinks = false;</span><br />
+<span style="color:#009900;font-size:14px;">$Snoopy-&gt;fetch("</span><a href="../index.html"><span style="color:#009900;font-size:14px;">http://kanng.net</span></a><span style="color:#009900;font-size:14px;">");</span><br />
+<span style="color:#009900;font-size:14px;">$htmls=$Snoopy-&gt;results;&nbsp; //取得源代码</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	<span style="font-size:14px;">之后正则匹配想要的数据。</span>
+</p>
+<p style="text-align:left;background-color:#f5fafe;text-indent:0px;color:#473b34;">
+	&nbsp;
+</p><br/>
+					<br/>
+					<div id="log_tags">
+						本文标签：	<a href="�tag=php.html">php</a>	<a href="�tag=采集.html">采集</a>					</div><br/>
+					<div id="share">
+						<!-- Baidu Button BEGIN -->
+						<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+						<a class="bds_tsina"></a>
+						<a class="bds_qzone"></a>
+						<a class="bds_renren"></a>
+						<a class="bds_t163"></a>
+						<a class="bds_tqq"></a>
+						<a class="bds_kaixin001"></a>
+						<a class="bds_tieba"></a>
+						<a class="bds_diandian"></a>
+						<a class="bds_mail"></a>
+						<a class="bds_bdhome"></a>
+						<a class="bds_sqq"></a>
+						<a class="bds_fx"></a>
+						<a class="bds_ty"></a>
+						<span class="bds_more"></span>
+						<a class="shareCount"></a>
+						</div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3134744" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">
+						document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+						</script>
+						<!-- Baidu Button END -->
+					</div><br/><br/>
+
+					<div class="feed-tip">
+						»版权所有：《<a href="blog.html" title="hao123IT博客">hao123IT博客</a>》 → 《<a title="php使用Snoopy做采集，模拟登录程序" href="�post=4.html">php使用Snoopy做采集，模拟登录程序</a>》；<br>
+						»本文网址：<a title="http://kanng.net/blog/?post=4" href="�post=4.html">http://kanng.net/blog/?post=4</a> ；<br>
+						»除特别标注,本博客所有文章均为原创. 互联分享,尊重版权,转载请以链接形式标明本文地址；    
+					</div>
+					<!--分享和版权结束-->
+										<div class="feed-tip">
+						<div class="neighbor_log">
+<span class="left">上一篇：：<a href="�post=5.html" title="上一篇《php MySQL使用批量插入多条记录》">php MySQL使用批量插入多条记录</a></span><br/>
+ <span class="right">下一篇：<a href="�post=3.html" title="下一篇《(chrome,IE,360等)浏览器打印去掉页眉页尾(url、标题、页码)》">(chrome,IE,360等)浏览器打印去掉页眉页尾(url、标题、页码)</a></span>
+</div>
+					</div>
+					<div class="remen">
+						<div style="float:right; width:49%; word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+						<h3>热门文章</h3>
+												<ul>
+												<li><a href="�post=19.html" title="查看文章:非API方式调用谷歌翻译">非API方式调用谷歌翻译</a></li>
+												<li><a href="�post=18.html" title="查看文章:js判断是否手机平板浏览器">js判断是否手机平板浏览器</a></li>
+												<li><a href="�post=20.html" title="查看文章:支付宝收款主页另一种实现，可用于接受捐赠">支付宝收款主页另一种实现，可用于接受捐赠</a></li>
+												<li><a href="�post=21.html" title="查看文章:查询数据库中某个值在哪个表">查询数据库中某个值在哪个表</a></li>
+												</ul>
+						</div>
+						<div style="float:left; width:49%; word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+						<h3>相关文章</h3>
+												<ul>
+												<li><a href="�post=19.html" title="查看文章:非API方式调用谷歌翻译">非API方式调用谷歌翻译</a></li>
+												<li><a href="�post=8.html" title="查看文章:天翼189开放平台短信验证码代码实例">天翼189开放平台短信验证码代码实例</a></li>
+												<li><a href="�post=4.html" title="查看文章:php使用Snoopy做采集，模拟登录程序">php使用Snoopy做采集，模拟登录程序</a></li>
+												<li><a href="�post=5.html" title="查看文章:php MySQL使用批量插入多条记录">php MySQL使用批量插入多条记录</a></li>
+												</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="articles">
+			<div id="wumiiLikeRecBtnDiv" class="wumii"></div>
+		</div>
+
+		<div class="articles">
+			<div class="post-comment">
+				<ul class="maintab_menu">
+					<li class="current"><h3>各种观点</h3></li>
+				</ul>
+				<div class="maintab_content">
+					<div class="">
+							<div id="comments" class="div"> 
+		<a name="comments"></a>
+					<div class="comment-header"> 评论列表 <span style="font-size:14px;" id="go-comment-place"><a href="javascript:void()">↓</a></span> </div>
+				<div id="comment_list">
+				<div class="comment-box">
+			<div class="comment" id="comment-25">
+				<a name="25"></a>
+									<img src="http://www.gravatar.com/avatar/dc66c73c00cd4add23cc9f21c99055c5?s=40&d=mm&r=g" width="36" height="36" class="avatar" />
+							<div class="comment-info" style="border-left: 3px solid #825600;"> 
+			<span class="louceng" style="color:#cc0000;font-weight: bold;font-size:15px">呦，果断人中龙凤!</span> 
+		<!--<span class="louceng">#1</span> -->
+		<span class="name"><a href="http://www.newbalanceshoesjp.net/" rel="external nofollow" target="_blank">newbalanceshoesjp</a></span><span style="padding-left:5px"></span>&nbsp;&nbsp; &nbsp;&nbsp;<span class="comment-time"> 2014-07-17 22:24 </span> <a class='comment-reply-link' href='#comment-25' onclick="commentReply(25,this)">@回复</a><br />
+          <span class="commnet-content">良いあなたはここにあるが、私はでしたサイト は、任意のコミュニティフォーラムここ|この記事ので議論|同じトピックをカバーフォーラム} {について話しました？私は思います本当に好き他得ることができますオンラインコミュニティコミュニティグループの一部であるように経験豊富な 同じ興味を共有する人々。何かある場合は提言、私に知らせてください。 それを感謝！</span> </div>
+              </div>
+    </div>
+    <div style="clear:both;"></div>
+      </div>
+</div>
+<div id="pagenavi">  </div>
+						<div id="comment-place" class="div">
+  <div class="comment-post" id="comment-post">
+
+	<div class="cancel-reply" id="cancel-reply" style="display:none"><a href="javascript:void(0);" onclick="cancelReply()">取消回复</a></div>
+    <div class="comment-header"><a name="respond"></a>亲，你怎么看？</div>
+    <form method="post" name="commentform" action="http://kanng.net/blog/index.php?action=addcom" id="commentform">
+      <input type="hidden" name="gid" value="4" />
+                  <div id="userinfo">
+        <div id="comment-author-info">          
+          <p>
+			<div id="guest_avatar">
+				<img src="http://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=80&d=mm&r=g" id="realtime_avatar" />
+				<p style="font-size:12px;color:#999;">亲，头像对么？</p>
+			</div>
+			<label for="author"><small>姓名:</small> </label>
+            <input type="text" name="comname" class="input" value="" tabindex="1"/>
+          </p>
+          <p>
+			<label for="email"><small>邮箱:</small> </label>
+            <input type="text" name="commail" id="email" class="input" value="" tabindex="2"/>
+          </p>
+          <p>
+			<label for="url"><small>主页:</small></label>
+            <input type="text" name="comurl" class="input" value="" tabindex="3" />
+          </p>
+        </div>
+      </div>
+            <p>
+        <textarea name="comment" class="textarea" cols="100" rows="7" tabindex="4" onkeydown="if(event.altKey && window.event.keyCode == 83) {document.getElementById('submit').click();return false;}; if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false;};" >
+</textarea>
+      </p>
+      <p>      <div id="loading" style="display:none">提交中，请稍候……</div>
+      </p>
+      <input name="submit" type="submit" class="submit blue button" tabindex="5" value="填写好了！(Ctrl+Enter)" />
+      <input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
+    </form>
+    <div id="error" style="color:red"></div>
+	<div class="clear"></div>
+    <p style="font-size:12px;color:#999;padding: 0 10px 10px 10px;text-shadow:-1px 1px 0 white;"><br />
+      木有头像就木JJ啦！还木有头像吗？<a href="http://www.gravatar.com/" target="_blank" rel="nofollow">点这里申请</a>属于你的个性Gravatar头像吧！</p>
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	﻿<div id="sidebar">
+		<ul id="sidebar">
+<li>
+  <h3><span>请支持我</span></h3>
+  <ul id="zidingyi">
+    <script type="text/javascript">
+     document.write('<a style="display:none!important" id="tanx-a-mm_22633153_2355965_13448834"></a>');
+     tanx_s = document.createElement("script");
+     tanx_s.type = "text/javascript";
+     tanx_s.charset = "gbk";
+     tanx_s.id = "tanx-s-mm_22633153_2355965_13448834";
+     tanx_s.async = true;
+     tanx_s.src = "http://p.tanx.com/ex?i=mm_22633153_2355965_13448834";
+     tanx_h = document.getElementsByTagName("head")[0];
+     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>  </ul>
+</li>
+<li>
+  <h3><span>日历</span></h3>
+  <div id="calendar"> </div>
+  <script>sendinfo('http://kanng.net/blog/?action=cal','calendar');</script> 
+</li>
+<li>
+  <h3><span>存档</span></h3>
+  <ul id="record">
+        <li><a href="�record=201502.html">2015年2月(1)</a></li>
+        <li><a href="�record=201411.html">2014年11月(1)</a></li>
+        <li><a href="�record=201410.html">2014年10月(2)</a></li>
+        <li><a href="�record=201403.html">2014年3月(2)</a></li>
+        <li><a href="�record=201402.html">2014年2月(1)</a></li>
+        <li><a href="�record=201312.html">2013年12月(1)</a></li>
+        <li><a href="�record=201311.html">2013年11月(3)</a></li>
+        <li><a href="�record=201310.html">2013年10月(2)</a></li>
+        <li><a href="�record=201309.html">2013年9月(4)</a></li>
+        <li><a href="�record=201308.html">2013年8月(2)</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>最新评论</span></h3>
+  <ul id="newcomment">
+        <li id="comment"><span class="name">admin </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=8#31">@佛山淋浴房：就几步流程</a></li>
+        <li id="comment"><span class="name">佛山淋浴房 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=8#30">感觉还是有点复杂</a></li>
+        <li id="comment"><span class="name">顾长春 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=6#29">这个网站不错，赞一个。</a></li>
+        <li id="comment"><span class="name">麦特佐罗 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#28">@财经博客：哪都有你啊</a></li>
+        <li id="comment"><span class="name">所在 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#27">看了之后启发很大啊值得推荐</a></li>
+        <li id="comment"><span class="name">newbalanceshoesjp </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=4#25">良いあなたはここにあるが、私はでしたサイ...</a></li>
+        <li id="comment"><span class="name">宋小北 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=5#24">如果用
+INSERT INTO tab...</a></li>
+        <li id="comment"><span class="name">财经名人 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#23">看写的文章，受益匪浅</a></li>
+        <li id="comment"><span class="name">财经博客 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=16#22">看了写的内容 很不错。欢迎回访</a></li>
+        <li id="comment"><span class="name">梦里的畅泳 </span><br />
+      <a id="pinglun_neirong" href="http://kanng.net/blog/?post=3#21">嗯,是这个道理</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>链接</span></h3>
+  <ul id="link">
+        <li><a href="http://www.kanng.net/" title="it导航，编程导航，程序员导航" target="_blank">IT导航</a></li>
+      </ul>
+</li>
+<li>
+  <h3><span>搜索</span></h3>
+  <ul id="logserch">
+    <form name="keyform" method="get" id="sidebar_s" action="http://kanng.net/blog/index.php">
+      <input name="keyword" id="s" type="text" value="" style="width:120px;"/>
+      <input type="submit" id="logserch_logserch" class="button" value="搜索" />
+    </form>
+  </ul>
+</li>
+</ul><!--end #siderbar-->	</div>
+	<div class="clear"></div>
+</div>
+	<div id="footer">
+	<div id="footer-body">
+		<div id="footer-subbody">
+			<div class="footerLink">
+				<li id="linkcat-2" class="linkcat">
+					<h2>友情链接</h2>
+					<ul class='xoxo blogroll'>
+						<li><a href="http://anyou8.com/" title="淘宝店铺SEO" target="_blank">淘宝店铺收录</a></li>
+						<li><a href="../index.html" title="程序员导航、IT导航" target="_blank">hao123it导航</a></li>
+						<li><a href="http://36kr.com/" title="互联网创业" target="_blank">关注互联网创业</a></li>
+						<li><a href="http://chinaz.com/" title="站长之家" target="_blank">站长之家</a></li>
+					</ul>
+				</li>
+				<div class="clear"></div>
+			</div>
+			<div class="footerLink" id="footerNavgate">
+				<h2>站内导航</h2>
+				<ul>
+					<li>联系站长</li>
+					<li><a href="guestbook" target="_blank">投稿</a></li>
+					<li>关于本站</li>
+					<li><a href="sitemap.xml" target="_blank">站点地图</a></li>
+				</ul>
+				<div style="margin:4px auto;color:#3399FF">关注本站站长微博：</div>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+			<div class="footerLink" id="footer-about">
+				<h2>本站简介</h2>
+					<ul>
+						<li>本站记录分享工作学习中的经验，如果你有好的技术文章，可以投稿给到本博客，加上您的原文连接，更好的推广您的文章。
+						</li>
+					</ul>
+				<div id="footer-logo"><a id="footer-title"></a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="footer-content">
+			Copyright &copy;  2013<a href="blog.html">hao123IT博客</a> |  
+			<a href="sitemap.xml" target="_blank">站点地图</a>  <a href="http://www.miibeian.gov.cn/" target="_blank"  rel="nofollow"></a> <!--这里是统计代码 开始--><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6426c588d8591d5b3a9e1d33146258df' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!--这里是统计代码 结束--><br/>
+			<!-- 返回顶部 -->
+			<div style="display: none;" id="gotop"></div>
+				<script type='text/javascript'>
+					backTop=function (btnId){
+						var btn=document.getElementById(btnId);
+						var d=document.documentElement;
+						var b=document.body;
+						window.onscroll=set;
+						btn.onclick=function (){
+							btn.style.display="none";
+							window.onscroll=null;
+							this.timer=setInterval(function(){
+								d.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+								b.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+								if((d.scrollTop+b.scrollTop)==0) clearInterval(btn.timer,window.onscroll=set);
+							},10);
+						};
+						function set(){btn.style.display=(d.scrollTop+b.scrollTop>100)?'block':"none"}
+					};
+					backTop('gotop');
+				</script>
+				<!-- 返回顶部END -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+</div>
+
+</body>
+</html>
