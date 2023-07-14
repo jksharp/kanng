@@ -38,7 +38,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.DeadMoney", "Kanng.De
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1C288ACA-D524-4B2C-8075-73F8E8C563CE}"
 	ProjectSection(SolutionItems) = preProject
-		docs\_config.yml = docs\_config.yml
 		docs\about.html = docs\about.html
 		docs\android.html = docs\android.html
 		docs\baidu_verify_g39oJFbMXx.html = docs\baidu_verify_g39oJFbMXx.html
