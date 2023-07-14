@@ -425,7 +425,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(87, 51);
 			this.button4.TabIndex = 0;
-			this.button4.Text = "看门狗";
+			this.button4.Text = "安雀";
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
@@ -796,7 +796,7 @@
 			this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
 			this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
 			this.关于AToolStripMenuItem.Text = "关于(&A)";
-			this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于看门狗ToolStripMenuItem_Click);
+			this.关于AToolStripMenuItem.Click += new System.EventHandler(this.关于安雀ToolStripMenuItem_Click);
 			// 
 			// 捐助SToolStripMenuItem
 			// 
@@ -955,7 +955,7 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "StartProccess";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "看门狗桌面启动助手";
+			this.Text = "安雀桌面启动助手";
 			this.Load += new System.EventHandler(this.StartProccess_Load);
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.tabPage1_DragEnter);

@@ -124,7 +124,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 12);
             this.label8.TabIndex = 8;
-            this.label8.Text = "看门狗导航：";
+            this.label8.Text = "安雀导航：";
             // 
             // linkLabel2
             // 
@@ -134,7 +134,7 @@
             this.linkLabel2.Size = new System.Drawing.Size(101, 12);
             this.linkLabel2.TabIndex = 9;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "http://kanng.net";
+            this.linkLabel2.Text = "http://FLYBI.CN";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label9
@@ -179,7 +179,7 @@
             this.MinimumSize = new System.Drawing.Size(583, 339);
             this.Name = "about";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "关于看门狗桌面助手";
+            this.Text = "关于安雀桌面助手";
             this.ResumeLayout(false);
             this.PerformLayout();
 

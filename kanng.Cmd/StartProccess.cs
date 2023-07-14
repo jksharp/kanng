@@ -57,7 +57,7 @@ namespace kanng.Cmd
         {
             LoadPath = path;
 
-            Title = "看门狗桌面助手1.4-" + path;
+            Title = "安雀桌面助手1.4-" + path;
 
             InitializeComponent();
 
@@ -132,7 +132,7 @@ namespace kanng.Cmd
         }
 
 
-        private void 关于看门狗ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 关于安雀ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             about aboutform = new about();
             aboutform.Show();
@@ -147,7 +147,7 @@ namespace kanng.Cmd
 
         public void LoadUrl()
         {
-            // Uri rulpaht = new Uri("http://www.kanng.net");
+            // Uri rulpaht = new Uri("http://www.FLYBI.CN");
 
             //webBrowser1.Url = rulpaht;
 
@@ -326,7 +326,7 @@ namespace kanng.Cmd
 
         private void button4_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.kanng.net");
+            System.Diagnostics.Process.Start("http://www.FLYBI.CN");
         }
 
         public void addControl(UrlModel model)
@@ -448,7 +448,7 @@ namespace kanng.Cmd
 
         private void iT导航ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.kanng.net");
+            System.Diagnostics.Process.Start("http://www.FLYBI.CN");
         }
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)

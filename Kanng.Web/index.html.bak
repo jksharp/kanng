@@ -6,7 +6,7 @@
     <meta name="keywords" content="IT垂直导航，IT科技资讯，个人服务，云计算，大数据，云服务，物联网，移动互联，开发者园地，IT服务，IT产品，信息安全，导航网站" />
     <meta name="description" content="我们专注于IT服务领域，将行业内知名网站、最新新闻、最酷产品、最新观点汇集到一起，让您可以在最短的时间内了解该领域的信息；同时，提供免费讲座信息、电子图书下载、免费在线培训等信息，让您可以轻松获取学习成长的资源。" />
     <title>IT专业领域导航网站 | IT领域垂直导航 | IT人的导航网站</title>
-    <link rel="shortcut icon" href="http://kanng.net/favicon.ico" />
+    <link rel="shortcut icon" href="http://FLYBI.CN/favicon.ico" />
     <link href="static/base.css" rel="stylesheet" type="text/css" />
     <style id="temp-css" type="text/css">
         #tanxssp_con_mm_22633153_2355965_13448834 {
@@ -19,7 +19,7 @@
 
     </style>
   
-    <script type="text/javascript" src="http://kanng.net/static/basegbk.js"></script>
+    <script type="text/javascript" src="http://FLYBI.CN/static/basegbk.js"></script>
     <base target="_blank" />
 </head>
 <body>
@@ -28,12 +28,12 @@
     <div id="wrap">
         <div id="top" class="clearfix">
             <ul id="set">
-                <li class="sethome"><a onclick="Yl.setHome(this,this.href); return false;" target="_self" href="index.html">设Kanng.NET看门狗为首页</a></li>
+                <li class="sethome"><a onclick="Yl.setHome(this,this.href); return false;" target="_self" href="index.html">设FLYBI.CN安雀为首页</a></li>
             </ul>
         </div>
         <div id="header">
             <div class="box clearfix">
-                <h1 id="logo"><a href="index.html"><img src="static/images/logo.jpg" alt="Kanng.NET导航" /></a></h1>
+                <h1 id="logo"><a href="index.html"><img src="static/images/logo.jpg" alt="FLYBI.CN导航" /></a></h1>
 
                 <div id="bn">
                     <ul id="cal">
@@ -1479,25 +1479,25 @@
             <div class="box">
                 <ul>
                     <li class="bd">
-                        <strong>友情链接</strong><a href='donate/index.html' title='捐助'>捐助</a><a href='http://www.daikuan.com/' title='汽车贷款'>易鑫车贷</a><a href='http://kanng.net/看门狗桌面助手1.4Release.rar' title='看门狗桌面助手'>看门狗桌面助手</a><a href='https://github.com/jksharp/kanng' title='看门狗桌面助手'>看门狗开源网址GitHUB</a>
+                        <strong>友情链接</strong><a href='donate/index.html' title='捐助'>捐助</a><a href='http://www.daikuan.com/' title='汽车贷款'>易鑫车贷</a><a href='http://FLYBI.CN/安雀桌面助手1.4Release.rar' title='安雀桌面助手'>安雀桌面助手</a><a href='https://github.com/jksharp/kanng' title='安雀桌面助手'>安雀开源网址GitHUB</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div id="footer">
-            <p class="copyright"><!--akcms--><span id='powerekanng'>Powered by <a href='http://www.kanng.net/' target='_blank'>Kanng.NET</a></span>&copy;2005-
-            <script type="text/javascript">document.write(new Date().getFullYear());</script>. All Rights Reserved. <a href="http://www.miibeian.gov.cn/">京ICP备15020407号</a> | <a href="about.html">关于Kanng.NET导航</a> </p>
+            <p class="copyright"><!--akcms--><span id='powerekanng'>Powered by <a href='http://www.FLYBI.CN/' target='_blank'>FLYBI.CN</a></span>&copy;2005-
+            <script type="text/javascript">document.write(new Date().getFullYear());</script>. All Rights Reserved. <a href="http://www.miibeian.gov.cn/">京ICP备15020407号</a> | <a href="../about.html">关于FLYBI.CN导航</a> </p>
         </div>
         <div style="display:none;">
 
         </div>
 
-        <script type="text/javascript" src="http://kanng.net/static/main.js"></script>
+        <script type="text/javascript" src="http://FLYBI.CN/static/main.js"></script>
 
         <div class="tongji"></div>
 
     </div>
-    <!-- kanng.net Baidu tongji analytics -->
+    <!-- FLYBI.CN Baidu tongji analytics -->
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F62c42e1c4a9ae3d9c6a0020aac47449d' type='text/javascript'%3E%3C/script%3E"));

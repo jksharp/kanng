@@ -23,7 +23,7 @@ namespace kanng.Cmd
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://kanng.net");
+            System.Diagnostics.Process.Start("http://FLYBI.CN");
         }
 
         private void label10_Click(object sender, EventArgs e)

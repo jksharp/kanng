@@ -3,12 +3,12 @@
 <channel>
 <title><![CDATA[hao123IT博客]]></title> 
 <description><![CDATA[hao123IT导航 IT博客]]></description>
-<link>http://kanng.net/blog/</link>
+<link>http://FLYBI.CN/blog/</link>
 <language>zh-cn</language>
 <generator>www.emlog.net</generator>
 <item>
 	<title>查询数据库中某个值在哪个表</title>
-	<link>http://kanng.net/blog/?post=21</link>
+	<link>http://FLYBI.CN/blog/?post=21</link>
 	<description><![CDATA[<p>
 	<span>数据库不是自己做的时候，又没有文档，想查询某个值在哪个表，可以用这种方式：</span>
 </p>
@@ -77,12 +77,12 @@
 </p>]]></description>
 	<pubDate>Thu, 12 Feb 2015 01:38:13 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=21</guid>
+	<guid>http://FLYBI.CN/blog/?post=21</guid>
 
 </item>
 <item>
 	<title>支付宝收款主页另一种实现，可用于接受捐赠</title>
-	<link>http://kanng.net/blog/?post=20</link>
+	<link>http://FLYBI.CN/blog/?post=20</link>
 	<description><![CDATA[<div style="margin:0px;padding:0px;font-family:'Gotham Narrow SSm', 'Microsoft Jhenghei', 'Microsoft Yahei', 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;font-size:14px;background-color:#FAFAFA;">
 	<p style="text-indent:2em;">
 		大家都知道PayPal有一個非常使用的「一鍵<a href="http://www.arefly.com/tag/%e8%bd%89%e8%b3%ac/" target="_blank">轉賬</a>」按鈕功能，但是自從<a href="http://www.arefly.com/tag/%e6%94%af%e4%bb%98%e5%af%b6/" target="_blank">支付寶</a>的個人收款主頁停止服務後，支付寶已經無法實現該類功能了。不過方法總還是有的，今天「暢想資源」就來教大家使用一個極其簡單的&nbsp;form&nbsp;標籤經過&nbsp;POST&nbsp;可以一鍵自動填寫「<a href="http://www.arefly.com/tag/%e6%94%af%e4%bb%98%e5%af%b6%e8%bd%89%e8%b3%ac/" target="_blank">支付寶轉賬</a>頁面」的信息，讓大家更方便、更快捷的轉賬！
@@ -189,12 +189,12 @@
 </div>]]></description>
 	<pubDate>Sat, 15 Nov 2014 14:25:07 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=20</guid>
+	<guid>http://FLYBI.CN/blog/?post=20</guid>
 
 </item>
 <item>
 	<title>非API方式调用谷歌翻译</title>
-	<link>http://kanng.net/blog/?post=19</link>
+	<link>http://FLYBI.CN/blog/?post=19</link>
 	<description><![CDATA[<p>
 	谷歌翻译API收费了，但是&nbsp;http://translate.google.cn/ 是免费的，我们模拟这个去发送请求，抓翻译结果吧。
 </p>
@@ -205,7 +205,7 @@
 	<span style="color:#99BB00;">require_once 'Snoopy.php';</span><br />
 <span style="color:#99BB00;"> $Snoopy=new Snoopy();</span><br />
 <span style="color:#99BB00;"> $Snoopy-&gt;agent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31";</span><br />
-<span style="color:#99BB00;"> $Snoopy-&gt;referer = "http://www.kanng.net/";</span><br />
+<span style="color:#99BB00;"> $Snoopy-&gt;referer = "http://www.FLYBI.CN/";</span><br />
 <span style="color:#99BB00;"> // set some cookies:</span><br />
 <span style="color:#99BB00;"> $Snoopy-&gt;cookies["PHPSESSID"] = "fc106b1918bd522cc863f".rand(12987,98765)."0e6fff7"; //伪装sessionid&nbsp;</span><br />
 <span style="color:#99BB00;"> $Snoopy-&gt;cookies["SessionID"] = rand(12987,98765).'834723489';</span><br />
@@ -233,12 +233,12 @@
 </p>]]></description>
 	<pubDate>Mon, 27 Oct 2014 06:25:34 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=19</guid>
+	<guid>http://FLYBI.CN/blog/?post=19</guid>
 
 </item>
 <item>
 	<title>js判断是否手机平板浏览器</title>
-	<link>http://kanng.net/blog/?post=18</link>
+	<link>http://FLYBI.CN/blog/?post=18</link>
 	<description><![CDATA[<pre class="prettyprint lang-js linenums">function is_m_browser(){
 try {
 var urlhash = window.location.hash;
@@ -262,12 +262,12 @@ return false;
 </p>]]></description>
 	<pubDate>Mon, 06 Oct 2014 02:10:57 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=18</guid>
+	<guid>http://FLYBI.CN/blog/?post=18</guid>
 
 </item>
 <item>
 	<title>js 倒计时关闭浏览器</title>
-	<link>http://kanng.net/blog/?post=16</link>
+	<link>http://FLYBI.CN/blog/?post=16</link>
 	<description><![CDATA[<p>
 	项目中用到定时任务，需要定时打开浏览器允许一个php,完成之后关闭浏览器,代码如下：
 </p>
@@ -287,12 +287,12 @@ return false;
 </p>]]></description>
 	<pubDate>Thu, 06 Mar 2014 07:03:39 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=16</guid>
+	<guid>http://FLYBI.CN/blog/?post=16</guid>
 
 </item>
 <item>
 	<title>php备份mysql数据库包括所有数据</title>
-	<link>http://kanng.net/blog/?post=15</link>
+	<link>http://FLYBI.CN/blog/?post=15</link>
 	<description><![CDATA[<p>
 	给客户做的网站，需要加一个一键备份数据库的功能。找到了两个很好用的函数，出处记得哪里的了。
 </p>
@@ -355,12 +355,12 @@ return false;
 </p>]]></description>
 	<pubDate>Mon, 03 Mar 2014 07:57:42 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=15</guid>
+	<guid>http://FLYBI.CN/blog/?post=15</guid>
 
 </item>
 <item>
 	<title>js防止重复点击保存提交表单</title>
-	<link>http://kanng.net/blog/?post=14</link>
+	<link>http://FLYBI.CN/blog/?post=14</link>
 	<description><![CDATA[<p>
 	往往有些用户网络慢或者其他问题，在提交表单的时候使劲点击保存提交按钮，在提交表单的时候加上下面的代码，即可以限制在一定时间内，只有一次点击是有效的。
 </p>
@@ -390,12 +390,12 @@ document.getElementById('imgform').submit();<br />
 </p>]]></description>
 	<pubDate>Wed, 12 Feb 2014 07:32:38 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=14</guid>
+	<guid>http://FLYBI.CN/blog/?post=14</guid>
 
 </item>
 <item>
 	<title>google地图api 通过地址获得经纬度</title>
-	<link>http://kanng.net/blog/?post=13</link>
+	<link>http://FLYBI.CN/blog/?post=13</link>
 	<description><![CDATA[<p>
 	最近要做一个在门店位置经纬度的接口给手机app端调用在地图上显示，由于有两千多个，所以只能用批量标注的方法，这里使用了谷歌地图的api，只要把地址传过去就可以了。下面是代码：
 </p>
@@ -421,19 +421,19 @@ document.getElementById('imgform').submit();<br />
 <span style="color:#99BB00;">&nbsp;echo $address." lng: ".$lng." lat:".$lat."&lt;br&gt;";</span><br />]]></description>
 	<pubDate>Tue, 17 Dec 2013 02:32:37 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=13</guid>
+	<guid>http://FLYBI.CN/blog/?post=13</guid>
 
 </item>
 <item>
 	<title>欧元美元日元黄金白银外汇监视小工具，上班族必备</title>
-	<link>http://kanng.net/blog/?post=12</link>
+	<link>http://FLYBI.CN/blog/?post=12</link>
 	<description><![CDATA[<p>
-	免费下载地址：<a href="http://kanng.net/waihui.zip">http://kanng.net/waihui.zip</a> 
+	免费下载地址：<a href="http://FLYBI.CN/waihui.zip">http://FLYBI.CN/waihui.zip</a> 
 </p>
 <p>
 	建议在win7系统以上运行，如果是xp系统，请下载<span style="color:#505050;font-family:'Microsoft YaHei', Meiryo, 'Malgun Gothic', 'Segoe UI', Tahoma, sans-serif;font-size:13px;line-height:16.1875px;background-color:#F3F3F3;">Microsoft .NET Framework 4</span>&nbsp;&nbsp;<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=17851">http://www.microsoft.com/zh-cn/download/details.aspx?id=17851</a>
 </p>
-<img title="外汇监视提醒小工具" alt="外汇监视提醒小工具" src="http://kanng.net/waihui.jpg" /> 
+<img title="外汇监视提醒小工具" alt="外汇监视提醒小工具" src="http://FLYBI.CN/waihui.jpg" /> 
 <p>
 	说明：
 </p>
@@ -452,7 +452,7 @@ document.getElementById('imgform').submit();<br />
 <p>
 	设置好之后，点击开始，会缩小到任务栏
 </p>
-<img alt="" src="http://kanng.net/www.jpg" /> 
+<img alt="" src="http://FLYBI.CN/www.jpg" /> 
 <p>
 	&nbsp;
 </p>
@@ -470,12 +470,12 @@ document.getElementById('imgform').submit();<br />
 </p>]]></description>
 	<pubDate>Tue, 26 Nov 2013 07:15:57 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=12</guid>
+	<guid>http://FLYBI.CN/blog/?post=12</guid>
 
 </item>
 <item>
 	<title>div 始终处于顶部和底部</title>
-	<link>http://kanng.net/blog/?post=11</link>
+	<link>http://FLYBI.CN/blog/?post=11</link>
 	<description><![CDATA[<p>
 	直接上代码：
 </p>
@@ -551,7 +551,7 @@ html, body, form{<br />
 </p>]]></description>
 	<pubDate>Fri, 15 Nov 2013 08:05:25 +0000</pubDate>
 	<author>admin</author>
-	<guid>http://kanng.net/blog/?post=11</guid>
+	<guid>http://FLYBI.CN/blog/?post=11</guid>
 
 </item></channel>
 </rss>

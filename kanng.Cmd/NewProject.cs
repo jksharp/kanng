@@ -42,7 +42,7 @@ namespace kanng.Cmd
 
                 DirectoryIO.CopyFolder(path + "\\data\\sys\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
 
-                MessageBox.Show(textBox1.Text.Trim() + "创建成功，请重新打开看门狗桌面启动助手！");
+                MessageBox.Show(textBox1.Text.Trim() + "创建成功，请重新打开安雀桌面启动助手！");
             }
             else if (FormMode == 2)
             {               
@@ -51,7 +51,7 @@ namespace kanng.Cmd
 
                 Directory.Move(path + "\\data\\" + ProjectName + "\\", path + "\\data\\" + textBox1.Text.Trim() + "\\");
 
-                MessageBox.Show(textBox1.Text.Trim() + "修改成功，请重新打开看门狗桌面启动助手！");
+                MessageBox.Show(textBox1.Text.Trim() + "修改成功，请重新打开安雀桌面启动助手！");
             }
         }
 

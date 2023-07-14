@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Kanng.Web", "http://localhost:8647", "{0914B69D-F428-4E97-B771-A051092EC152}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -35,6 +35,54 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.SyntaxTextBox", "Kanng.SyntaxTextBox\Kanng.SyntaxTextBox.csproj", "{4F6938E1-B0A7-4EDD-97E8-0A5C10B4D155}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanng.DeadMoney", "Kanng.DeadMoney\Kanng.DeadMoney.csproj", "{DE1791DA-66C7-49EA-8562-39F10F4185EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1C288ACA-D524-4B2C-8075-73F8E8C563CE}"
+	ProjectSection(SolutionItems) = preProject
+		docs\_config.yml = docs\_config.yml
+		docs\about.html = docs\about.html
+		docs\android.html = docs\android.html
+		docs\baidu_verify_g39oJFbMXx.html = docs\baidu_verify_g39oJFbMXx.html
+		docs\bdunion.txt = docs\bdunion.txt
+		docs\blog.html = docs\blog.html
+		docs\CNAME = docs\CNAME
+		docs\csharp.html = docs\csharp.html
+		docs\damotouicon (2).ico = docs\damotouicon (2).ico
+		docs\damotouicon.ico = docs\damotouicon.ico
+		docs\Default.aspx = docs\Default.aspx
+		docs\Default.aspx.vb = docs\Default.aspx.vb
+		docs\favicon.ico = docs\favicon.ico
+		docs\flex.html = docs\flex.html
+		docs\g.html = docs\g.html
+		docs\hao123it.html.bak = docs\hao123it.html.bak
+		docs\huibian.html = docs\huibian.html
+		docs\index.html = docs\index.html
+		docs\index.html.bak = docs\index.html.bak
+		docs\index2.html = docs\index2.html
+		docs\kanng.html = docs\kanng.html
+		docs\LICENSE = docs\LICENSE
+		docs\linux.html = docs\linux.html
+		docs\localhost_29794.sln = docs\localhost_29794.sln
+		docs\logo.jpg = docs\logo.jpg
+		docs\logo1.png = docs\logo1.png
+		docs\message.html = docs\message.html
+		docs\Ofc_Android_0303_1600x560_EN_US.jpg = docs\Ofc_Android_0303_1600x560_EN_US.jpg
+		docs\perl.html = docs\perl.html
+		docs\puppy-151306.png = docs\puppy-151306.png
+		docs\puppy-151306_1280.png = docs\puppy-151306_1280.png
+		docs\puppy-151306_640.png = docs\puppy-151306_640.png
+		docs\python.html = docs\python.html
+		docs\readme.txt = docs\readme.txt
+		docs\signin.html = docs\signin.html
+		docs\signin.html.bak = docs\signin.html.bak
+		docs\testnews.html = docs\testnews.html
+		docs\Update_增量更新车型库数据20161028.sql = docs\Update_增量更新车型库数据20161028.sql
+		docs\vb.html = docs\vb.html
+		docs\waihui.jpg = docs\waihui.jpg
+		docs\waihui.zip = docs\waihui.zip
+		docs\webwxgetmsgimg (2).jpg = docs\webwxgetmsgimg (2).jpg
+		docs\www.jpg = docs\www.jpg
+		docs\yiyuyan.html = docs\yiyuyan.html
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
